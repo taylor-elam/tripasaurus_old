@@ -71,7 +71,7 @@
 				7F794457285CF29500B850FB /* Enums */,
 				7F79445A285CF5DF00B850FB /* Models */,
 				7F794468285CF70A00B850FB /* Stores */,
-				7F794455285CEF7F00B850FB /* Events */,
+				7F79446B285CF84300B850FB /* Views */,
 				7F794465285CF6D800B850FB /* Utilities */,
 				7F79444B285CED6B00B850FB /* Assets.xcassets */,
 				7F79444D285CED6B00B850FB /* Preview Content */,
@@ -137,6 +137,14 @@
 				7F794469285CF71600B850FB /* EventStore.swift */,
 			);
 			path = Stores;
+			sourceTree = "<group>";
+		};
+		7F79446B285CF84300B850FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F794455285CEF7F00B850FB /* Events */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
