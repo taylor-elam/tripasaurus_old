@@ -16,6 +16,14 @@ struct EventListView: View {
                             } label: {
                                 EventRow(event: $event)
                             }
+                            .swipeActions(edge: .leading) {
+                                Button {
+                                    copyEvent(event: event)
+                                } label: {
+                                    Label("Copy", systemImage: "doc.on.doc")
+                                }
+                                .tint(.purple)
+                            }
                             .swipeActions {
                                 Button(role: .destructive) {
                                     event.isDeleted = true
