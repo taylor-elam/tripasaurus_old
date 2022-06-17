@@ -9,7 +9,7 @@ struct EventListView: View {
                 if !eventStore.sortedEvents(section: section).isEmpty {
                     Section(content: {
                         ForEach(eventStore.sortedEvents(section: section)) { $event in
-                            Text(event.title)
+                            EventRow(event: $event)
                         }
                     }, header: {
                         Text(section.name)
