@@ -14,6 +14,13 @@ struct EventListView: View {
                             } label: {
                                 EventRow(event: $event)
                             }
+                            .swipeActions {
+                                Button(role: .destructive) {
+                                    event.isDeleted = true
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
+                            }
                         }
                     }, header: {
                         Text(section.name)
