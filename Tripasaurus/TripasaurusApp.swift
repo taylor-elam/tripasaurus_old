@@ -2,6 +2,7 @@ import SwiftUI
 
 @main
 struct TripasaurusApp: App {
+    @StateObject private var eventStore = EventStore()
     @State private var id = UUID()
     @State private var tabSelection = 0
 
@@ -27,6 +28,7 @@ struct TripasaurusApp: App {
                     .tag(tab.tag)
                 }
             }
+            .environmentObject(eventStore)
         }
     }
 }
