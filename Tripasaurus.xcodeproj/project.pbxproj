@@ -55,6 +55,7 @@
 			children = (
 				7F794447285CED6600B850FB /* TripasaurusApp.swift */,
 				7F794457285CF29500B850FB /* Enums */,
+				7F79445A285CF5DF00B850FB /* Models */,
 				7F794455285CEF7F00B850FB /* Events */,
 				7F79444B285CED6B00B850FB /* Assets.xcassets */,
 				7F79444D285CED6B00B850FB /* Preview Content */,
@@ -92,6 +93,13 @@
 				7F794458285CF2A100B850FB /* AppTab.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		7F79445A285CF5DF00B850FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
