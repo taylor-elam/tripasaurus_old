@@ -21,10 +21,12 @@ struct TaskSection: View {
                 ForEach($tasks.filter { !$0.isDeleted.wrappedValue }) { $task in
                     TaskRow(task: $task)
                 }
-                Button { addTask() } label: { Label("Add Task", systemImage: "plus") .padding(.horizontal) }
+                Button { addTask() } label: { Label("Add Task", systemImage: "plus").padding(.horizontal) }
+                    .disabled(!tasks.allSatisfy { !$0.title.isEmpty })
                     .buttonStyle(.borderless)
                     
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical)
             .listCardStyle()
         }

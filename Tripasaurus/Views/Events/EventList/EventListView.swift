@@ -2,6 +2,8 @@ import SwiftUI
 
 struct EventListView: View {
     @EnvironmentObject var eventStore: EventStore
+    @State var isAddingNewEvent = false
+    @State var newEvent = Event()
 
     var body: some View {
         List {
@@ -31,11 +33,25 @@ struct EventListView: View {
                 }
             }
         }
+        .listStyle(SidebarListStyle())
+        .toolbar {
+            ToolbarItem {
+                Button { addNewEvent() } label: { Label("Add Event", systemImage: "plus") }
+            }
+        }
+        .sheet(isPresented: $isAddingNewEvent) {
+            NavigationView {
+                EventDetailView(event: $newEvent, isNew: true)
+                    .navigationBarTitle(Text("New Event"), displayMode: .inline)
+            }
+        }
     }
 }
 
 struct EventListView_Previews: PreviewProvider {
     static var previews: some View {
-        EventListView().environmentObject(EventStore())
+        NavigationView {
+            EventListView().environmentObject(EventStore())
+        }
     }
 }

@@ -1,6 +1,11 @@
 import SwiftUI
 
 extension EventDetailView {
+    func addEvent(event: Event) {
+        eventStore.add(event)
+        dismiss()
+    }
+
     func saveEvent() {
         event = eventCopy
         dismiss()

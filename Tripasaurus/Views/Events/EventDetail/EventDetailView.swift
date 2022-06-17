@@ -4,8 +4,10 @@ struct EventDetailView: View {
     @Binding var event: Event
 
     @Environment(\.dismiss) var dismiss
-    @State var selection: String = ""
+    @EnvironmentObject var eventStore: EventStore
     @State var eventCopy = Event()
+    @State var isNew = false
+    @State var selection: String = ""
 
     var body: some View {
         VStack(spacing: 0) {
@@ -23,8 +25,13 @@ struct EventDetailView: View {
             .onAppear { eventCopy = event }
             .navigationBarTitle("", displayMode: .inline)
             .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    if isNew {
+                        Button("Cancel") { dismiss() }
+                    }
+                }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") { saveEvent() }
+                    Button(isNew ? "Add" : "Save") { isNew ? addEvent(event: eventCopy) : saveEvent() }
                         .disabled(eventCopy.title.isEmpty)
                 }
             }
@@ -48,7 +55,7 @@ struct EventDetailView: View {
 struct EventDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            EventDetailView(event: .constant(Event.example))
+            EventDetailView(event: .constant(Event.example)).environmentObject(EventStore())
         }
     }
 }
