@@ -1,18 +1,30 @@
 import SwiftUI
 
 struct EventListView: View {
+    @EnvironmentObject var eventStore: EventStore
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        List {
+            ForEach(EventSection.allCases) { section in
+                if !eventStore.sortedEvents(section: section).isEmpty {
+                    Section(content: {
+                        ForEach(eventStore.sortedEvents(section: section)) { $event in
+                            Text(event.title)
+                        }
+                    }, header: {
+                        Text(section.name)
+                            .font(.callout)
+                            .fontWeight(.bold)
+                            .foregroundColor(.secondary)
+                    })
+                }
+            }
         }
     }
 }
 
 struct EventListView_Previews: PreviewProvider {
     static var previews: some View {
-        EventListView()
+        EventListView().environmentObject(EventStore())
     }
 }
