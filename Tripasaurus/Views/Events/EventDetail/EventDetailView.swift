@@ -2,22 +2,32 @@ import SwiftUI
 
 struct EventDetailView: View {
     @Binding var event: Event
+
+    @Environment(\.dismiss) var dismiss
     @State var selection: String = ""
+    @State var eventCopy = Event()
 
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
                 TitleSection(
-                    color: $event.color,
-                    icon: $event.icon,
-                    title: $event.title,
+                    color: $eventCopy.color,
+                    icon: $eventCopy.icon,
+                    title: $eventCopy.title,
                     isSelected: selection == "Icon",
                     selectRow: selectDeselect
                 )
-                DateSection(date: $event.date, isSelected: selection == "Date", selectRow: selectDeselect)
-                TaskSection(tasks: $event.tasks)
+                DateSection(date: $eventCopy.date, isSelected: selection == "Date", selectRow: selectDeselect)
+                TaskSection(tasks: $eventCopy.tasks)
             }
+            .onAppear { eventCopy = event }
             .navigationBarTitle("", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") { saveEvent() }
+                        .disabled(eventCopy.title.isEmpty)
+                }
+            }
             .background(Color(UIColor.secondarySystemBackground))
         }
     }
@@ -25,6 +35,8 @@ struct EventDetailView: View {
 
 struct EventDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetailView(event: .constant(Event.example))
+        NavigationView {
+            EventDetailView(event: .constant(Event.example))
+        }
     }
 }
