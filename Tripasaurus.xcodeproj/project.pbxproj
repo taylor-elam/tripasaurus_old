@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794447285CED6600B850FB /* TripasaurusApp.swift */; };
-		7F79444A285CED6600B850FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794449285CED6600B850FB /* ContentView.swift */; };
+		7F79444A285CED6600B850FB /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794449285CED6600B850FB /* EventListView.swift */; };
 		7F79444C285CED6B00B850FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444B285CED6B00B850FB /* Assets.xcassets */; };
 		7F79444F285CED6B00B850FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444E285CED6B00B850FB /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		7F794444285CED6600B850FB /* Tripasaurus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripasaurus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F794447285CED6600B850FB /* TripasaurusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripasaurusApp.swift; sourceTree = "<group>"; };
-		7F794449285CED6600B850FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7F794449285CED6600B850FB /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		7F79444B285CED6B00B850FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F79444E285CED6B00B850FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,7 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				7F794447285CED6600B850FB /* TripasaurusApp.swift */,
-				7F794449285CED6600B850FB /* ContentView.swift */,
+				7F794455285CEF7F00B850FB /* Events */,
 				7F79444B285CED6B00B850FB /* Assets.xcassets */,
 				7F79444D285CED6B00B850FB /* Preview Content */,
 			);
@@ -65,6 +65,22 @@
 				7F79444E285CED6B00B850FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F794455285CEF7F00B850FB /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				7F794456285CEF8500B850FB /* EventList */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		7F794456285CEF8500B850FB /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				7F794449285CED6600B850FB /* EventListView.swift */,
+			);
+			path = EventList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F79444A285CED6600B850FB /* ContentView.swift in Sources */,
+				7F79444A285CED6600B850FB /* EventListView.swift in Sources */,
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,13 +283,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tripasaurus/Preview Content\"";
+				DEVELOPMENT_TEAM = HST8S6VDV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,13 +312,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tripasaurus/Preview Content\"";
+				DEVELOPMENT_TEAM = HST8S6VDV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

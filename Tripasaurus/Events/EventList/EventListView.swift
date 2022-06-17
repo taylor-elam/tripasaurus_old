@@ -1,13 +1,6 @@
-//
-//  ContentView.swift
-//  Tripasaurus
-//
-//  Created by Taylor Elam on 6/17/22.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct EventListView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -18,8 +11,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct EventListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        EventListView()
     }
 }
