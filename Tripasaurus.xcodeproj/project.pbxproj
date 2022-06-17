@@ -11,6 +11,7 @@
 		7F79444A285CED6600B850FB /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794449285CED6600B850FB /* EventListView.swift */; };
 		7F79444C285CED6B00B850FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444B285CED6B00B850FB /* Assets.xcassets */; };
 		7F79444F285CED6B00B850FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444E285CED6B00B850FB /* Preview Assets.xcassets */; };
+		7F794459285CF2A100B850FB /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794458285CF2A100B850FB /* AppTab.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		7F794449285CED6600B850FB /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		7F79444B285CED6B00B850FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F79444E285CED6B00B850FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F794458285CF2A100B850FB /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				7F794447285CED6600B850FB /* TripasaurusApp.swift */,
+				7F794457285CF29500B850FB /* Enums */,
 				7F794455285CEF7F00B850FB /* Events */,
 				7F79444B285CED6B00B850FB /* Assets.xcassets */,
 				7F79444D285CED6B00B850FB /* Preview Content */,
@@ -81,6 +84,14 @@
 				7F794449285CED6600B850FB /* EventListView.swift */,
 			);
 			path = EventList;
+			sourceTree = "<group>";
+		};
+		7F794457285CF29500B850FB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				7F794458285CF2A100B850FB /* AppTab.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +166,7 @@
 			files = (
 				7F79444A285CED6600B850FB /* EventListView.swift in Sources */,
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,
+				7F794459285CF2A100B850FB /* AppTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
