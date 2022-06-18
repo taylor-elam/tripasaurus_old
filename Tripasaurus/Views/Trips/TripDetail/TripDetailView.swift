@@ -42,7 +42,7 @@ struct TripDetailView: View {
                 .padding(.horizontal)
             }
 
-            DeleteButton(text: "Delete Trip", action: deleteTrip).deleteButtonStyle()
+            Button(role: .destructive, action: deleteTrip, label: { Label("Delete Trip", systemImage: "trash") })
         }
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))

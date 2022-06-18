@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E5FA285E07C300529B61 /* TripList+Controller.swift */; };
-		7F52E601285E254E00529B61 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E600285E254E00529B61 /* DeleteButton.swift */; };
 		7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E602285E298900529B61 /* DetailDeleteButton.swift */; };
 		7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E604285E2C2500529B61 /* SectionHeader.swift */; };
 		7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E606285E4D5500529B61 /* ResizeImage.swift */; };
@@ -45,7 +44,6 @@
 
 /* Begin PBXFileReference section */
 		7F52E5FA285E07C300529B61 /* TripList+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripList+Controller.swift"; sourceTree = "<group>"; };
-		7F52E600285E254E00529B61 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		7F52E602285E298900529B61 /* DetailDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeleteButton.swift; sourceTree = "<group>"; };
 		7F52E604285E2C2500529B61 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		7F52E606285E4D5500529B61 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
@@ -272,7 +270,6 @@
 			isa = PBXGroup;
 			children = (
 				7F79447D285D071600B850FB /* DateSection.swift */,
-				7F52E600285E254E00529B61 /* DeleteButton.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -350,7 +347,6 @@
 				7F794476285D03A300B850FB /* TitleSection.swift in Sources */,
 				7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */,
 				7F79446A285CF71600B850FB /* EventStore.swift in Sources */,
-				7F52E601285E254E00529B61 /* DeleteButton.swift in Sources */,
 				7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */,
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,

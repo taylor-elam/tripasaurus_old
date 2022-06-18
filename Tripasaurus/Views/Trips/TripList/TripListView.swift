@@ -23,7 +23,7 @@ struct TripListView: View {
                     .tint(.purple)
                 }
                 .swipeActions {
-                    DeleteButton(text: "Delete", action: { trip.isDeleted = true })
+                    Button(role: .destructive, action: { trip.isDeleted = true }, label: { Label("Delete", systemImage: "trash") })
                 }
             }
         }
