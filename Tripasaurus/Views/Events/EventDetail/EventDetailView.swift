@@ -19,7 +19,17 @@ struct EventDetailView: View {
                     isSelected: selection == "Icon",
                     selectRow: selectDeselect
                 )
-                DateSection(date: $eventCopy.date, isSelected: selection == "Date", selectRow: selectDeselect)
+
+                DateSection(
+                    date: $eventCopy.date,
+                    isSelected: selection == "date",
+                    label: "Date",
+                    selectRow: selectDeselect
+                )
+                .padding()
+                .listCardStyle()
+                .padding(.horizontal)
+
                 TaskSection(tasks: $eventCopy.tasks)
             }
             .onAppear { eventCopy = event }
