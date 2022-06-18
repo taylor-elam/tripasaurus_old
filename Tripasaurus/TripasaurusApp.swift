@@ -3,6 +3,7 @@ import SwiftUI
 @main
 struct TripasaurusApp: App {
     @StateObject private var eventStore = EventStore()
+    @StateObject private var tripStore = TripStore()
     @State private var id = UUID()
     @State private var tabSelection = 0
 
@@ -16,7 +17,7 @@ struct TripasaurusApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabView {
+            TabView(selection: handler) {
                 ForEach(AppTab.allCases) { tab in
                     NavigationView {
                         tab.content
@@ -29,6 +30,7 @@ struct TripasaurusApp: App {
                 }
             }
             .environmentObject(eventStore)
+            .environmentObject(tripStore)
         }
     }
 }
