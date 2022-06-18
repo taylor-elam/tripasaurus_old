@@ -6,6 +6,11 @@ extension TripDetailView {
         dismiss()
     }
 
+    func deleteTrip() {
+        trip.isDeleted = true
+        dismiss()
+    }
+
     func saveTrip() {
         trip = tripCopy
         dismiss()

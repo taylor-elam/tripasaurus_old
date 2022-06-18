@@ -6,6 +6,11 @@ extension EventDetailView {
         dismiss()
     }
 
+    func deleteEvent() {
+        event.isDeleted = true
+        dismiss()
+    }
+
     func saveEvent() {
         event = eventCopy
         dismiss()

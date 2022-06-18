@@ -47,17 +47,7 @@ struct EventDetailView: View {
             }
             .background(Color(UIColor.secondarySystemBackground))
 
-            Button(role: .destructive, action: {
-                event.isDeleted = true
-                dismiss()
-            }, label: {
-                Text("Delete Event").foregroundColor(Color(UIColor.systemRed))
-            })
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.vertical)
-            .background(.white.opacity(0.7))
-            .overlay(Divider(), alignment: .top)
-            .overlay(Divider(), alignment: .bottom)
+            DeleteButton(text: "Delete Event", action: deleteEvent).deleteButtonStyle()
         }
     }
 }
