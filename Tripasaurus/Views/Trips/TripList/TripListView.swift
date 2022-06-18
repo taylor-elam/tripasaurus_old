@@ -8,7 +8,11 @@ struct TripListView: View {
             // TODO: add Add Trip button
             // TODO: add sections by time period
             ForEach(tripStore.sortedTrips()) { $trip in
-                TripRow(trip: $trip)
+                NavigationLink {
+                    TripDetailView(trip: $trip)
+                } label: {
+                    TripRow(trip: $trip)
+                }
                 // TODO: add swipe to delete
             }
         }
