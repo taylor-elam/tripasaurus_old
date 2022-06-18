@@ -28,12 +28,7 @@ struct EventListView: View {
                                 DeleteButton(text: "Delete", action: { event.isDeleted = true })
                             }
                         }
-                    }, header: {
-                        Text(section.name)
-                            .font(.callout)
-                            .fontWeight(.bold)
-                            .foregroundColor(.secondary)
-                    })
+                    }, header: { Text(section.name).sectionHeaderStyle() })
                 }
             }
         }
