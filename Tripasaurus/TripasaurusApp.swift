@@ -17,7 +17,7 @@ struct TripasaurusApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabView {
+            TabView(selection: handler) {
                 ForEach(AppTab.allCases) { tab in
                     NavigationView {
                         tab.content
