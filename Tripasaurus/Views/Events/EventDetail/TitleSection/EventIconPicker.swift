@@ -10,7 +10,7 @@ struct EventIconPicker: View {
     var body: some View {
         VStack {
             HStack {
-                ForEach(EventColor.allCases, id: \.self) { color in
+                ForEach(EventColor.allCases) { color in
                     Button {
                         eventColor = color
                     } label: {
@@ -28,7 +28,7 @@ struct EventIconPicker: View {
                     columns: [GridItem(.adaptive(minimum: size))],
                     spacing: padding
                 ) {
-                    ForEach(EventIcon.allCases, id: \.self) { icon in
+                    ForEach(EventIcon.allCases) { icon in
                         Button {
                             eventIcon = icon
                         } label: {
