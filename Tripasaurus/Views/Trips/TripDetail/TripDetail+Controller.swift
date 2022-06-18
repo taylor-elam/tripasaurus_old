@@ -1,6 +1,16 @@
 import SwiftUI
 
 extension TripDetailView {
+    func addTrip(trip: Trip) {
+        tripStore.add(trip)
+        dismiss()
+    }
+
+    func saveTrip() {
+        trip = tripCopy
+        dismiss()
+    }
+
     func selectDeselect(row: String) {
         withAnimation(.linear) {
             if selection == row {

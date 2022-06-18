@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E5FA285E07C300529B61 /* TripList+Controller.swift */; };
 		7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794447285CED6600B850FB /* TripasaurusApp.swift */; };
 		7F79444A285CED6600B850FB /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794449285CED6600B850FB /* EventListView.swift */; };
 		7F79444C285CED6B00B850FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444B285CED6B00B850FB /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F52E5FA285E07C300529B61 /* TripList+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripList+Controller.swift"; sourceTree = "<group>"; };
 		7F794444285CED6600B850FB /* Tripasaurus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripasaurus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F794447285CED6600B850FB /* TripasaurusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripasaurusApp.swift; sourceTree = "<group>"; };
 		7F794449285CED6600B850FB /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				7F794489285D6EE500B850FB /* TripListView.swift */,
+				7F52E5FA285E07C300529B61 /* TripList+Controller.swift */,
 				7F79448F285D740100B850FB /* TripRow.swift */,
 			);
 			path = TripList;
@@ -346,6 +349,7 @@
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,
 				7F794460285CF67D00B850FB /* EventSection.swift in Sources */,
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
+				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
 				7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */,
