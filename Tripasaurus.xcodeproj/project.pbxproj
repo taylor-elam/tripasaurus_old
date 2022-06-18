@@ -30,6 +30,7 @@
 		7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794480285D0A0D00B850FB /* TaskRow.swift */; };
 		7F794484285D0B0500B850FB /* TaskSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794483285D0B0500B850FB /* TaskSection.swift */; };
 		7F794486285D175B00B850FB /* EventList+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794485285D175A00B850FB /* EventList+Controller.swift */; };
+		7F79448A285D6EE500B850FB /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794489285D6EE500B850FB /* TripListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		7F794480285D0A0D00B850FB /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		7F794483285D0B0500B850FB /* TaskSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSection.swift; sourceTree = "<group>"; };
 		7F794485285D175A00B850FB /* EventList+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventList+Controller.swift"; sourceTree = "<group>"; };
+		7F794489285D6EE500B850FB /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +96,8 @@
 				7F79445A285CF5DF00B850FB /* Models */,
 				7F794468285CF70A00B850FB /* Stores */,
 				7F79446E285CF8EB00B850FB /* Styles */,
-				7F79446B285CF84300B850FB /* Views */,
 				7F794465285CF6D800B850FB /* Utilities */,
+				7F79446B285CF84300B850FB /* Views */,
 				7F79444B285CED6B00B850FB /* Assets.xcassets */,
 				7F79444D285CED6B00B850FB /* Preview Content */,
 			);
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				7F794455285CEF7F00B850FB /* Events */,
+				7F794487285D6ECE00B850FB /* Trips */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,22 @@
 				7F794480285D0A0D00B850FB /* TaskRow.swift */,
 			);
 			path = TaskSection;
+			sourceTree = "<group>";
+		};
+		7F794487285D6ECE00B850FB /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				7F794488285D6ED800B850FB /* TripList */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		7F794488285D6ED800B850FB /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				7F794489285D6EE500B850FB /* TripListView.swift */,
+			);
+			path = TripList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +314,7 @@
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,
 				7F794460285CF67D00B850FB /* EventSection.swift in Sources */,
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
+				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
 				7F794470285CF91B00B850FB /* CustomLabelStyle.swift in Sources */,
 				7F794459285CF2A100B850FB /* AppTab.swift in Sources */,
