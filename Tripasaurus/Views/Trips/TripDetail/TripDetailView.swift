@@ -2,17 +2,20 @@ import SwiftUI
 
 struct TripDetailView: View {
     @Binding var trip: Trip
+
+    @Environment(\.dismiss) var dismiss
     @State var selection: String = ""
+    @State var tripCopy: Trip = Trip()
 
     var body: some View {
         VStack {
             VStack {
-                TextField("Title", text: $trip.title)
+                TextField("Title", text: $tripCopy.title)
                     .multilineTextAlignment(.center)
                     .font(.title2)
                 Divider().frame(height: 1)
                 DateSection(
-                    date: $trip.startDate,
+                    date: $tripCopy.startDate,
                     displayComponents: [.date],
                     id: "startDate",
                     isSelected: selection == "startDate",
@@ -22,7 +25,7 @@ struct TripDetailView: View {
                 )
                 Divider().frame(height: 1)
                 DateSection(
-                    date: $trip.endDate,
+                    date: $tripCopy.endDate,
                     displayComponents: [.date],
                     id: "endDate",
                     isSelected: selection == "endDate",
@@ -37,8 +40,14 @@ struct TripDetailView: View {
 
             Spacer()
         }
+        .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))
         .navigationBarTitle("", displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button("Save") { saveTrip() }.disabled(tripCopy.title.isEmpty)
+            }
+        }
     }
 }
 
