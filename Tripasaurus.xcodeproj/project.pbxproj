@@ -34,6 +34,8 @@
 		7F79448C285D720800B850FB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79448B285D720800B850FB /* Trip.swift */; };
 		7F79448E285D72D700B850FB /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79448D285D72D700B850FB /* TripStore.swift */; };
 		7F794490285D740100B850FB /* TripRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79448F285D740100B850FB /* TripRow.swift */; };
+		7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794492285D78CD00B850FB /* TripDetailView.swift */; };
+		7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794494285D86EB00B850FB /* TripDetail+Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		7F79448B285D720800B850FB /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		7F79448D285D72D700B850FB /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
 		7F79448F285D740100B850FB /* TripRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRow.swift; sourceTree = "<group>"; };
+		7F794492285D78CD00B850FB /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
+		7F794494285D86EB00B850FB /* TripDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripDetail+Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 		7F79446B285CF84300B850FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7F794496285DA09300B850FB /* Shared */,
 				7F794455285CEF7F00B850FB /* Events */,
 				7F794487285D6ECE00B850FB /* Trips */,
 			);
@@ -199,7 +204,6 @@
 				7F794472285CFFE100B850FB /* EventDetailView.swift */,
 				7F79447B285D059800B850FB /* EventDetail+Controller.swift */,
 				7F794474285D038300B850FB /* TitleSection */,
-				7F79447D285D071600B850FB /* DateSection.swift */,
 				7F79447F285D091B00B850FB /* TaskSection */,
 			);
 			path = EventDetail;
@@ -227,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				7F794488285D6ED800B850FB /* TripList */,
+				7F794491285D78BD00B850FB /* TripDetail */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -238,6 +243,23 @@
 				7F79448F285D740100B850FB /* TripRow.swift */,
 			);
 			path = TripList;
+			sourceTree = "<group>";
+		};
+		7F794491285D78BD00B850FB /* TripDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7F794492285D78CD00B850FB /* TripDetailView.swift */,
+				7F794494285D86EB00B850FB /* TripDetail+Controller.swift */,
+			);
+			path = TripDetail;
+			sourceTree = "<group>";
+		};
+		7F794496285DA09300B850FB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				7F79447D285D071600B850FB /* DateSection.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +348,8 @@
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
+				7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */,
+				7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */,
 				7F794470285CF91B00B850FB /* CustomLabelStyle.swift in Sources */,
 				7F794459285CF2A100B850FB /* AppTab.swift in Sources */,
 				7F794478285D03EF00B850FB /* EventIconPicker.swift in Sources */,
