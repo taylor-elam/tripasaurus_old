@@ -13,7 +13,13 @@ struct TripListView: View {
                 } label: {
                     TripRow(trip: $trip)
                 }
-                // TODO: add swipe to delete
+                .swipeActions {
+                    Button(role: .destructive) {
+                        trip.isDeleted = true
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                }
             }
         }
     }
