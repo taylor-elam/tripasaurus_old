@@ -33,9 +33,7 @@ struct EventIconPicker: View {
                             eventIcon = icon
                         } label: {
                             Image(systemName: icon.name)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 30, height: 30)
+                                .resizeImage(width: 30, height: 30)
                                 .foregroundColor(eventColor.mainColor)
                                 .padding(5)
                         }

@@ -11,6 +11,7 @@
 		7F52E601285E254E00529B61 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E600285E254E00529B61 /* DeleteButton.swift */; };
 		7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E602285E298900529B61 /* DetailDeleteButton.swift */; };
 		7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E604285E2C2500529B61 /* SectionHeader.swift */; };
+		7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E606285E4D5500529B61 /* ResizeImage.swift */; };
 		7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794447285CED6600B850FB /* TripasaurusApp.swift */; };
 		7F79444A285CED6600B850FB /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794449285CED6600B850FB /* EventListView.swift */; };
 		7F79444C285CED6B00B850FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444B285CED6B00B850FB /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		7F52E600285E254E00529B61 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		7F52E602285E298900529B61 /* DetailDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeleteButton.swift; sourceTree = "<group>"; };
 		7F52E604285E2C2500529B61 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		7F52E606285E4D5500529B61 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
 		7F794444285CED6600B850FB /* Tripasaurus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripasaurus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F794447285CED6600B850FB /* TripasaurusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripasaurusApp.swift; sourceTree = "<group>"; };
 		7F794449285CED6600B850FB /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				7F79446F285CF91B00B850FB /* CustomLabelStyle.swift */,
 				7F52E602285E298900529B61 /* DetailDeleteButton.swift */,
 				7F794479285D041800B850FB /* ListCard.swift */,
+				7F52E606285E4D5500529B61 /* ResizeImage.swift */,
 				7F52E604285E2C2500529B61 /* SectionHeader.swift */,
 			);
 			path = Styles;
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F794476285D03A300B850FB /* TitleSection.swift in Sources */,
+				7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */,
 				7F79446A285CF71600B850FB /* EventStore.swift in Sources */,
 				7F52E601285E254E00529B61 /* DeleteButton.swift in Sources */,
 				7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */,

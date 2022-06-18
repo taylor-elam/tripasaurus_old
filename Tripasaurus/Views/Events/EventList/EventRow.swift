@@ -18,9 +18,7 @@ struct EventRow: View {
                 }
             } icon: {
                 Image(systemName: event.icon.name)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
+                    .resizeImage(width: 25, height: 25)
                     .foregroundStyle(event.color.mainColor)
                     .padding(.trailing, 15)
             }
