@@ -31,6 +31,8 @@
 		7F794484285D0B0500B850FB /* TaskSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794483285D0B0500B850FB /* TaskSection.swift */; };
 		7F794486285D175B00B850FB /* EventList+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794485285D175A00B850FB /* EventList+Controller.swift */; };
 		7F79448A285D6EE500B850FB /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794489285D6EE500B850FB /* TripListView.swift */; };
+		7F79448C285D720800B850FB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79448B285D720800B850FB /* Trip.swift */; };
+		7F79448E285D72D700B850FB /* TripStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79448D285D72D700B850FB /* TripStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		7F794483285D0B0500B850FB /* TaskSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSection.swift; sourceTree = "<group>"; };
 		7F794485285D175A00B850FB /* EventList+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventList+Controller.swift"; sourceTree = "<group>"; };
 		7F794489285D6EE500B850FB /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
+		7F79448B285D720800B850FB /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		7F79448D285D72D700B850FB /* TripStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 			children = (
 				7F794463285CF6C300B850FB /* Event.swift */,
 				7F794461285CF6B200B850FB /* EventTask.swift */,
+				7F79448B285D720800B850FB /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				7F794469285CF71600B850FB /* EventStore.swift */,
+				7F79448D285D72D700B850FB /* TripStore.swift */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 				7F79446A285CF71600B850FB /* EventStore.swift in Sources */,
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,
+				7F79448C285D720800B850FB /* Trip.swift in Sources */,
 				7F79447C285D059800B850FB /* EventDetail+Controller.swift in Sources */,
 				7F794464285CF6C300B850FB /* Event.swift in Sources */,
 				7F79445C285CF64800B850FB /* EventColor.swift in Sources */,
@@ -322,6 +329,7 @@
 				7F79446D285CF87200B850FB /* EventRow.swift in Sources */,
 				7F794486285D175B00B850FB /* EventList+Controller.swift in Sources */,
 				7F79447A285D041800B850FB /* ListCard.swift in Sources */,
+				7F79448E285D72D700B850FB /* TripStore.swift in Sources */,
 				7F79447E285D071600B850FB /* DateSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
