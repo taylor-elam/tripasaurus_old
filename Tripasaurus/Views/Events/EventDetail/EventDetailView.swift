@@ -10,45 +10,43 @@ struct EventDetailView: View {
     @State var selection: String = ""
 
     var body: some View {
-        VStack(spacing: 0) {
-            ScrollView {
-                TitleSection(
-                    color: $eventCopy.color,
-                    icon: $eventCopy.icon,
-                    title: $eventCopy.title,
-                    isSelected: selection == "Icon",
-                    selectRow: selectDeselect
-                )
+        VStack {
+            TitleSection(
+                color: $eventCopy.color,
+                icon: $eventCopy.icon,
+                title: $eventCopy.title,
+                isSelected: selection == "Icon",
+                selectRow: selectDeselect
+            )
 
-                DateSection(
-                    date: $eventCopy.date,
-                    isSelected: selection == "date",
-                    label: "Date",
-                    selectRow: selectDeselect
-                )
-                .padding()
-                .listCardStyle()
-                .padding(.horizontal)
+            DateSection(
+                date: $eventCopy.date,
+                isSelected: selection == "date",
+                label: "Date",
+                selectRow: selectDeselect
+            )
+            .padding()
+            .listCardStyle()
+            .padding(.horizontal)
 
-                TaskSection(tasks: $eventCopy.tasks)
-            }
-            .onAppear { eventCopy = event }
-            .navigationBarTitle("", displayMode: .inline)
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    if isNew {
-                        Button("Cancel") { dismiss() }
-                    }
-                }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button(isNew ? "Add" : "Save") { isNew ? addEvent(event: eventCopy) : saveEvent() }
-                        .disabled(eventCopy.title.isEmpty)
-                }
-            }
-            .background(Color(UIColor.secondarySystemBackground))
+            TaskSection(tasks: $eventCopy.tasks)
 
             DeleteButton(text: "Delete Event", action: deleteEvent).deleteButtonStyle()
         }
+        .onAppear { eventCopy = event }
+        .navigationBarTitle("", displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                if isNew {
+                    Button("Cancel") { dismiss() }
+                }
+            }
+            ToolbarItem(placement: .confirmationAction) {
+                Button(isNew ? "Add" : "Save") { isNew ? addEvent(event: eventCopy) : saveEvent() }
+                    .disabled(eventCopy.title.isEmpty)
+            }
+        }
+        .background(Color(UIColor.secondarySystemBackground))
     }
 }
 
