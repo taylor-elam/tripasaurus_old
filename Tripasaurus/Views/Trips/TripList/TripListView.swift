@@ -14,6 +14,14 @@ struct TripListView: View {
                 } label: {
                     TripRow(trip: $trip)
                 }
+                .swipeActions(edge: .leading) {
+                    Button {
+                        copyTrip(trip: trip)
+                    } label: {
+                        Label("Copy", systemImage: "doc.on.doc")
+                    }
+                    .tint(.purple)
+                }
                 .swipeActions {
                     Button(role: .destructive) {
                         trip.isDeleted = true
