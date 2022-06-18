@@ -4,6 +4,8 @@ struct TripDetailView: View {
     @Binding var trip: Trip
 
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var tripStore: TripStore
+    @State var isNew = false
     @State var selection: String = ""
     @State var tripCopy: Trip = Trip()
 
@@ -57,8 +59,12 @@ struct TripDetailView: View {
         .navigationBarTitle("", displayMode: .inline)
         // TODO: add styling to navbar
         .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                if isNew { Button("Cancel") { dismiss() } }
+            }
             ToolbarItem(placement: .confirmationAction) {
-                Button("Save") { saveTrip() }.disabled(tripCopy.title.isEmpty)
+                Button(isNew ? "Add" : "Save") { isNew ? addTrip(trip: tripCopy) : saveTrip() }
+                    .disabled(tripCopy.title.isEmpty)
             }
         }
     }
@@ -67,7 +73,7 @@ struct TripDetailView: View {
 struct TripDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            TripDetailView(trip: .constant(Trip.example))
+            TripDetailView(trip: .constant(Trip.example)).environmentObject(TripStore())
         }
     }
 }

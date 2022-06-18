@@ -2,10 +2,11 @@ import SwiftUI
 
 struct TripListView: View {
     @EnvironmentObject var tripStore: TripStore
+    @State var isAddingNewTrip = false
+    @State var newTrip = Trip()
 
     var body: some View {
         List {
-            // TODO: add Add Trip button
             // TODO: add sections by time period
             ForEach(tripStore.sortedTrips()) { $trip in
                 NavigationLink {
@@ -20,6 +21,18 @@ struct TripListView: View {
                         Label("Delete", systemImage: "trash")
                     }
                 }
+            }
+        }
+        .listStyle(SidebarListStyle())
+        .toolbar {
+            ToolbarItem {
+                Button { addNewTrip() } label: { Label("Add Trip", systemImage: "plus") }
+            }
+        }
+        .sheet(isPresented: $isAddingNewTrip) {
+            NavigationView {
+                TripDetailView(trip: $newTrip, isNew: true)
+                    .navigationBarTitle(Text("New Trip"), displayMode: .inline)
             }
         }
     }

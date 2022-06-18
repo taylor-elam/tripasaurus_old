@@ -6,6 +6,10 @@ class TripStore: ObservableObject {
         Trip(endDate: Date.now.add(days: 150), startDate: Date.now.add(days: 140), title: "Trip to NYC")
     ]
 
+    func add(_ trip: Trip) {
+        trips.append(trip)
+    }
+
     func sortedTrips() -> Binding<[Trip]> {
         Binding<[Trip]>(
             get: {

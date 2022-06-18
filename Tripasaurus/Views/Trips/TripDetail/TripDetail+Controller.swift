@@ -1,6 +1,11 @@
 import SwiftUI
 
 extension TripDetailView {
+    func addTrip(trip: Trip) {
+        tripStore.add(trip)
+        dismiss()
+    }
+
     func saveTrip() {
         trip = tripCopy
         dismiss()
