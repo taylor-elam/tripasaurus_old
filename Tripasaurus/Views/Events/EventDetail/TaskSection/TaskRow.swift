@@ -17,7 +17,6 @@ struct TaskRow: View {
             TextField("Task Description", text: $task.title)
                 .focused($focusedTask, equals: task)
         }
-        .padding(.horizontal)
     }
 }
 

@@ -9,18 +9,14 @@ struct EventRow: View {
         HStack {
             Label {
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(event.title)
-                        .fontWeight(.bold)
-
+                    Text(event.title).fontWeight(.bold)
                     Text(event.date.formatted(date: .abbreviated, time: .shortened))
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
             } icon: {
                 Image(systemName: event.icon.name)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
+                    .resizeImage(width: 25, height: 25)
                     .foregroundStyle(event.color.mainColor)
                     .padding(.trailing, 15)
             }
@@ -29,8 +25,7 @@ struct EventRow: View {
         .badge(event.remainingTaskCount - event.emptyTaskCount)
 
         if event.isComplete {
-            Image(systemName: "checkmark")
-                .foregroundStyle(.secondary)
+            Image(systemName: "checkmark").foregroundStyle(.secondary)
         }
     }
 }

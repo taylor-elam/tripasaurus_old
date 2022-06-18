@@ -11,26 +11,21 @@ struct TaskSection: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            Text("Tasks")
-                .font(.callout)
-                .fontWeight(.bold)
-                .foregroundColor(.secondary)
-
-            VStack(alignment: .leading) {
+        List {
+            Section(content: {
                 ForEach($tasks.filter { !$0.isDeleted.wrappedValue }) { $task in
                     TaskRow(task: $task)
+                        .swipeActions {
+                            Button(role: .destructive, action: { task.isDeleted = true }, label: { Label("Delete", systemImage: "trash") })
+                        }
                 }
-                Button { addTask() } label: { Label("Add Task", systemImage: "plus").padding(.horizontal) }
+                Button(action: addTask, label: { Label("Add Task", systemImage: "plus") })
                     .disabled(!tasks.allSatisfy { !$0.title.isEmpty })
-                    .buttonStyle(.borderless)
-                    
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.vertical)
-            .listCardStyle()
+                    .padding(.horizontal, -4)
+            }, header: {
+                Text("Tasks").sectionHeaderStyle()
+            })
         }
-        .padding(.horizontal)
     }
 }
 

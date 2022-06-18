@@ -6,6 +6,11 @@ extension EventDetailView {
         dismiss()
     }
 
+    func deleteEvent() {
+        event.isDeleted = true
+        dismiss()
+    }
+
     func saveEvent() {
         event = eventCopy
         dismiss()
@@ -13,11 +18,7 @@ extension EventDetailView {
 
     func selectDeselect(row: String) {
         withAnimation(.linear) {
-            if selection == row {
-                selection = ""
-            } else {
-                selection = row
-            }
+            selection = (selection == row) ? "" : row
         }
     }
 }

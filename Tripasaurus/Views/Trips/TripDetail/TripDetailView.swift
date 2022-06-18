@@ -41,18 +41,8 @@ struct TripDetailView: View {
                 .listCardStyle()
                 .padding(.horizontal)
             }
-            
-            Button(role: .destructive, action: {
-                trip.isDeleted = true
-                dismiss()
-            }, label: {
-                Text("Delete Trip").foregroundColor(Color(UIColor.systemRed))
-            })
-            .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.vertical)
-            .background(.white.opacity(0.7))
-            .overlay(Divider(), alignment: .top)
-            .overlay(Divider(), alignment: .bottom)
+
+            Button(role: .destructive, action: deleteTrip, label: { Label("Delete Trip", systemImage: "trash") })
         }
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))

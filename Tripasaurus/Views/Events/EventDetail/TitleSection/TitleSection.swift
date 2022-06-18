@@ -6,7 +6,6 @@ struct TitleSection: View {
     @Binding var title: String
     var isSelected: Bool
     var selectRow: (String) -> Void
-    @FocusState var isInputActive: Bool
 
     var body: some View {
         VStack {
@@ -15,23 +14,14 @@ struct TitleSection: View {
                     selectRow("Icon")
                 } label: {
                     Image(systemName: icon.name)
-                        .imageScale(.large)
+                        .resizeImage(width: 30, height: 30)
                         .foregroundColor(color.mainColor)
-                        .frame(width: 40, height: 40)
-                        .padding(6)
+                        .padding(11)
                 }
                 .listCardStyle()
-                .padding(.trailing, 5)
 
                 TextField("New Event", text: $title)
-                    .focused($isInputActive)
                     .font(.title2)
-                    .toolbar {
-                        ToolbarItemGroup(placement: .keyboard) {
-                            Spacer()
-                            Button("Done") { isInputActive = false }
-                        }
-                    }
                     .padding(.horizontal)
                     .padding(.vertical, 12)
                     .listCardStyle()

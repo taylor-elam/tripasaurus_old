@@ -6,6 +6,11 @@ extension TripDetailView {
         dismiss()
     }
 
+    func deleteTrip() {
+        trip.isDeleted = true
+        dismiss()
+    }
+
     func saveTrip() {
         trip = tripCopy
         dismiss()
@@ -13,11 +18,7 @@ extension TripDetailView {
 
     func selectDeselect(row: String) {
         withAnimation(.linear) {
-            if selection == row {
-                selection = ""
-            } else {
-                selection = row
-            }
+            selection = (selection == row) ? "" : row
         }
     }
 }
