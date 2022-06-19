@@ -14,6 +14,11 @@ extension FlightDetailView {
         return formatter
     }
 
+    func saveFlight() {
+        reservation = reservationCopy
+        dismiss()
+    }
+
     func selectDeselect(row: String) {
         withAnimation(.linear) {
             selection = (selection == row) ? "" : row

@@ -2,6 +2,9 @@ import SwiftUI
 
 struct FlightDetailView: View {
     @Binding var reservation: FlightReservation
+
+    @Environment(\.dismiss) var dismiss
+    @State var reservationCopy = FlightReservation()
     @State var selection: String = ""
 
     var body: some View {
@@ -15,16 +18,16 @@ struct FlightDetailView: View {
                     Divider()
 
                     TransportationNode(
-                        city: $reservation.departureCity,
-                        date: $reservation.departureDate,
+                        city: $reservationCopy.departureCity,
+                        date: $reservationCopy.departureDate,
                         cityPlaceholder: "Origin",
                         dateTitle: "Departure Date",
                         label: "Depart"
                     )
 
                     TransportationNode(
-                        city: $reservation.arrivalCity,
-                        date: $reservation.arrivalDate,
+                        city: $reservationCopy.arrivalCity,
+                        date: $reservationCopy.arrivalDate,
                         cityPlaceholder: "Destination",
                         dateTitle: "Arrival Date",
                         label: "Arrive"
@@ -32,13 +35,13 @@ struct FlightDetailView: View {
                     
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Carrier").font(.caption).foregroundColor(.secondary)
-                        TextField("Carrier", text: $reservation.carrier)
+                        TextField("Carrier", text: $reservationCopy.carrier)
                             .textInputStyle()
                     }
                     
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Flight #").font(.caption).foregroundColor(.secondary)
-                        TextField("Flight #", text: $reservation.flightNumber)
+                        TextField("Flight #", text: $reservationCopy.flightNumber)
                             .textInputStyle()
                     }
 
@@ -48,13 +51,13 @@ struct FlightDetailView: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Confirmation #").font(.caption).foregroundColor(.secondary)
-                        TextField("Confirmation #", text: $reservation.confirmationNumber)
+                        TextField("Confirmation #", text: $reservationCopy.confirmationNumber)
                             .textInputStyle()
                     }
 
                     VStack(alignment: .leading, spacing: 5) {
                         Text("Cost").font(.caption).foregroundColor(.secondary)
-                        TextField("Cost", value: $reservation.cost, formatter: numberFormatter)
+                        TextField("Cost", value: $reservationCopy.cost, formatter: numberFormatter)
                             .textInputStyle()
                             .keyboardType(.decimalPad)
                         // TODO: add custom currency input
@@ -64,7 +67,7 @@ struct FlightDetailView: View {
                 VStack(alignment: .leading, spacing: 5) {
                     // TODO: add custom label style
                     Text("Notes").font(.caption).foregroundColor(.secondary)
-                    TextEditor(text: $reservation.notes)
+                    TextEditor(text: $reservationCopy.notes)
                         .frame(height: 120)
                         .padding(.vertical, -5)
                         .textInputStyle()
@@ -77,6 +80,13 @@ struct FlightDetailView: View {
             Spacer()
         }
         .background(Color(UIColor.secondarySystemBackground))
+        .onAppear { reservationCopy = reservation }
+        .navigationBarTitle("", displayMode: .inline)
+        .toolbar {
+            ToolbarItem(placement: .confirmationAction) {
+                Button(action: saveFlight, label: { Text("Save") })
+            }
+        }
     }
 }
 
