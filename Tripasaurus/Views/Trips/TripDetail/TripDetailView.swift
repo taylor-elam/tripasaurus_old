@@ -11,36 +11,44 @@ struct TripDetailView: View {
 
     var body: some View {
         VStack {
-            ScrollView {
-                VStack {
-                    TextField("Title", text: $tripCopy.title)
-                        .multilineTextAlignment(.center)
-                        .font(.title2)
-                    Divider().frame(height: 1)
-                    DateSection(
-                        date: $tripCopy.startDate,
-                        displayComponents: [.date],
-                        id: "startDate",
-                        isSelected: selection == "startDate",
-                        label: "Start Date",
-                        selectRow: selectDeselect,
-                        timeFormat: .omitted
-                    )
-                    Divider().frame(height: 1)
-                    DateSection(
-                        date: $tripCopy.endDate,
-                        displayComponents: [.date],
-                        id: "endDate",
-                        isSelected: selection == "endDate",
-                        label: "End Date",
-                        selectRow: selectDeselect,
-                        timeFormat: .omitted
-                    )
-                }
-                .padding()
-                .listCardStyle()
-                .padding(.horizontal)
+            VStack {
+                TextField("Title", text: $tripCopy.title)
+                    .multilineTextAlignment(.center)
+                    .font(.title2)
+                Divider().frame(height: 1)
+                DateSection(
+                    date: $tripCopy.startDate,
+                    displayComponents: [.date],
+                    id: "startDate",
+                    isSelected: selection == "startDate",
+                    label: "Start Date",
+                    selectRow: selectDeselect,
+                    timeFormat: .omitted
+                )
+                Divider().frame(height: 1)
+                DateSection(
+                    date: $tripCopy.endDate,
+                    displayComponents: [.date],
+                    id: "endDate",
+                    isSelected: selection == "endDate",
+                    label: "End Date",
+                    selectRow: selectDeselect,
+                    timeFormat: .omitted
+                )
             }
+            .padding()
+            .listCardStyle()
+            .padding(.horizontal)
+
+            List {
+                Section(content: {
+                    ForEach($trip.flights) { $flight in
+                        Text(flight.departureCity)
+                    }
+                }, header: { Text("Flights").sectionHeaderStyle() })
+            }
+
+            Spacer()
 
             Button(role: .destructive, action: deleteTrip, label: { Label("Delete Trip", systemImage: "trash") })
         }
