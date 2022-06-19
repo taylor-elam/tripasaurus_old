@@ -46,6 +46,7 @@
 		7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794494285D86EB00B850FB /* TripDetail+Controller.swift */; };
 		7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA98309285F7D0700C2CEC0 /* TextInput.swift */; };
 		7FA9830C285F943500C2CEC0 /* FlightDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */; };
+		7FA9830E285F9AC600C2CEC0 /* TransportationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		7F794494285D86EB00B850FB /* TripDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripDetail+Controller.swift"; sourceTree = "<group>"; };
 		7FA98309285F7D0700C2CEC0 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightDetail+Controller.swift"; sourceTree = "<group>"; };
+		7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */,
 				7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */,
 				7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */,
+				7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */,
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,
+				7FA9830E285F9AC600C2CEC0 /* TransportationNode.swift in Sources */,
 				7F79448C285D720800B850FB /* Trip.swift in Sources */,
 				7F79447C285D059800B850FB /* EventDetail+Controller.swift in Sources */,
 				7F794464285CF6C300B850FB /* Event.swift in Sources */,

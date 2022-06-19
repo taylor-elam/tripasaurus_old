@@ -12,11 +12,28 @@ struct FlightDetailView: View {
                     .onTapGesture { selectDeselect(row: "flightMainDetails") }
 
                 if selection == "flightMainDetails" {
-                    TextField("Departure City", text: $reservation.departureCity)
-                    TextField("Arrival City", text: $reservation.arrivalCity)
-                }
+                    Divider()
 
-                Divider()
+                    TransportationNode(
+                        city: $reservation.departureCity,
+                        date: $reservation.departureDate,
+                        cityPlaceholder: "Origin",
+                        dateTitle: "Departure Date",
+                        label: "Depart"
+                    )
+
+                    TransportationNode(
+                        city: $reservation.arrivalCity,
+                        date: $reservation.arrivalDate,
+                        cityPlaceholder: "Destination",
+                        dateTitle: "Arrival Date",
+                        label: "Arrive"
+                    )
+                    // TODO: add carrier input
+                    // TODO: add flight # input
+
+                    Divider()
+                }
 
                 HStack {
                     VStack(alignment: .leading, spacing: 5) {
@@ -33,8 +50,6 @@ struct FlightDetailView: View {
                         // TODO: add custom currency input
                     }
                 }
-                
-                Divider()
 
                 VStack(alignment: .leading, spacing: 5) {
                     // TODO: add custom label style
