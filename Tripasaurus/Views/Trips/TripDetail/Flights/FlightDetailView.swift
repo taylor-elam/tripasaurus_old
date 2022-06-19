@@ -29,8 +29,18 @@ struct FlightDetailView: View {
                         dateTitle: "Arrival Date",
                         label: "Arrive"
                     )
-                    // TODO: add carrier input
-                    // TODO: add flight # input
+                    
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Carrier").font(.caption).foregroundColor(.secondary)
+                        TextField("Carrier", text: $reservation.carrier)
+                            .textInputStyle()
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Flight #").font(.caption).foregroundColor(.secondary)
+                        TextField("Flight #", text: $reservation.flightNumber)
+                            .textInputStyle()
+                    }
 
                     Divider()
                 }
