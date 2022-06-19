@@ -25,10 +25,4 @@ extension TripDetailView {
         trip = tripCopy
         dismiss()
     }
-
-    func selectDeselect(row: String) {
-        withAnimation(.linear) {
-            selection = (selection == row) ? "" : row
-        }
-    }
 }

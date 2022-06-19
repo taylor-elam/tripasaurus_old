@@ -6,39 +6,11 @@ struct TripDetailView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var tripStore: TripStore
     @State var isNew = false
-    @State var selection: String = ""
     @State var tripCopy: Trip = Trip()
 
     var body: some View {
         VStack {
-            VStack {
-                TextField("Title", text: $tripCopy.title)
-                    .multilineTextAlignment(.center)
-                    .font(.title2)
-                Divider().frame(height: 1)
-                DateSection(
-                    date: $tripCopy.startDate,
-                    displayComponents: [.date],
-                    id: "startDate",
-                    isSelected: selection == "startDate",
-                    label: "Start Date",
-                    selectRow: selectDeselect,
-                    timeFormat: .omitted
-                )
-                Divider().frame(height: 1)
-                DateSection(
-                    date: $tripCopy.endDate,
-                    displayComponents: [.date],
-                    id: "endDate",
-                    isSelected: selection == "endDate",
-                    label: "End Date",
-                    selectRow: selectDeselect,
-                    timeFormat: .omitted
-                )
-            }
-            .padding()
-            .listCardStyle()
-            .padding(.horizontal)
+            TripMainDetails(trip: $tripCopy)
 
             List {
                 Section(content: {
@@ -50,6 +22,8 @@ struct TripDetailView: View {
                         )
                     }
                 }, header: { Label("Flights", systemImage: "airplane").font(.title2).fontWeight(.bold) })
+                // TODO: add Hotels & Lodging
+                // TODO: add Budgeting
             }
 
             Spacer()

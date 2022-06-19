@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F0D9104285EB09300B674D9 /* FlightReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9103285EB09300B674D9 /* FlightReservation.swift */; };
 		7F0D9106285EB97600B674D9 /* FlightMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */; };
+		7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9108285EC69300B674D9 /* TripMainDetails.swift */; };
 		7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E5FA285E07C300529B61 /* TripList+Controller.swift */; };
 		7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E602285E298900529B61 /* DetailDeleteButton.swift */; };
 		7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E604285E2C2500529B61 /* SectionHeader.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		7F0D9103285EB09300B674D9 /* FlightReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightReservation.swift; sourceTree = "<group>"; };
 		7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightMainDetails.swift; sourceTree = "<group>"; };
+		7F0D9108285EC69300B674D9 /* TripMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMainDetails.swift; sourceTree = "<group>"; };
 		7F52E5FA285E07C300529B61 /* TripList+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripList+Controller.swift"; sourceTree = "<group>"; };
 		7F52E602285E298900529B61 /* DetailDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeleteButton.swift; sourceTree = "<group>"; };
 		7F52E604285E2C2500529B61 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 			children = (
 				7F794492285D78CD00B850FB /* TripDetailView.swift */,
 				7F794494285D86EB00B850FB /* TripDetail+Controller.swift */,
+				7F0D9108285EC69300B674D9 /* TripMainDetails.swift */,
 				7F0D9107285EBC0F00B674D9 /* Flights */,
 			);
 			path = TripDetail;
@@ -398,6 +401,7 @@
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
 				7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */,
 				7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */,
+				7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */,
 				7F794470285CF91B00B850FB /* CustomLabelStyle.swift in Sources */,
 				7F794459285CF2A100B850FB /* AppTab.swift in Sources */,
 				7F794478285D03EF00B850FB /* EventIconPicker.swift in Sources */,
