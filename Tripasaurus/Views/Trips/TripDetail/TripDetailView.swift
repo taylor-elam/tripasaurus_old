@@ -43,9 +43,13 @@ struct TripDetailView: View {
             List {
                 Section(content: {
                     ForEach($trip.flights) { $flight in
-                        Text(flight.departureCity)
+                        FlightMainDetails(
+                            reservation: $flight,
+                            dateFormatter: dateFormatter,
+                            overnightDays: getOvernightDays(flight.departureDate, flight.arrivalDate)
+                        )
                     }
-                }, header: { Text("Flights").sectionHeaderStyle() })
+                }, header: { Label("Flights", systemImage: "airplane").font(.title2).fontWeight(.bold) })
             }
 
             Spacer()
