@@ -16,7 +16,7 @@ struct TripDetailView: View {
                 Section(content: {
                     ForEach($trip.flights) { $flight in
                         NavigationLink {
-                            FlightDetail(reservation: $flight)
+                            FlightDetailView(reservation: $flight)
                         } label: {
                             FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter)
                         }

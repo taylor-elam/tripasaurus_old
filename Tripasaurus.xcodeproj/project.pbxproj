@@ -10,7 +10,7 @@
 		7F0D9104285EB09300B674D9 /* FlightReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9103285EB09300B674D9 /* FlightReservation.swift */; };
 		7F0D9106285EB97600B674D9 /* FlightMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */; };
 		7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9108285EC69300B674D9 /* TripMainDetails.swift */; };
-		7F0D910B285EC7EC00B674D9 /* FlightDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D910A285EC7EC00B674D9 /* FlightDetail.swift */; };
+		7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */; };
 		7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E5FA285E07C300529B61 /* TripList+Controller.swift */; };
 		7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E602285E298900529B61 /* DetailDeleteButton.swift */; };
 		7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E604285E2C2500529B61 /* SectionHeader.swift */; };
@@ -45,13 +45,14 @@
 		7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794492285D78CD00B850FB /* TripDetailView.swift */; };
 		7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794494285D86EB00B850FB /* TripDetail+Controller.swift */; };
 		7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA98309285F7D0700C2CEC0 /* TextInput.swift */; };
+		7FA9830C285F943500C2CEC0 /* FlightDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7F0D9103285EB09300B674D9 /* FlightReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightReservation.swift; sourceTree = "<group>"; };
 		7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightMainDetails.swift; sourceTree = "<group>"; };
 		7F0D9108285EC69300B674D9 /* TripMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMainDetails.swift; sourceTree = "<group>"; };
-		7F0D910A285EC7EC00B674D9 /* FlightDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetail.swift; sourceTree = "<group>"; };
+		7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
 		7F52E5FA285E07C300529B61 /* TripList+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripList+Controller.swift"; sourceTree = "<group>"; };
 		7F52E602285E298900529B61 /* DetailDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeleteButton.swift; sourceTree = "<group>"; };
 		7F52E604285E2C2500529B61 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		7F794492285D78CD00B850FB /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		7F794494285D86EB00B850FB /* TripDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripDetail+Controller.swift"; sourceTree = "<group>"; };
 		7FA98309285F7D0700C2CEC0 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightDetail+Controller.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +123,8 @@
 		7F0D9107285EBC0F00B674D9 /* Flights */ = {
 			isa = PBXGroup;
 			children = (
-				7F0D910A285EC7EC00B674D9 /* FlightDetail.swift */,
+				7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */,
+				7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */,
 				7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */,
 			);
 			path = Flights;
@@ -416,8 +419,9 @@
 				7F794486285D175B00B850FB /* EventList+Controller.swift in Sources */,
 				7F79447A285D041800B850FB /* ListCard.swift in Sources */,
 				7F79448E285D72D700B850FB /* TripStore.swift in Sources */,
-				7F0D910B285EC7EC00B674D9 /* FlightDetail.swift in Sources */,
+				7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
+				7FA9830C285F943500C2CEC0 /* FlightDetail+Controller.swift in Sources */,
 				7F79447E285D071600B850FB /* DateSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

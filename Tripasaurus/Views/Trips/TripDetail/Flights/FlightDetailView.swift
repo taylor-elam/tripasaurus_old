@@ -1,26 +1,20 @@
 import SwiftUI
 
-struct FlightDetail: View {
+struct FlightDetailView: View {
     @Binding var reservation: FlightReservation
-
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "E, MMM d"
-        return formatter
-    }
-
-    var numberFormatter: NumberFormatter {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 2
-        return formatter
-    }
+    @State var selection: String = ""
 
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 10) {
                 FlightMainDetails(reservation: $reservation, dateFormatter: dateFormatter)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .onTapGesture { selectDeselect(row: "flightMainDetails") }
+
+                if selection == "flightMainDetails" {
+                    TextField("Departure City", text: $reservation.departureCity)
+                    TextField("Arrival City", text: $reservation.arrivalCity)
+                }
 
                 Divider()
 
@@ -61,10 +55,10 @@ struct FlightDetail: View {
     }
 }
 
-struct FlightDetail_Previews: PreviewProvider {
+struct FlightDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            FlightDetail(reservation: .constant(FlightReservation.example))
+            FlightDetailView(reservation: .constant(FlightReservation.example))
                 .previewLayout(.sizeThatFits)
         }
     }
