@@ -22,34 +22,33 @@ struct FlightDetail: View {
                 FlightMainDetails(reservation: $reservation, dateFormatter: dateFormatter)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
-                if !reservation.confirmationNumber.isEmpty || reservation.cost > 0 || !reservation.notes.isEmpty {
-                    Divider()
-                }
+                Divider()
 
                 HStack {
-                    if !reservation.confirmationNumber.isEmpty {
-                        VStack(alignment: .leading) {
-                            Text("Confirmation #").font(.caption).foregroundColor(.secondary)
-                            Text(reservation.confirmationNumber)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Confirmation #").font(.caption).foregroundColor(.secondary)
+                        TextField("Confirmation #", text: $reservation.confirmationNumber)
+                            .textInputStyle()
                     }
 
-                    if reservation.cost > 0 {
-                        VStack(alignment: .leading) {
-                            Text("Cost").font(.caption).foregroundColor(.secondary)
-                            Text(numberFormatter.string(from: reservation.cost as NSNumber) ?? "")
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("Cost").font(.caption).foregroundColor(.secondary)
+                        TextField("Cost", value: $reservation.cost, formatter: numberFormatter)
+                            .textInputStyle()
+                            .keyboardType(.decimalPad)
+                        // TODO: add custom currency input
                     }
                 }
+                
+                Divider()
 
-                if !reservation.notes.isEmpty {
-                    VStack(alignment: .leading) {
-                        Text("Notes").font(.caption).foregroundColor(.secondary)
-                        Text(reservation.notes)
-                        // TODO: Add More/Less button and truncate notes
-                    }
+                VStack(alignment: .leading, spacing: 5) {
+                    // TODO: add custom label style
+                    Text("Notes").font(.caption).foregroundColor(.secondary)
+                    TextEditor(text: $reservation.notes)
+                        .frame(height: 120)
+                        .padding(.vertical, -5)
+                        .textInputStyle()
                 }
             }
             .padding()

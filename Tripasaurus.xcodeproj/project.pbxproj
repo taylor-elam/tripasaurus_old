@@ -44,6 +44,7 @@
 		7F794490285D740100B850FB /* TripRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79448F285D740100B850FB /* TripRow.swift */; };
 		7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794492285D78CD00B850FB /* TripDetailView.swift */; };
 		7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794494285D86EB00B850FB /* TripDetail+Controller.swift */; };
+		7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA98309285F7D0700C2CEC0 /* TextInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		7F79448F285D740100B850FB /* TripRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripRow.swift; sourceTree = "<group>"; };
 		7F794492285D78CD00B850FB /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		7F794494285D86EB00B850FB /* TripDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripDetail+Controller.swift"; sourceTree = "<group>"; };
+		7FA98309285F7D0700C2CEC0 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 				7F794479285D041800B850FB /* ListCard.swift */,
 				7F52E606285E4D5500529B61 /* ResizeImage.swift */,
 				7F52E604285E2C2500529B61 /* SectionHeader.swift */,
+				7FA98309285F7D0700C2CEC0 /* TextInput.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
 				7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */,
+				7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */,
 				7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */,
 				7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */,
 				7F794470285CF91B00B850FB /* CustomLabelStyle.swift in Sources */,
