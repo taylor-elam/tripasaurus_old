@@ -14,11 +14,14 @@ struct TripDetailView: View {
 
             List {
                 Section(content: {
-                    ForEach($trip.flights) { $flight in
+                    ForEach($trip.flights.filter { !$0.isDeleted.wrappedValue }) { $flight in
                         NavigationLink {
                             FlightDetailView(reservation: $flight)
                         } label: {
                             FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter)
+                        }
+                        .swipeActions {
+                            Button(role: .destructive, action: { flight.isDeleted = true }, label: { Label("Delete", systemImage: "trash") })
                         }
                     }
                 }, header: { Label("Flights", systemImage: "airplane").font(.title2).fontWeight(.bold) })
