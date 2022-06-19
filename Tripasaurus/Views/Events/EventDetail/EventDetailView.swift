@@ -32,6 +32,7 @@ struct EventDetailView: View {
             TaskSection(tasks: $eventCopy.tasks)
 
             Button(role: .destructive, action: deleteEvent, label: { Label("Delete Event", systemImage: "trash") })
+                .deleteButtonStyle()
         }
         .onAppear { eventCopy = event }
         .navigationBarTitle("", displayMode: .inline)

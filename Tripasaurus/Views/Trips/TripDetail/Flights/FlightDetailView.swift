@@ -78,6 +78,9 @@ struct FlightDetailView: View {
             .padding(.horizontal)
 
             Spacer()
+            
+            Button(role: .destructive, action: deleteReservation, label: { Label("Delete Reservation", systemImage: "trash") })
+                .deleteButtonStyle()
         }
         .background(Color(UIColor.secondarySystemBackground))
         .onAppear { reservationCopy = reservation }

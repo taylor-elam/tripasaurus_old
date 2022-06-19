@@ -14,6 +14,11 @@ extension FlightDetailView {
         return formatter
     }
 
+    func deleteReservation() {
+        reservation.isDeleted = true
+        dismiss()
+    }
+
     func saveFlight() {
         reservation = reservationCopy
         dismiss()
