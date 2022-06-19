@@ -2,20 +2,24 @@ import SwiftUI
 
 struct FlightDetailView: View {
     @Binding var reservation: FlightReservation
+    @Binding var trip: Trip
 
     @Environment(\.dismiss) var dismiss
+    @State var isNew = false
     @State var reservationCopy = FlightReservation()
     @State var selection: String = ""
 
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 10) {
-                FlightMainDetails(reservation: $reservation, dateFormatter: dateFormatter)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .onTapGesture { selectDeselect(row: "flightMainDetails") }
+                if !isNew {
+                    FlightMainDetails(reservation: $reservation, dateFormatter: dateFormatter)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .onTapGesture { selectDeselect(row: "flightMainDetails") }
+                }
 
                 if selection == "flightMainDetails" {
-                    Divider()
+                    if !isNew { Divider() }
 
                     TransportationNode(
                         city: $reservationCopy.departureCity,
@@ -83,11 +87,20 @@ struct FlightDetailView: View {
                 .deleteButtonStyle()
         }
         .background(Color(UIColor.secondarySystemBackground))
-        .onAppear { reservationCopy = reservation }
+        .onAppear {
+            reservationCopy = reservation
+            selection = isNew ? "flightMainDetails" : ""
+        }
         .navigationBarTitle("", displayMode: .inline)
         .toolbar {
+            ToolbarItem(placement: .cancellationAction) {
+                if isNew { Button(action: cancel, label: { Text("Cancel") }) }
+            }
             ToolbarItem(placement: .confirmationAction) {
-                Button(action: saveFlight, label: { Text("Save") })
+                Button(
+                    action: isNew ? addFlight : saveFlight,
+                    label: { Text(isNew ? "Add" : "Save").disabled(isSaveDisabled) }
+                )
             }
         }
     }
@@ -96,7 +109,7 @@ struct FlightDetailView: View {
 struct FlightDetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            FlightDetailView(reservation: .constant(FlightReservation.example))
+            FlightDetailView(reservation: .constant(FlightReservation.example), trip: .constant(Trip.example))
                 .previewLayout(.sizeThatFits)
         }
     }

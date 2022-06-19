@@ -5,7 +5,9 @@ struct TripDetailView: View {
 
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var tripStore: TripStore
+    @State var isAddingNewFlight = false
     @State var isNew = false
+    @State var newFlight = FlightReservation()
     @State var tripCopy: Trip = Trip()
 
     var body: some View {
@@ -16,7 +18,7 @@ struct TripDetailView: View {
                 Section(content: {
                     ForEach($trip.flights.filter { !$0.isDeleted.wrappedValue }) { $flight in
                         NavigationLink {
-                            FlightDetailView(reservation: $flight)
+                            FlightDetailView(reservation: $flight, trip: $trip)
                         } label: {
                             FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter)
                         }
@@ -24,6 +26,8 @@ struct TripDetailView: View {
                             Button(role: .destructive, action: { flight.isDeleted = true }, label: { Label("Delete", systemImage: "trash") })
                         }
                     }
+                    Button(action: addFlight, label: { Label("Add Task", systemImage: "plus") })
+                        .padding(.horizontal, -4)
                 }, header: { Label("Flights", systemImage: "airplane").font(.title2).fontWeight(.bold) })
                 // TODO: add Hotels & Lodging
                 // TODO: add Budgeting
@@ -45,6 +49,12 @@ struct TripDetailView: View {
             ToolbarItem(placement: .confirmationAction) {
                 Button(isNew ? "Add" : "Save") { isNew ? addTrip(trip: tripCopy) : saveTrip() }
                     .disabled(tripCopy.title.isEmpty)
+            }
+        }
+        .sheet(isPresented: $isAddingNewFlight) {
+            NavigationView {
+                FlightDetailView(reservation: $newFlight, trip: $trip, isNew: true)
+                    .navigationBarTitle(Text("New Flight Reservation"), displayMode: .inline)
             }
         }
     }
