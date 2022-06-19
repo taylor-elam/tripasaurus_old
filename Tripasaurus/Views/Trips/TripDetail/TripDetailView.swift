@@ -15,11 +15,11 @@ struct TripDetailView: View {
             List {
                 Section(content: {
                     ForEach($trip.flights) { $flight in
-                        FlightMainDetails(
-                            reservation: $flight,
-                            dateFormatter: dateFormatter,
-                            overnightDays: getOvernightDays(flight.departureDate, flight.arrivalDate)
-                        )
+                        NavigationLink {
+                            FlightDetail(reservation: $flight)
+                        } label: {
+                            FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter)
+                        }
                     }
                 }, header: { Label("Flights", systemImage: "airplane").font(.title2).fontWeight(.bold) })
                 // TODO: add Hotels & Lodging
@@ -29,6 +29,7 @@ struct TripDetailView: View {
             Spacer()
 
             Button(role: .destructive, action: deleteTrip, label: { Label("Delete Trip", systemImage: "trash") })
+                .deleteButtonStyle()
         }
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))

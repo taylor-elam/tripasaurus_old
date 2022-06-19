@@ -17,10 +17,6 @@ extension TripDetailView {
         dismiss()
     }
 
-    func getOvernightDays(_ departureDate: Date, _ arrivalDate: Date) -> Int {
-        return Calendar.current.dateComponents([.day], from: departureDate.startOfDay, to: arrivalDate.startOfDay).day ?? 0
-    }
-
     func saveTrip() {
         trip = tripCopy
         dismiss()

@@ -3,7 +3,10 @@ import SwiftUI
 struct FlightMainDetails: View {
     @Binding var reservation: FlightReservation
     var dateFormatter: DateFormatter
-    var overnightDays: Int
+
+    var overnightDays: Int {
+        return Calendar.current.dateComponents([.day], from: reservation.departureDate.startOfDay, to: reservation.arrivalDate.startOfDay).day ?? 0
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -40,8 +43,7 @@ struct FlightMainDetails_Previews: PreviewProvider {
     static var previews: some View {
         FlightMainDetails(
             reservation: .constant(FlightReservation.example),
-            dateFormatter: DateFormatter(),
-            overnightDays: 1
+            dateFormatter: DateFormatter()
         )
         .previewLayout(.sizeThatFits)
     }
