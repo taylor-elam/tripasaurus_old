@@ -17,7 +17,7 @@ struct TaskSection: View {
                     TaskRow(task: $task)
                         .swipeActions { DeleteButton(action: { task.isDeleted = true }) }
                 }
-                Button(action: addTask, label: { Label("Add Task", systemImage: "plus") })
+                Button(action: addTask, label: { Label("Add Task", systemImage: AppSymbol.addNew.name) })
                     .disabled(!tasks.allSatisfy { !$0.title.isEmpty })
                     .padding(.horizontal, -4)
             }, header: {

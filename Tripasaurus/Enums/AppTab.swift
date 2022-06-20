@@ -13,8 +13,8 @@ enum AppTab: Int, CaseIterable, Identifiable, Codable {
     }
     var icon: String {
         switch self {
-        case .trips: return "airplane"
-        case .events: return "calendar"
+        case .trips: return AppSymbol.airplane.name
+        case .events: return AppSymbol.calendar.name
         }
     }
     var tag: Int { rawValue }

@@ -25,10 +25,12 @@ struct TripDetailView: View {
                     }
                     Button(
                         action: addNewFlight,
-                        label: { Label("Add Task", systemImage: "plus") }
+                        label: { Label("Add Task", systemImage: AppSymbol.addNew.name) }
                     )
                     .padding(.horizontal, -4)
-                }, header: { Label("Flights", systemImage: "airplane").font(.title2).fontWeight(.bold) })
+                }, header: {
+                    Label("Flights", systemImage: AppSymbol.airplane.name).font(.title2).fontWeight(.bold)
+                })
                 // TODO: add Hotels & Lodging
                 // TODO: add Budgeting
             }

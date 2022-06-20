@@ -25,7 +25,7 @@ struct EventListView: View {
         .listStyle(SidebarListStyle())
         .toolbar {
             ToolbarItem {
-                Button { addNewEvent() } label: { Label("Add Event", systemImage: "plus") }
+                Button { addNewEvent() } label: { Label("Add Event", systemImage: AppSymbol.addNew.name) }
             }
         }
         .sheet(isPresented: $isAddingNewEvent) {

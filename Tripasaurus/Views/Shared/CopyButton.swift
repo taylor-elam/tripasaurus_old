@@ -4,7 +4,7 @@ struct CopyButton: View {
     var action: () -> Void
 
     var body: some View {
-        Button(action: action, label: { Label("Copy", systemImage: "doc.on.doc") })
+        Button(action: action, label: { Label("Copy", systemImage: AppSymbol.copy.name) })
             .tint(.purple)
     }
 }

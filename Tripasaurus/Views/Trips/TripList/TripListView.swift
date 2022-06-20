@@ -20,7 +20,7 @@ struct TripListView: View {
         .listStyle(SidebarListStyle())
         .toolbar {
             ToolbarItem {
-                Button(action: addNewTrip, label: { Label("Add Trip", systemImage: "plus") })
+                Button(action: addNewTrip, label: { Label("Add Trip", systemImage: AppSymbol.addNew.name) })
             }
         }
         .sheet(isPresented: $isAddingNewTrip) {
