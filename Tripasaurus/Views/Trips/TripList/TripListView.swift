@@ -10,19 +10,11 @@ struct TripListView: View {
             // TODO: add sections by time period
             ForEach(tripStore.sortedTrips()) { $trip in
                 NavigationLink(
-                    destination:  { TripDetailView(trip: $trip) },
+                    destination: { TripDetailView(trip: $trip) },
                     label: { TripRow(trip: $trip) }
                 )
-                .swipeActions(edge: .leading) {
-                    Button(
-                        action: { copy(trip: trip) },
-                        label: { Label("Copy", systemImage: "doc.on.doc") }
-                    )
-                    .tint(.purple)
-                }
-                .swipeActions {
-                    DeleteButton(action: { trip.isDeleted = true })
-                }
+                .swipeActions(edge: .leading) { CopyButton(action: { copy(trip: trip) }) }
+                .swipeActions { DeleteButton(action: { trip.isDeleted = true }) }
             }
         }
         .listStyle(SidebarListStyle())

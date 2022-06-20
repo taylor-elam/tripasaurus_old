@@ -6,7 +6,7 @@ extension EventListView {
         isAddingNewEvent = true
     }
 
-    func copyEvent(event: Event) {
+    func copy(event: Event) {
         newEvent = event
         newEvent.title = "Copy of \(event.title)"
         isAddingNewEvent = true
