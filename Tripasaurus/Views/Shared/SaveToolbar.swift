@@ -10,12 +10,12 @@ struct SaveToolbar: ToolbarContent {
     var body: some ToolbarContent {
         Group {
             ToolbarItem(placement: .cancellationAction) {
-                if isNew { Button(action: cancelAction, label: { Text("Cancel") }) }
+                if isNew { Button(action: cancelAction, label: { Text(LocalizedStringKey(AppVault.cancel.name)) }) }
             }
             ToolbarItem(placement: .confirmationAction) {
                 Button(
                     action: isNew ? addAction : saveAction,
-                    label: { Text(isNew ? "Add" : "Save").disabled(isSaveDisabled) }
+                    label: { Text(LocalizedStringKey(isNew ? AppVault.add.name : AppVault.save.name)).disabled(isSaveDisabled) }
                 )
             }
         }

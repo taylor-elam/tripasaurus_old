@@ -8,7 +8,7 @@ struct DeleteButton: View {
         Button(
             role: .destructive,
             action: action,
-            label: { Label(label, systemImage: AppSymbol.delete.name) }
+            label: { Label(LocalizedStringKey(label), systemImage: AppSymbol.delete.name) }
         )
     }
 }

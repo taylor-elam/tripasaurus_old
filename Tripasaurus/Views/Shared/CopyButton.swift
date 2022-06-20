@@ -4,8 +4,11 @@ struct CopyButton: View {
     var action: () -> Void
 
     var body: some View {
-        Button(action: action, label: { Label("Copy", systemImage: AppSymbol.copy.name) })
-            .tint(.purple)
+        Button(
+            action: action,
+            label: { Label(LocalizedStringKey(AppVault.copy.name), systemImage: AppSymbol.copy.name) }
+        )
+        .tint(.purple)
     }
 }
 
