@@ -2,3 +2,11 @@
 "app.cancel" = "Cancel";
 "app.copy" = "Copy";
 "app.save" = "Save";
+
+"event.add" = "Add Event";
+"event.date" = "Date";
+"event.delete" = "Delete Event";
+"event.new" = "New Event";
+"event.task.add" = "Add Task";
+"event.task.description" = "Task Description";
+"event.task.sectionTitle" = "Tasks";

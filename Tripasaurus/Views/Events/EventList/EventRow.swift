@@ -25,7 +25,7 @@ struct EventRow: View {
         .badge(event.remainingTaskCount - event.emptyTaskCount)
 
         if event.isComplete {
-            Image(systemName: "checkmark").foregroundStyle(.secondary)
+            Image(systemName: AppSymbol.checkmark.name).foregroundStyle(.secondary)
         }
     }
 }

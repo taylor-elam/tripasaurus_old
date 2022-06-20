@@ -13,17 +13,15 @@ struct DateSection: View {
     var body: some View {
         VStack {
             HStack {
-                Text(label).font(.callout)
+                Text(LocalizedStringKey(label)).font(.callout)
                 Spacer()
-                if !isSelected {
-                    Text(date.formatted(date: dateFormat, time: timeFormat))
-                }
+                if !isSelected { Text(date.formatted(date: dateFormat, time: timeFormat)) }
             }
             .contentShape(Rectangle())
             .onTapGesture { selectRow(id) }
 
             if isSelected {
-                DatePicker(label, selection: $date, displayedComponents: displayComponents)
+                DatePicker(LocalizedStringKey(label), selection: $date, displayedComponents: displayComponents)
                     .datePickerStyle(.graphical)
                     .labelsHidden()
             }

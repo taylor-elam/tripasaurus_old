@@ -15,14 +15,14 @@ struct EventDetailView: View {
                 color: $eventCopy.color,
                 icon: $eventCopy.icon,
                 title: $eventCopy.title,
-                isSelected: selection == "Icon",
+                isSelected: selection == "icon",
                 selectRow: selectDeselect
             )
 
             DateSection(
                 date: $eventCopy.date,
                 isSelected: selection == "date",
-                label: "Date",
+                label: EventVault.date.name,
                 selectRow: selectDeselect
             )
             .padding()
@@ -31,10 +31,9 @@ struct EventDetailView: View {
 
             TaskSection(tasks: $eventCopy.tasks)
 
-            DeleteButton(action: deleteEvent, label: "Delete Event").deleteButtonStyle()
+            DeleteButton(action: deleteEvent, label: EventVault.delete.name).deleteButtonStyle()
         }
         .onAppear { eventCopy = event }
-        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: eventCopy.title.isEmpty, addAction: { add(event: eventCopy) }, cancelAction: cancel, saveAction: saveEvent)
         }

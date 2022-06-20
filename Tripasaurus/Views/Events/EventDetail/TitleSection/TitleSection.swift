@@ -10,17 +10,18 @@ struct TitleSection: View {
     var body: some View {
         VStack {
             HStack {
-                Button {
-                    selectRow("Icon")
-                } label: {
-                    Image(systemName: icon.name)
-                        .resizeImage(width: 30, height: 30)
-                        .foregroundColor(color.mainColor)
-                        .padding(11)
-                }
+                Button(
+                    action: { selectRow("icon") },
+                    label: {
+                        Image(systemName: icon.name)
+                            .resizeImage(width: 30, height: 30)
+                            .foregroundColor(color.mainColor)
+                            .padding(11)
+                    }
+                )
                 .listCardStyle()
 
-                TextField("New Event", text: $title)
+                TextField(LocalizedStringKey(EventVault.new.name), text: $title)
                     .font(.title2)
                     .padding(.horizontal)
                     .padding(.vertical, 12)

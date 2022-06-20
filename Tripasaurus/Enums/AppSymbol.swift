@@ -5,6 +5,9 @@ enum AppSymbol: String, CaseIterable, Identifiable {
     case airplane = "airplane"
     case delete = "trash"
     case calendar = "calendar"
+    case checkmark = "checkmark"
+    case checkmarkCircle = "checkmark.circle.fill"
+    case circle = "circle"
     case copy = "doc.on.doc"
 
     var id: String { self.rawValue }
