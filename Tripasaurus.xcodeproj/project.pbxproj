@@ -49,6 +49,7 @@
 		7FA9830E285F9AC600C2CEC0 /* TransportationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */; };
 		7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */; };
 		7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983112860089300C2CEC0 /* CopyButton.swift */; };
+		7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983132860155A00C2CEC0 /* SaveToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationNode.swift; sourceTree = "<group>"; };
 		7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		7FA983112860089300C2CEC0 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
+		7FA983132860155A00C2CEC0 /* SaveToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToolbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 				7FA983112860089300C2CEC0 /* CopyButton.swift */,
 				7F79447D285D071600B850FB /* DateSection.swift */,
 				7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */,
+				7FA983132860155A00C2CEC0 /* SaveToolbar.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,
 				7FA9830E285F9AC600C2CEC0 /* TransportationNode.swift in Sources */,
+				7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */,
 				7F79448C285D720800B850FB /* Trip.swift in Sources */,
 				7F79447C285D059800B850FB /* EventDetail+Controller.swift in Sources */,
 				7F794464285CF6C300B850FB /* Event.swift in Sources */,

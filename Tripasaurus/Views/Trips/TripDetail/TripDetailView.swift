@@ -21,12 +21,10 @@ struct TripDetailView: View {
                             destination: { FlightDetailView(reservation: $flight, trip: $trip) },
                             label: { FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter) }
                         )
-                        .swipeActions {
-                            DeleteButton(action: { flight.isDeleted = true })
-                        }
+                        .swipeActions { DeleteButton(action: { flight.isDeleted = true }) }
                     }
                     Button(
-                        action: addFlight,
+                        action: addNewFlight,
                         label: { Label("Add Task", systemImage: "plus") }
                     )
                     .padding(.horizontal, -4)
@@ -34,6 +32,7 @@ struct TripDetailView: View {
                 // TODO: add Hotels & Lodging
                 // TODO: add Budgeting
             }
+            .listStyle(.sidebar)
 
             Spacer()
 
@@ -44,16 +43,7 @@ struct TripDetailView: View {
         .navigationBarTitle("", displayMode: .inline)
         // TODO: add styling to navbar
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                if isNew { Button(action: cancelAddTrip, label: { Text("Cancel") }) }
-            }
-            ToolbarItem(placement: .confirmationAction) {
-                Button(
-                    action: { isNew ? add(trip: tripCopy) : saveTrip() },
-                    label: { Text(isNew ? "Add" : "Save") }
-                )
-                .disabled(tripCopy.title.isEmpty)
-            }
+            SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addTrip, cancelAction: cancelAddTrip, saveAction: saveTrip)
         }
         .sheet(isPresented: $isAddingNewFlight) {
             NavigationView {

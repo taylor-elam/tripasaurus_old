@@ -84,7 +84,7 @@ struct FlightDetailView: View {
 
             Spacer()
 
-            DeleteButton(action: deleteReservation, label: "Delete Reservation").deleteButtonStyle()
+            DeleteButton(action: deleteFlight, label: "Delete Reservation").deleteButtonStyle()
         }
         .background(Color(UIColor.secondarySystemBackground))
         .onAppear {
@@ -93,15 +93,7 @@ struct FlightDetailView: View {
         }
         .navigationBarTitle("", displayMode: .inline)
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                if isNew { Button(action: cancel, label: { Text("Cancel") }) }
-            }
-            ToolbarItem(placement: .confirmationAction) {
-                Button(
-                    action: isNew ? addFlight : saveFlight,
-                    label: { Text(isNew ? "Add" : "Save").disabled(isSaveDisabled) }
-                )
-            }
+            SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addFlight, cancelAction: cancel, saveAction: saveFlight)
         }
     }
 }
