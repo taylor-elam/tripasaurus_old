@@ -22,11 +22,7 @@ struct TripDetailView: View {
                             label: { FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter) }
                         )
                         .swipeActions {
-                            Button(
-                                role: .destructive,
-                                action: { flight.isDeleted = true },
-                                label: { Label("Delete", systemImage: "trash") }
-                            )
+                            DeleteButton(action: { flight.isDeleted = true })
                         }
                     }
                     Button(
@@ -41,12 +37,7 @@ struct TripDetailView: View {
 
             Spacer()
 
-            Button(
-                role: .destructive,
-                action: deleteTrip,
-                label: { Label("Delete Trip", systemImage: "trash") }
-            )
-            .deleteButtonStyle()
+            DeleteButton(action: deleteTrip, label: "Delete Trip").deleteButtonStyle()
         }
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))

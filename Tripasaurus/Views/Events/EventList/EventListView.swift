@@ -25,7 +25,7 @@ struct EventListView: View {
                                 .tint(.purple)
                             }
                             .swipeActions {
-                                Button(role: .destructive, action: { event.isDeleted = true }, label: { Label("Delete", systemImage: "trash") })
+                                DeleteButton(action: { event.isDeleted = true })
                             }
                         }
                     }, header: { Text(section.name).sectionHeaderStyle() })
