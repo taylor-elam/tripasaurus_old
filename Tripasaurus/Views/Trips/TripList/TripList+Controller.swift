@@ -6,7 +6,7 @@ extension TripListView {
         isAddingNewTrip = true
     }
     
-    func copyTrip(trip: Trip) {
+    func copy(trip: Trip) {
         newTrip = trip
         newTrip.title = "Copy of \(trip.title)"
         isAddingNewTrip = true

@@ -12,8 +12,12 @@ extension TripDetailView {
         isAddingNewFlight = true
     }
 
-    func addTrip(trip: Trip) {
+    func add(trip: Trip) {
         tripStore.add(trip)
+        dismiss()
+    }
+
+    func cancelAddTrip() {
         dismiss()
     }
 

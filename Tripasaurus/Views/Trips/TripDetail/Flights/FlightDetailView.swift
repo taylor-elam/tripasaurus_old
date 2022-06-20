@@ -5,6 +5,7 @@ struct FlightDetailView: View {
     @Binding var trip: Trip
 
     @Environment(\.dismiss) var dismiss
+    @State var isMainDetailsSelected: Bool = false
     @State var isNew = false
     @State var reservationCopy = FlightReservation()
     @State var selection: String = ""
@@ -15,10 +16,10 @@ struct FlightDetailView: View {
                 if !isNew {
                     FlightMainDetails(reservation: $reservation, dateFormatter: dateFormatter)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .onTapGesture { selectDeselect(row: "flightMainDetails") }
+                        .onTapGesture { isMainDetailsSelected.toggle() }
                 }
 
-                if selection == "flightMainDetails" {
+                if isMainDetailsSelected {
                     if !isNew { Divider() }
 
                     TransportationNode(
@@ -83,13 +84,17 @@ struct FlightDetailView: View {
 
             Spacer()
             
-            Button(role: .destructive, action: deleteReservation, label: { Label("Delete Reservation", systemImage: "trash") })
-                .deleteButtonStyle()
+            Button(
+                role: .destructive,
+                action: deleteReservation,
+                label: { Label("Delete Reservation", systemImage: "trash") }
+            )
+            .deleteButtonStyle()
         }
         .background(Color(UIColor.secondarySystemBackground))
         .onAppear {
             reservationCopy = reservation
-            selection = isNew ? "flightMainDetails" : ""
+            isMainDetailsSelected = isNew
         }
         .navigationBarTitle("", displayMode: .inline)
         .toolbar {

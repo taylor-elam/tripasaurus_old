@@ -39,7 +39,7 @@ struct EventDetailView: View {
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
                 if isNew {
-                    Button("Cancel") { dismiss() }
+                    Button(action: cancelEventEdit, label: { Text("Cancel") })
                 }
             }
             ToolbarItem(placement: .confirmationAction) {
