@@ -8,7 +8,7 @@ extension TripDetailView {
     }
 
     var isSaveDisabled: Bool {
-        return trip.title == ""
+        return trip.title.isEmpty
     }
 
     func addNewFlight() {

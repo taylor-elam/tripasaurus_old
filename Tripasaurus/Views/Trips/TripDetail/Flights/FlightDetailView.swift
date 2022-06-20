@@ -26,29 +26,37 @@ struct FlightDetailView: View {
                         TransportationNode(
                             city: $reservationCopy.departureCity,
                             date: $reservationCopy.departureDate,
-                            cityPlaceholder: "Origin",
-                            dateTitle: "Departure Date",
-                            label: "Depart"
+                            cityPlaceholder: TripVault.flightDepartureCityPlaceholder.name,
+                            dateTitle: TripVault.flightDepartureDate.name,
+                            label: TripVault.flightDepart.name
                         )
 
                         TransportationNode(
                             city: $reservationCopy.arrivalCity,
                             date: $reservationCopy.arrivalDate,
-                            cityPlaceholder: "Destination",
-                            dateTitle: "Arrival Date",
-                            label: "Arrive"
+                            cityPlaceholder: TripVault.flightArrivalCityPlaceholder.name,
+                            dateTitle: TripVault.flightArrivalDate.name,
+                            label: TripVault.flightArrive.name
                         )
                         
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("Carrier").font(.caption).foregroundColor(.secondary)
-                            TextField("Carrier", text: $reservationCopy.carrier)
-                                .textInputStyle()
+                            Text(LocalizedStringKey(TripVault.flightCarrier.name))
+                                .font(.caption).foregroundColor(.secondary)
+                            TextField(
+                                LocalizedStringKey(TripVault.flightCarrier.name),
+                                text: $reservationCopy.carrier
+                            )
+                            .textInputStyle()
                         }
                         
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("Flight #").font(.caption).foregroundColor(.secondary)
-                            TextField("Flight #", text: $reservationCopy.flightNumber)
-                                .textInputStyle()
+                            Text(LocalizedStringKey(TripVault.flightNumber.name))
+                                .font(.caption).foregroundColor(.secondary)
+                            TextField(
+                                LocalizedStringKey(TripVault.flightNumber.name),
+                                text: $reservationCopy.flightNumber
+                            )
+                            .textInputStyle()
                         }
 
                         Divider()
@@ -56,23 +64,32 @@ struct FlightDetailView: View {
 
                     HStack {
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("Confirmation #").font(.caption).foregroundColor(.secondary)
-                            TextField("Confirmation #", text: $reservationCopy.confirmationNumber)
-                                .textInputStyle()
+                            Text(LocalizedStringKey(TripVault.flightConfirmationNumber.name))
+                                .font(.caption).foregroundColor(.secondary)
+                            TextField(
+                                LocalizedStringKey(TripVault.flightConfirmationNumber.name),
+                                text: $reservationCopy.confirmationNumber
+                            )
+                            .textInputStyle()
                         }
 
                         VStack(alignment: .leading, spacing: 5) {
-                            Text("Cost").font(.caption).foregroundColor(.secondary)
-                            TextField("Cost", value: $reservationCopy.cost, formatter: numberFormatter)
-                                .textInputStyle()
-                                .keyboardType(.decimalPad)
+                            Text(LocalizedStringKey(TripVault.flightCost.name))
+                                .font(.caption).foregroundColor(.secondary)
+                            TextField(
+                                LocalizedStringKey(TripVault.flightCost.name),
+                                value: $reservationCopy.cost, formatter: numberFormatter
+                            )
+                            .textInputStyle()
+                            .keyboardType(.decimalPad)
                             // TODO: add custom currency input
                         }
                     }
 
                     VStack(alignment: .leading, spacing: 5) {
                         // TODO: add custom label style
-                        Text("Notes").font(.caption).foregroundColor(.secondary)
+                        Text(LocalizedStringKey(TripVault.flightNotes.name))
+                            .font(.caption).foregroundColor(.secondary)
                         TextEditor(text: $reservationCopy.notes)
                             .frame(height: 120)
                             .padding(.vertical, -5)
@@ -84,14 +101,13 @@ struct FlightDetailView: View {
                 .padding(.horizontal)
             }
 
-            DeleteButton(action: deleteFlight, label: "Delete Reservation").deleteButtonStyle()
+            DeleteButton(action: deleteFlight, label: TripVault.flightDelete.name).deleteButtonStyle()
         }
         .background(Color(UIColor.secondarySystemBackground))
         .onAppear {
             reservationCopy = reservation
             isMainDetailsSelected = isNew
         }
-        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addFlight, cancelAction: cancel, saveAction: saveFlight)
         }

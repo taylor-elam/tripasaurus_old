@@ -2,7 +2,7 @@ import SwiftUI
 
 struct DeleteButton: View {
     var action: () -> Void
-    var label: String = "Delete"
+    var label: String = AppVault.delete.name
 
     var body: some View {
         Button(
@@ -15,6 +15,6 @@ struct DeleteButton: View {
 
 struct DeleteButton_Previews: PreviewProvider {
     static var previews: some View {
-        DeleteButton(action: {}, label: "Delete")
+        DeleteButton(action: {}, label: EventVault.delete.name)
     }
 }

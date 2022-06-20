@@ -8,7 +8,7 @@ extension FlightDetailView {
     }
 
     var isSaveDisabled: Bool {
-        return reservationCopy.departureCity == "" || reservationCopy.arrivalCity == ""
+        return reservationCopy.departureCity.isEmpty || reservationCopy.arrivalCity.isEmpty
     }
 
     var numberFormatter: NumberFormatter {

@@ -12,7 +12,7 @@ struct TripMainDetails: View {
 
     var body: some View {
         VStack {
-            TextField("Title", text: $trip.title)
+            TextField(LocalizedStringKey(TripVault.titlePlaceholder.name), text: $trip.title)
                 .multilineTextAlignment(.center)
                 .font(.title2)
             Divider().frame(height: 1)
@@ -21,7 +21,7 @@ struct TripMainDetails: View {
                 displayComponents: [.date],
                 id: "startDate",
                 isSelected: selection == "startDate",
-                label: "Start Date",
+                label: TripVault.startDate.name,
                 selectRow: selectDeselect,
                 timeFormat: .omitted
             )
@@ -31,7 +31,7 @@ struct TripMainDetails: View {
                 displayComponents: [.date],
                 id: "endDate",
                 isSelected: selection == "endDate",
-                label: "End Date",
+                label: TripVault.endDate.name,
                 selectRow: selectDeselect,
                 timeFormat: .omitted
             )

@@ -6,7 +6,7 @@ struct DateSection: View {
     var displayComponents: DatePickerComponents = [.date, .hourAndMinute]
     var id: String = "date"
     var isSelected: Bool
-    var label: String = "Date"
+    var label: String
     var selectRow: (String) -> Void
     var timeFormat: Date.FormatStyle.TimeStyle = .shortened
 
@@ -36,7 +36,7 @@ struct DateSection_Previews: PreviewProvider {
             displayComponents: [.date, .hourAndMinute],
             id: "date",
             isSelected: false,
-            label: "Date",
+            label: TripVault.startDate.name,
             selectRow: {row in }
         )
         .previewLayout(.sizeThatFits)

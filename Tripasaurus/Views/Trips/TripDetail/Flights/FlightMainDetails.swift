@@ -13,7 +13,7 @@ struct FlightMainDetails: View {
             HStack {
                 Text(reservation.departureCity)
                 if !(reservation.departureCity.isEmpty && reservation.arrivalCity.isEmpty) {
-                    Image(systemName: "arrow.right").foregroundColor(.gray)
+                    Image(systemName: AppSymbol.arrowRight.name).foregroundColor(.gray)
                 }
                 Text(reservation.arrivalCity)
             }

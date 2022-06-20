@@ -54,6 +54,7 @@
 		7FE52E952860FC890068B182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FE52E942860FC890068B182 /* Localizable.strings */; };
 		7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E972860FD3E0068B182 /* AppVault.swift */; };
 		7FE52E9A286104A90068B182 /* EventVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E99286104A90068B182 /* EventVault.swift */; };
+		7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E9B286116EB0068B182 /* TripVault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		7FE52E942860FC890068B182 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7FE52E972860FD3E0068B182 /* AppVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVault.swift; sourceTree = "<group>"; };
 		7FE52E99286104A90068B182 /* EventVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVault.swift; sourceTree = "<group>"; };
+		7FE52E9B286116EB0068B182 /* TripVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripVault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +346,7 @@
 			children = (
 				7FE52E972860FD3E0068B182 /* AppVault.swift */,
 				7FE52E99286104A90068B182 /* EventVault.swift */,
+				7FE52E9B286116EB0068B182 /* TripVault.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				7F794486285D175B00B850FB /* EventList+Controller.swift in Sources */,
 				7F79447A285D041800B850FB /* ListCard.swift in Sources */,
 				7F79448E285D72D700B850FB /* TripStore.swift in Sources */,
+				7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */,
 				7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
