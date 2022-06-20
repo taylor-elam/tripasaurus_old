@@ -7,8 +7,17 @@ extension TripDetailView {
         return formatter
     }
 
-    func addTrip(trip: Trip) {
+    func addFlight() {
+        newFlight = FlightReservation()
+        isAddingNewFlight = true
+    }
+
+    func add(trip: Trip) {
         tripStore.add(trip)
+        dismiss()
+    }
+
+    func cancelAddTrip() {
         dismiss()
     }
 
