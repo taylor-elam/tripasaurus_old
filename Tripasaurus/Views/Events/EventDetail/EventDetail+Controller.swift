@@ -1,12 +1,12 @@
 import SwiftUI
 
 extension EventDetailView {
-    func addEvent(event: Event) {
+    func add(event: Event) {
         eventStore.add(event)
         dismiss()
     }
 
-    func cancelEventEdit() {
+    func cancel() {
         dismiss()
     }
 

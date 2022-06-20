@@ -11,22 +11,12 @@ struct EventListView: View {
                 if !eventStore.sortedEvents(section: section).isEmpty {
                     Section(content: {
                         ForEach(eventStore.sortedEvents(section: section)) { $event in
-                            NavigationLink {
-                                EventDetailView(event: $event)
-                            } label: {
-                                EventRow(event: $event)
-                            }
-                            .swipeActions(edge: .leading) {
-                                Button {
-                                    copyEvent(event: event)
-                                } label: {
-                                    Label("Copy", systemImage: "doc.on.doc")
-                                }
-                                .tint(.purple)
-                            }
-                            .swipeActions {
-                                Button(role: .destructive, action: { event.isDeleted = true }, label: { Label("Delete", systemImage: "trash") })
-                            }
+                            NavigationLink(
+                                destination: { EventDetailView(event: $event) },
+                                label: { EventRow(event: $event) }
+                            )
+                            .swipeActions(edge: .leading) { CopyButton(action: { copy(event: event) }) }
+                            .swipeActions { DeleteButton(action: { event.isDeleted = true }) }
                         }
                     }, header: { Text(section.name).sectionHeaderStyle() })
                 }

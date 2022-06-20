@@ -31,21 +31,12 @@ struct EventDetailView: View {
 
             TaskSection(tasks: $eventCopy.tasks)
 
-            Button(role: .destructive, action: deleteEvent, label: { Label("Delete Event", systemImage: "trash") })
-                .deleteButtonStyle()
+            DeleteButton(action: deleteEvent, label: "Delete Event").deleteButtonStyle()
         }
         .onAppear { eventCopy = event }
         .navigationBarTitle("", displayMode: .inline)
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                if isNew {
-                    Button(action: cancelEventEdit, label: { Text("Cancel") })
-                }
-            }
-            ToolbarItem(placement: .confirmationAction) {
-                Button(isNew ? "Add" : "Save") { isNew ? addEvent(event: eventCopy) : saveEvent() }
-                    .disabled(eventCopy.title.isEmpty)
-            }
+            SaveToolbar(isNew: isNew, isSaveDisabled: eventCopy.title.isEmpty, addAction: { add(event: eventCopy) }, cancelAction: cancel, saveAction: saveEvent)
         }
         .background(Color(UIColor.secondarySystemBackground))
     }

@@ -15,9 +15,7 @@ struct TaskSection: View {
             Section(content: {
                 ForEach($tasks.filter { !$0.isDeleted.wrappedValue }) { $task in
                     TaskRow(task: $task)
-                        .swipeActions {
-                            Button(role: .destructive, action: { task.isDeleted = true }, label: { Label("Delete", systemImage: "trash") })
-                        }
+                        .swipeActions { DeleteButton(action: { task.isDeleted = true }) }
                 }
                 Button(action: addTask, label: { Label("Add Task", systemImage: "plus") })
                     .disabled(!tasks.allSatisfy { !$0.title.isEmpty })

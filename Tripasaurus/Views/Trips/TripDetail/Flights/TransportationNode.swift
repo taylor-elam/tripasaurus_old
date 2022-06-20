@@ -10,7 +10,7 @@ struct TransportationNode: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(label).font(.caption).foregroundColor(.secondary)
-            HStack {
+            VStack(alignment: .leading) {
                 TextField(cityPlaceholder, text: $city)
                     .textInputStyle()
                 // TODO: date format - MMM d

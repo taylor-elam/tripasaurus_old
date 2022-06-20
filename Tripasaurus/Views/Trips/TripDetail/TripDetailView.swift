@@ -21,16 +21,10 @@ struct TripDetailView: View {
                             destination: { FlightDetailView(reservation: $flight, trip: $trip) },
                             label: { FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter) }
                         )
-                        .swipeActions {
-                            Button(
-                                role: .destructive,
-                                action: { flight.isDeleted = true },
-                                label: { Label("Delete", systemImage: "trash") }
-                            )
-                        }
+                        .swipeActions { DeleteButton(action: { flight.isDeleted = true }) }
                     }
                     Button(
-                        action: addFlight,
+                        action: addNewFlight,
                         label: { Label("Add Task", systemImage: "plus") }
                     )
                     .padding(.horizontal, -4)
@@ -38,31 +32,18 @@ struct TripDetailView: View {
                 // TODO: add Hotels & Lodging
                 // TODO: add Budgeting
             }
+            .listStyle(.sidebar)
 
             Spacer()
 
-            Button(
-                role: .destructive,
-                action: deleteTrip,
-                label: { Label("Delete Trip", systemImage: "trash") }
-            )
-            .deleteButtonStyle()
+            DeleteButton(action: deleteTrip, label: "Delete Trip").deleteButtonStyle()
         }
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))
         .navigationBarTitle("", displayMode: .inline)
         // TODO: add styling to navbar
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                if isNew { Button(action: cancelAddTrip, label: { Text("Cancel") }) }
-            }
-            ToolbarItem(placement: .confirmationAction) {
-                Button(
-                    action: { isNew ? add(trip: tripCopy) : saveTrip() },
-                    label: { Text(isNew ? "Add" : "Save") }
-                )
-                .disabled(tripCopy.title.isEmpty)
-            }
+            SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addTrip, cancelAction: cancelAddTrip, saveAction: saveTrip)
         }
         .sheet(isPresented: $isAddingNewFlight) {
             NavigationView {

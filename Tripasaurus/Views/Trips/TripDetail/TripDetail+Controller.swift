@@ -7,13 +7,17 @@ extension TripDetailView {
         return formatter
     }
 
-    func addFlight() {
+    var isSaveDisabled: Bool {
+        return trip.title == ""
+    }
+
+    func addNewFlight() {
         newFlight = FlightReservation()
         isAddingNewFlight = true
     }
 
-    func add(trip: Trip) {
-        tripStore.add(trip)
+    func addTrip() {
+        tripStore.add(tripCopy)
         dismiss()
     }
 

@@ -27,7 +27,7 @@ extension FlightDetailView {
         dismiss()
     }
 
-    func deleteReservation() {
+    func deleteFlight() {
         reservation.isDeleted = true
         dismiss()
     }
