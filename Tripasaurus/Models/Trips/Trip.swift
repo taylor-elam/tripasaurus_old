@@ -18,6 +18,10 @@ struct Trip: Identifiable, Hashable {
 
         return expenseItems
     }
+
+    var expenseTotal: Double {
+        expenseItems.map({ $0.cost }).reduce(0, +)
+    }
 }
 
 extension Trip {

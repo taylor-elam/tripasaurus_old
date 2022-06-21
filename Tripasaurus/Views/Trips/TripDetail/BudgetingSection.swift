@@ -6,6 +6,13 @@ struct BudgetingSection: View {
 
     var body: some View {
         Section(content: {
+            HStack {
+                Text("Total")
+                Spacer()
+                if let formattedCost = currencyFormatter.string(from: trip.expenseTotal as NSNumber) {
+                    Text(formattedCost)
+                }
+            }
             ForEach(trip.expenseItems) { expenseItem in
                 HStack {
                     Image(systemName: AppSymbol.airplane.name)
