@@ -58,6 +58,7 @@
 		7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E9F2861546F0068B182 /* ExpandableRow.swift */; };
 		7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA1286159780068B182 /* DateFormatter.swift */; };
 		7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA328615C090068B182 /* NumberFormatter.swift */; };
+		7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA528616BC90068B182 /* FlightsSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		7FE52E9F2861546F0068B182 /* ExpandableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableRow.swift; sourceTree = "<group>"; };
 		7FE52EA1286159780068B182 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		7FE52EA328615C090068B182 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		7FE52EA528616BC90068B182 /* FlightsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 				7F794492285D78CD00B850FB /* TripDetailView.swift */,
 				7F794494285D86EB00B850FB /* TripDetail+Controller.swift */,
 				7F0D9108285EC69300B674D9 /* TripMainDetails.swift */,
+				7FE52EA528616BC90068B182 /* FlightsSection.swift */,
 				7F0D9107285EBC0F00B674D9 /* Flights */,
 			);
 			path = TripDetail;
@@ -474,6 +477,7 @@
 				7F79448E285D72D700B850FB /* TripStore.swift in Sources */,
 				7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */,
 				7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */,
+				7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
 				7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */,

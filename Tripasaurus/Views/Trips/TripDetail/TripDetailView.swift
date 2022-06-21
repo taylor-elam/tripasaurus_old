@@ -15,27 +15,7 @@ struct TripDetailView: View {
             TripMainDetails(trip: $tripCopy)
 
             List {
-                Section(content: {
-                    ForEach($trip.flights.filter { !$0.isDeleted.wrappedValue }) { $flight in
-                        NavigationLink(
-                            destination: { FlightDetailView(reservation: $flight, trip: $trip) },
-                            label: { FlightMainDetails(reservation: $flight) }
-                        )
-                        .swipeActions { DeleteButton(action: { flight.isDeleted = true }) }
-                    }
-                    Button(
-                        action: addNewFlight,
-                        label: {
-                            Label(LocalizedStringKey(TripVault.flightAdd.name), systemImage: AppSymbol.addNew.name)
-                        }
-                    )
-                    .padding(.horizontal, -4)
-                }, header: {
-                    Label(
-                        LocalizedStringKey(TripVault.flightSectionHeader.name),
-                        systemImage: AppSymbol.airplane.name
-                    ).font(.title2).fontWeight(.bold)
-                })
+                FlightsSection(trip: $trip, addNewFlight: addNewFlight)
                 // TODO: add Transportation
                 // TODO: add Hotels & Lodging
                 // TODO: add Budgeting
