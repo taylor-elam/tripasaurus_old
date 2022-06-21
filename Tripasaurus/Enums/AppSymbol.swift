@@ -4,6 +4,7 @@ enum AppSymbol: String, CaseIterable, Identifiable {
     case addNew = "plus"
     case airplane = "airplane"
     case arrowRight = "arrow.right"
+    case budget = "dollarsign.circle.fill"
     case delete = "trash"
     case calendar = "calendar"
     case checkmark = "checkmark"

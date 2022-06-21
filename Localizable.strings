@@ -20,6 +20,8 @@
 "trip.startDate" = "Start Date";
 "trip.titlePlaceholder" = "Title";
 
+"trip.budget.sectionHeader" = "Budgeting";
+
 "trip.flight.add" = "Add Flight Reservation";
 "trip.flight.arrivalCityPlaceholder" = "Destination";
 "trip.flight.arrivalDate" = "Arrival Date";

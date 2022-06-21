@@ -18,7 +18,7 @@ struct TripDetailView: View {
                 FlightsSection(trip: $trip, addNewFlight: addNewFlight)
                 // TODO: add Transportation
                 // TODO: add Hotels & Lodging
-                // TODO: add Budgeting
+                BudgetingSection(trip: $trip)
             }
             .listStyle(.sidebar)
 

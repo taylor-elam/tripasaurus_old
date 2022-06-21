@@ -59,6 +59,7 @@
 		7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA1286159780068B182 /* DateFormatter.swift */; };
 		7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA328615C090068B182 /* NumberFormatter.swift */; };
 		7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA528616BC90068B182 /* FlightsSection.swift */; };
+		7FE52EA82861EE3F0068B182 /* BudgetingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		7FE52EA1286159780068B182 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		7FE52EA328615C090068B182 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		7FE52EA528616BC90068B182 /* FlightsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsSection.swift; sourceTree = "<group>"; };
+		7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetingSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 				7F794492285D78CD00B850FB /* TripDetailView.swift */,
 				7F794494285D86EB00B850FB /* TripDetail+Controller.swift */,
 				7F0D9108285EC69300B674D9 /* TripMainDetails.swift */,
+				7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */,
 				7FE52EA528616BC90068B182 /* FlightsSection.swift */,
 				7F0D9107285EBC0F00B674D9 /* Flights */,
 			);
@@ -435,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F794476285D03A300B850FB /* TitleSection.swift in Sources */,
+				7FE52EA82861EE3F0068B182 /* BudgetingSection.swift in Sources */,
 				7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */,
 				7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */,
 				7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */,
