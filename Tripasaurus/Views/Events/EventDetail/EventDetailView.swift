@@ -34,6 +34,7 @@ struct EventDetailView: View {
             DeleteButton(action: deleteEvent, label: EventVault.delete.name).deleteButtonStyle()
         }
         .onAppear { eventCopy = event }
+        .navigationBarTitle(Text(LocalizedStringKey(isNew ? EventVault.new.name : event.title)), displayMode: .inline)
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: eventCopy.title.isEmpty, addAction: { add(event: eventCopy) }, cancelAction: cancel, saveAction: saveEvent)
         }

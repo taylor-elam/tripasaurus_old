@@ -36,6 +36,7 @@ struct TripDetailView: View {
                         systemImage: AppSymbol.airplane.name
                     ).font(.title2).fontWeight(.bold)
                 })
+                // TODO: add Transportation
                 // TODO: add Hotels & Lodging
                 // TODO: add Budgeting
             }
@@ -48,13 +49,13 @@ struct TripDetailView: View {
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))
         // TODO: add styling to navbar
+        .navigationBarTitle(Text(isNew ? LocalizedStringKey(TripVault.new.name) : ""), displayMode: .inline)
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addTrip, cancelAction: cancelAddTrip, saveAction: saveTrip)
         }
         .sheet(isPresented: $isAddingNewFlight) {
             NavigationView {
                 FlightDetailView(reservation: $newFlight, trip: $trip, isNew: true)
-                    .navigationBarTitle(Text(LocalizedStringKey(TripVault.flightNew.name)), displayMode: .inline)
             }
         }
     }

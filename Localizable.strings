@@ -34,4 +34,5 @@
 "trip.flight.new" = "New Flight Reservation";
 "trip.flight.notes" = "Notes";
 "trip.flight.number" = "Flight #";
+"trip.flight.reservation" = "Flight Reservation";
 "trip.flight.sectionHeader" = "Flights";

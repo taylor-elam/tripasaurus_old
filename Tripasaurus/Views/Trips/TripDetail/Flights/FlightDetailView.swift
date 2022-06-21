@@ -108,6 +108,10 @@ struct FlightDetailView: View {
             reservationCopy = reservation
             isMainDetailsSelected = isNew
         }
+        .navigationBarTitle(
+            Text(LocalizedStringKey(isNew ? TripVault.flightNew.name : TripVault.flightReservation.name)),
+            displayMode: .inline
+        )
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addFlight, cancelAction: cancel, saveAction: saveFlight)
         }

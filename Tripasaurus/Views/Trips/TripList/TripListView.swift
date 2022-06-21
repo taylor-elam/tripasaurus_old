@@ -29,7 +29,6 @@ struct TripListView: View {
         .sheet(isPresented: $isAddingNewTrip) {
             NavigationView {
                 TripDetailView(trip: $newTrip, isNew: true)
-                    .navigationBarTitle(Text(LocalizedStringKey(TripVault.new.name)), displayMode: .inline)
             }
         }
     }
