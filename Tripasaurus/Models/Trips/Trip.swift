@@ -7,6 +7,7 @@ struct Trip: Identifiable, Hashable {
     var endDate: Date = Date.now
     var startDate: Date = Date.now
     var title: String = ""
+    var budget: Double = 0.0
 
     var flights: [FlightReservation] = []
 
@@ -29,6 +30,7 @@ extension Trip {
         endDate: Date.now.add(days: 55),
         startDate: Date.now.add(days: 45),
         title: "Trip to Paris",
+        budget: 1500.0,
         flights: [
             FlightReservation.example,
             FlightReservation(

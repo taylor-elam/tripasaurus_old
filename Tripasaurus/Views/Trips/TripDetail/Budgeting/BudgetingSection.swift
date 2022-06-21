@@ -6,13 +6,9 @@ struct BudgetingSection: View {
 
     var body: some View {
         Section(content: {
-            HStack {
-                Text("Total")
-                Spacer()
-                if let formattedCost = currencyFormatter.string(from: trip.expenseTotal as NSNumber) {
-                    Text(formattedCost)
-                }
-            }
+            BudgetProgress(budget: trip.budget, expenseTotal: trip.expenseTotal)
+            // TODO: tap to edit budget
+            // TODO: add budget sections to progress bar
             ForEach(trip.expenseItems) { expenseItem in
                 HStack {
                     Image(systemName: AppSymbol.airplane.name)

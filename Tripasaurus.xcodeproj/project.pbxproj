@@ -61,6 +61,8 @@
 		7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA528616BC90068B182 /* FlightsSection.swift */; };
 		7FE52EA82861EE3F0068B182 /* BudgetingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */; };
 		7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA92861F2C40068B182 /* ExpenseItem.swift */; };
+		7FE52EAC286239CF0068B182 /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */; };
+		7FE52EAF28623FBB0068B182 /* BudgetProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +121,8 @@
 		7FE52EA528616BC90068B182 /* FlightsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsSection.swift; sourceTree = "<group>"; };
 		7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetingSection.swift; sourceTree = "<group>"; };
 		7FE52EA92861F2C40068B182 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
+		7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
+		7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,7 @@
 		7F0D9107285EBC0F00B674D9 /* Flights */ = {
 			isa = PBXGroup;
 			children = (
+				7FE52EA528616BC90068B182 /* FlightsSection.swift */,
 				7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */,
 				7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */,
 				7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */,
@@ -280,6 +285,7 @@
 				7F79446F285CF91B00B850FB /* CustomLabelStyle.swift */,
 				7F52E602285E298900529B61 /* DetailDeleteButton.swift */,
 				7F794479285D041800B850FB /* ListCard.swift */,
+				7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */,
 				7F52E606285E4D5500529B61 /* ResizeImage.swift */,
 				7F52E604285E2C2500529B61 /* SectionHeader.swift */,
 				7FA98309285F7D0700C2CEC0 /* TextInput.swift */,
@@ -341,8 +347,7 @@
 				7F794492285D78CD00B850FB /* TripDetailView.swift */,
 				7F794494285D86EB00B850FB /* TripDetail+Controller.swift */,
 				7F0D9108285EC69300B674D9 /* TripMainDetails.swift */,
-				7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */,
-				7FE52EA528616BC90068B182 /* FlightsSection.swift */,
+				7FE52EAD28623F9C0068B182 /* Budgeting */,
 				7F0D9107285EBC0F00B674D9 /* Flights */,
 			);
 			path = TripDetail;
@@ -367,6 +372,15 @@
 				7FE52E9B286116EB0068B182 /* TripVault.swift */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		7FE52EAD28623F9C0068B182 /* Budgeting */ = {
+			isa = PBXGroup;
+			children = (
+				7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */,
+				7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */,
+			);
+			path = Budgeting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +481,7 @@
 				7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */,
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
 				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
+				7FE52EAC286239CF0068B182 /* ProgressViewStyle.swift in Sources */,
 				7F0D9106285EB97600B674D9 /* FlightMainDetails.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,
@@ -486,6 +501,7 @@
 				7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */,
 				7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */,
 				7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */,
+				7FE52EAF28623FBB0068B182 /* BudgetProgress.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
 				7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */,
