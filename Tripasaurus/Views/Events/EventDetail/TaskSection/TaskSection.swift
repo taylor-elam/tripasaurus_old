@@ -5,7 +5,7 @@ struct TaskSection: View {
     @FocusState var focusedTask: EventTask?
 
     func addTask() {
-        let newTask = EventTask(title: "")
+        let newTask = EventTask()
         tasks.append(newTask)
         focusedTask = newTask
     }
@@ -17,11 +17,14 @@ struct TaskSection: View {
                     TaskRow(task: $task)
                         .swipeActions { DeleteButton(action: { task.isDeleted = true }) }
                 }
-                Button(action: addTask, label: { Label("Add Task", systemImage: "plus") })
-                    .disabled(!tasks.allSatisfy { !$0.title.isEmpty })
-                    .padding(.horizontal, -4)
+                Button(
+                    action: addTask,
+                    label: { Label(LocalizedStringKey(EventVault.taskAdd.name), systemImage: AppSymbol.addNew.name) }
+                )
+                .disabled(!tasks.allSatisfy { !$0.title.isEmpty })
+                .padding(.horizontal, -4)
             }, header: {
-                Text("Tasks").sectionHeaderStyle()
+                Text(LocalizedStringKey(EventVault.taskSectionTitle.name)).sectionHeaderStyle()
             })
         }
     }

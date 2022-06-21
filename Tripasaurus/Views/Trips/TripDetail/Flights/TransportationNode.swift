@@ -9,12 +9,12 @@ struct TransportationNode: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text(label).font(.caption).foregroundColor(.secondary)
+            Text(LocalizedStringKey(label)).font(.caption).foregroundColor(.secondary)
             VStack(alignment: .leading) {
-                TextField(cityPlaceholder, text: $city)
+                TextField(LocalizedStringKey(cityPlaceholder), text: $city)
                     .textInputStyle()
                 // TODO: date format - MMM d
-                DatePicker(dateTitle, selection: $date)
+                DatePicker(LocalizedStringKey(dateTitle), selection: $date)
                     .datePickerStyle(.compact)
                     .labelsHidden()
             }
@@ -25,11 +25,11 @@ struct TransportationNode: View {
 struct TransportationNode_Previews: PreviewProvider {
     static var previews: some View {
         TransportationNode(
-            city: .constant("Chicago, IL"),
+            city: .constant(FlightReservation.example.departureCity),
             date: .constant(Date.now),
-            cityPlaceholder: "Origin",
-            dateTitle: "Departure Date",
-            label: "Depart"
+            cityPlaceholder: TripVault.flightDepartureCityPlaceholder.name,
+            dateTitle: TripVault.flightDepartureDate.name,
+            label: TripVault.flightDepart.name
         )
     }
 }

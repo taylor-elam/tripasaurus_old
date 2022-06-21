@@ -1,0 +1,37 @@
+"app.add" = "Add";
+"app.cancel" = "Cancel";
+"app.copy" = "Copy";
+"app.delete" = "Delete";
+"app.save" = "Save";
+
+"event.add" = "Add Event";
+"event.date" = "Date";
+"event.delete" = "Delete Event";
+"event.new" = "New Event";
+
+"event.task.add" = "Add Task";
+"event.task.description" = "Task Description";
+"event.task.sectionTitle" = "Tasks";
+
+"trip.add" = "Add Trip";
+"trip.delete" = "Delete Trip";
+"trip.endDate" = "End Date";
+"trip.new" = "New Trip";
+"trip.startDate" = "Start Date";
+"trip.titlePlaceholder" = "Title";
+
+"trip.flight.add" = "Add Flight Reservation";
+"trip.flight.arrivalCityPlaceholder" = "Destination";
+"trip.flight.arrivalDate" = "Arrival Date";
+"trip.flight.arrive" = "Arrive";
+"trip.flight.carrier" = "Carrier";
+"trip.flight.confirmationNumber" = "Confirmation #";
+"trip.flight.cost" = "Cost";
+"trip.flight.delete" = "Delete Reservation";
+"trip.flight.departureCityPlaceholder" = "Origin";
+"trip.flight.departureDate" = "Departure Date";
+"trip.flight.depart" = "Depart";
+"trip.flight.new" = "New Flight Reservation";
+"trip.flight.notes" = "Notes";
+"trip.flight.number" = "Flight #";
+"trip.flight.sectionHeader" = "Flights";

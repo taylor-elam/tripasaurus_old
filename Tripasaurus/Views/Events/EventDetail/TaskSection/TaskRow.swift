@@ -10,11 +10,11 @@ struct TaskRow: View {
             Button {
                 task.isCompleted.toggle()
             } label: {
-                Image(systemName: task.isCompleted ? "checkmark.circle.fill" : "circle")
+                Image(systemName: task.isCompleted ? AppSymbol.checkmarkCircle.name : AppSymbol.circle.name)
             }
             .buttonStyle(.plain)
 
-            TextField("Task Description", text: $task.title)
+            TextField(LocalizedStringKey(EventVault.taskDescription.name), text: $task.title)
                 .focused($focusedTask, equals: task)
         }
     }

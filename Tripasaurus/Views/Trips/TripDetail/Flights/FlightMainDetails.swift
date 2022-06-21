@@ -2,7 +2,7 @@ import SwiftUI
 
 struct FlightMainDetails: View {
     @Binding var reservation: FlightReservation
-    var dateFormatter: DateFormatter
+    let dateFormatter: DateFormatter = DateFormatter().with(format: "E, MMM d")
 
     var overnightDays: Int {
         return Calendar.current.dateComponents([.day], from: reservation.departureDate.startOfDay, to: reservation.arrivalDate.startOfDay).day ?? 0
@@ -13,7 +13,7 @@ struct FlightMainDetails: View {
             HStack {
                 Text(reservation.departureCity)
                 if !(reservation.departureCity.isEmpty && reservation.arrivalCity.isEmpty) {
-                    Image(systemName: "arrow.right").foregroundColor(.gray)
+                    Image(systemName: AppSymbol.arrowRight.name).foregroundColor(.gray)
                 }
                 Text(reservation.arrivalCity)
             }
@@ -41,10 +41,7 @@ struct FlightMainDetails: View {
 
 struct FlightMainDetails_Previews: PreviewProvider {
     static var previews: some View {
-        FlightMainDetails(
-            reservation: .constant(FlightReservation.example),
-            dateFormatter: DateFormatter()
-        )
-        .previewLayout(.sizeThatFits)
+        FlightMainDetails(reservation: .constant(FlightReservation.example))
+            .previewLayout(.sizeThatFits)
     }
 }

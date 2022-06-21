@@ -25,13 +25,16 @@ struct EventListView: View {
         .listStyle(SidebarListStyle())
         .toolbar {
             ToolbarItem {
-                Button { addNewEvent() } label: { Label("Add Event", systemImage: "plus") }
+                Button(
+                    action: addNewEvent,
+                    label: { Label(LocalizedStringKey(EventVault.add.name), systemImage: AppSymbol.addNew.name) }
+                )
             }
         }
         .sheet(isPresented: $isAddingNewEvent) {
             NavigationView {
                 EventDetailView(event: $newEvent, isNew: true)
-                    .navigationBarTitle(Text("New Event"), displayMode: .inline)
+                    .navigationBarTitle(Text(LocalizedStringKey(EventVault.new.name)), displayMode: .inline)
             }
         }
     }

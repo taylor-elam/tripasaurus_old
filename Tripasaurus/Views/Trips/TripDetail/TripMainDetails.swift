@@ -2,37 +2,35 @@ import SwiftUI
 
 struct TripMainDetails: View {
     @Binding var trip: Trip
-    @State var selection: String = ""
+    @State var selection: ExpandableRow = .none
 
-    func selectDeselect(row: String) {
+    func selectDeselect(row: ExpandableRow) {
         withAnimation(.linear) {
-            selection = (selection == row) ? "" : row
+            selection = (selection == row) ? .none : row
         }
     }
 
     var body: some View {
         VStack {
-            TextField("Title", text: $trip.title)
+            TextField(LocalizedStringKey(TripVault.titlePlaceholder.name), text: $trip.title)
                 .multilineTextAlignment(.center)
                 .font(.title2)
             Divider().frame(height: 1)
             DateSection(
                 date: $trip.startDate,
                 displayComponents: [.date],
-                id: "startDate",
-                isSelected: selection == "startDate",
-                label: "Start Date",
-                selectRow: selectDeselect,
+                isSelected: selection == .startDate,
+                label: TripVault.startDate.name,
+                selectRow: { selectDeselect(row: .startDate) },
                 timeFormat: .omitted
             )
             Divider().frame(height: 1)
             DateSection(
                 date: $trip.endDate,
                 displayComponents: [.date],
-                id: "endDate",
-                isSelected: selection == "endDate",
-                label: "End Date",
-                selectRow: selectDeselect,
+                isSelected: selection == .endDate,
+                label: TripVault.endDate.name,
+                selectRow: { selectDeselect(row: .endDate) },
                 timeFormat: .omitted
             )
         }

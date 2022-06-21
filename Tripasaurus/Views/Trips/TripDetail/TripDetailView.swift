@@ -19,16 +19,23 @@ struct TripDetailView: View {
                     ForEach($trip.flights.filter { !$0.isDeleted.wrappedValue }) { $flight in
                         NavigationLink(
                             destination: { FlightDetailView(reservation: $flight, trip: $trip) },
-                            label: { FlightMainDetails(reservation: $flight, dateFormatter: dateFormatter) }
+                            label: { FlightMainDetails(reservation: $flight) }
                         )
                         .swipeActions { DeleteButton(action: { flight.isDeleted = true }) }
                     }
                     Button(
                         action: addNewFlight,
-                        label: { Label("Add Task", systemImage: "plus") }
+                        label: {
+                            Label(LocalizedStringKey(TripVault.flightAdd.name), systemImage: AppSymbol.addNew.name)
+                        }
                     )
                     .padding(.horizontal, -4)
-                }, header: { Label("Flights", systemImage: "airplane").font(.title2).fontWeight(.bold) })
+                }, header: {
+                    Label(
+                        LocalizedStringKey(TripVault.flightSectionHeader.name),
+                        systemImage: AppSymbol.airplane.name
+                    ).font(.title2).fontWeight(.bold)
+                })
                 // TODO: add Hotels & Lodging
                 // TODO: add Budgeting
             }
@@ -36,11 +43,10 @@ struct TripDetailView: View {
 
             Spacer()
 
-            DeleteButton(action: deleteTrip, label: "Delete Trip").deleteButtonStyle()
+            DeleteButton(action: deleteTrip, label: TripVault.delete.name).deleteButtonStyle()
         }
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))
-        .navigationBarTitle("", displayMode: .inline)
         // TODO: add styling to navbar
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addTrip, cancelAction: cancelAddTrip, saveAction: saveTrip)
@@ -48,7 +54,7 @@ struct TripDetailView: View {
         .sheet(isPresented: $isAddingNewFlight) {
             NavigationView {
                 FlightDetailView(reservation: $newFlight, trip: $trip, isNew: true)
-                    .navigationBarTitle(Text("New Flight Reservation"), displayMode: .inline)
+                    .navigationBarTitle(Text(LocalizedStringKey(TripVault.flightNew.name)), displayMode: .inline)
             }
         }
     }

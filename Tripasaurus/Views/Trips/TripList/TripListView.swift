@@ -20,13 +20,16 @@ struct TripListView: View {
         .listStyle(SidebarListStyle())
         .toolbar {
             ToolbarItem {
-                Button(action: addNewTrip, label: { Label("Add Trip", systemImage: "plus") })
+                Button(
+                    action: addNewTrip,
+                    label: { Label(LocalizedStringKey(TripVault.add.name), systemImage: AppSymbol.addNew.name) }
+                )
             }
         }
         .sheet(isPresented: $isAddingNewTrip) {
             NavigationView {
                 TripDetailView(trip: $newTrip, isNew: true)
-                    .navigationBarTitle(Text("New Trip"), displayMode: .inline)
+                    .navigationBarTitle(Text(LocalizedStringKey(TripVault.new.name)), displayMode: .inline)
             }
         }
     }

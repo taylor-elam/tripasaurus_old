@@ -7,7 +7,7 @@ struct EventDetailView: View {
     @EnvironmentObject var eventStore: EventStore
     @State var eventCopy = Event()
     @State var isNew = false
-    @State var selection: String = ""
+    @State var selection: ExpandableRow = .none
 
     var body: some View {
         VStack {
@@ -15,15 +15,15 @@ struct EventDetailView: View {
                 color: $eventCopy.color,
                 icon: $eventCopy.icon,
                 title: $eventCopy.title,
-                isSelected: selection == "Icon",
-                selectRow: selectDeselect
+                isSelected: selection == .icon,
+                selectRow: { selectDeselect(row: .icon) }
             )
 
             DateSection(
                 date: $eventCopy.date,
-                isSelected: selection == "date",
-                label: "Date",
-                selectRow: selectDeselect
+                isSelected: selection == .date,
+                label: EventVault.date.name,
+                selectRow: { selectDeselect(row: .date) }
             )
             .padding()
             .listCardStyle()
@@ -31,10 +31,9 @@ struct EventDetailView: View {
 
             TaskSection(tasks: $eventCopy.tasks)
 
-            DeleteButton(action: deleteEvent, label: "Delete Event").deleteButtonStyle()
+            DeleteButton(action: deleteEvent, label: EventVault.delete.name).deleteButtonStyle()
         }
         .onAppear { eventCopy = event }
-        .navigationBarTitle("", displayMode: .inline)
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: eventCopy.title.isEmpty, addAction: { add(event: eventCopy) }, cancelAction: cancel, saveAction: saveEvent)
         }

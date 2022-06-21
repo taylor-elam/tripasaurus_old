@@ -50,6 +50,14 @@
 		7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */; };
 		7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983112860089300C2CEC0 /* CopyButton.swift */; };
 		7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983132860155A00C2CEC0 /* SaveToolbar.swift */; };
+		7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */; };
+		7FE52E952860FC890068B182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FE52E942860FC890068B182 /* Localizable.strings */; };
+		7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E972860FD3E0068B182 /* AppVault.swift */; };
+		7FE52E9A286104A90068B182 /* EventVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E99286104A90068B182 /* EventVault.swift */; };
+		7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E9B286116EB0068B182 /* TripVault.swift */; };
+		7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E9F2861546F0068B182 /* ExpandableRow.swift */; };
+		7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA1286159780068B182 /* DateFormatter.swift */; };
+		7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA328615C090068B182 /* NumberFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +105,14 @@
 		7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		7FA983112860089300C2CEC0 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		7FA983132860155A00C2CEC0 /* SaveToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToolbar.swift; sourceTree = "<group>"; };
+		7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSymbol.swift; sourceTree = "<group>"; };
+		7FE52E942860FC890068B182 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		7FE52E972860FD3E0068B182 /* AppVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVault.swift; sourceTree = "<group>"; };
+		7FE52E99286104A90068B182 /* EventVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVault.swift; sourceTree = "<group>"; };
+		7FE52E9B286116EB0068B182 /* TripVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripVault.swift; sourceTree = "<group>"; };
+		7FE52E9F2861546F0068B182 /* ExpandableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableRow.swift; sourceTree = "<group>"; };
+		7FE52EA1286159780068B182 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		7FE52EA328615C090068B182 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +158,7 @@
 		7F79443B285CED6600B850FB = {
 			isa = PBXGroup;
 			children = (
+				7FE52E942860FC890068B182 /* Localizable.strings */,
 				7F794446285CED6600B850FB /* Tripasaurus */,
 				7F794445285CED6600B850FB /* Products */,
 			);
@@ -201,10 +218,13 @@
 		7F794457285CF29500B850FB /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				7FE52E962860FCDB0068B182 /* Localization */,
 				7F794458285CF2A100B850FB /* AppTab.swift */,
+				7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */,
 				7F79445B285CF64800B850FB /* EventColor.swift */,
 				7F79445D285CF65800B850FB /* EventIcon.swift */,
 				7F79445F285CF67D00B850FB /* EventSection.swift */,
+				7FE52E9F2861546F0068B182 /* ExpandableRow.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -222,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				7F794466285CF6E400B850FB /* Date.swift */,
+				7FE52EA1286159780068B182 /* DateFormatter.swift */,
+				7FE52EA328615C090068B182 /* NumberFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -328,6 +350,16 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		7FE52E962860FCDB0068B182 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				7FE52E972860FD3E0068B182 /* AppVault.swift */,
+				7FE52E99286104A90068B182 /* EventVault.swift */,
+				7FE52E9B286116EB0068B182 /* TripVault.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F79444F285CED6B00B850FB /* Preview Assets.xcassets in Resources */,
+				7FE52E952860FC890068B182 /* Localizable.strings in Resources */,
 				7F79444C285CED6B00B850FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,15 +432,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F794476285D03A300B850FB /* TitleSection.swift in Sources */,
+				7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */,
 				7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */,
 				7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */,
 				7F0D9104285EB09300B674D9 /* FlightReservation.swift in Sources */,
+				7FE52E9A286104A90068B182 /* EventVault.swift in Sources */,
 				7F79446A285CF71600B850FB /* EventStore.swift in Sources */,
 				7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */,
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
+				7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,
 				7FA9830E285F9AC600C2CEC0 /* TransportationNode.swift in Sources */,
 				7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */,
+				7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */,
 				7F79448C285D720800B850FB /* Trip.swift in Sources */,
 				7F79447C285D059800B850FB /* EventDetail+Controller.swift in Sources */,
 				7F794464285CF6C300B850FB /* Event.swift in Sources */,
@@ -422,6 +459,7 @@
 				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
 				7F0D9106285EB97600B674D9 /* FlightMainDetails.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
+				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
 				7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */,
 				7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */,
@@ -434,9 +472,11 @@
 				7F794486285D175B00B850FB /* EventList+Controller.swift in Sources */,
 				7F79447A285D041800B850FB /* ListCard.swift in Sources */,
 				7F79448E285D72D700B850FB /* TripStore.swift in Sources */,
+				7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */,
 				7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
+				7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */,
 				7FA9830C285F943500C2CEC0 /* FlightDetail+Controller.swift in Sources */,
 				7F79447E285D071600B850FB /* DateSection.swift in Sources */,
 			);

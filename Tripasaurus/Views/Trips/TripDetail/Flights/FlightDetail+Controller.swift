@@ -1,21 +1,8 @@
 import SwiftUI
 
 extension FlightDetailView {
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "E, MMM d"
-        return formatter
-    }
-
     var isSaveDisabled: Bool {
-        return reservationCopy.departureCity == "" || reservationCopy.arrivalCity == ""
-    }
-
-    var numberFormatter: NumberFormatter {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 2
-        return formatter
+        return reservationCopy.departureCity.isEmpty || reservationCopy.arrivalCity.isEmpty
     }
 
     func addFlight() {
@@ -35,11 +22,5 @@ extension FlightDetailView {
     func saveFlight() {
         reservation = reservationCopy
         dismiss()
-    }
-
-    func selectDeselect(row: String) {
-        withAnimation(.linear) {
-            selection = (selection == row) ? "" : row
-        }
     }
 }
