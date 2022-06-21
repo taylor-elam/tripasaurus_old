@@ -7,7 +7,7 @@ struct EventDetailView: View {
     @EnvironmentObject var eventStore: EventStore
     @State var eventCopy = Event()
     @State var isNew = false
-    @State var selection: String = ""
+    @State var selection: ExpandableRow = .none
 
     var body: some View {
         VStack {
@@ -15,15 +15,15 @@ struct EventDetailView: View {
                 color: $eventCopy.color,
                 icon: $eventCopy.icon,
                 title: $eventCopy.title,
-                isSelected: selection == "icon",
-                selectRow: selectDeselect
+                isSelected: selection == .icon,
+                selectRow: { selectDeselect(row: .icon) }
             )
 
             DateSection(
                 date: $eventCopy.date,
-                isSelected: selection == "date",
+                isSelected: selection == .date,
                 label: EventVault.date.name,
-                selectRow: selectDeselect
+                selectRow: { selectDeselect(row: .date) }
             )
             .padding()
             .listCardStyle()

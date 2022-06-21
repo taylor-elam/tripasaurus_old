@@ -2,11 +2,11 @@ import SwiftUI
 
 struct TripMainDetails: View {
     @Binding var trip: Trip
-    @State var selection: String = ""
+    @State var selection: ExpandableRow = .none
 
-    func selectDeselect(row: String) {
+    func selectDeselect(row: ExpandableRow) {
         withAnimation(.linear) {
-            selection = (selection == row) ? "" : row
+            selection = (selection == row) ? .none : row
         }
     }
 
@@ -19,20 +19,18 @@ struct TripMainDetails: View {
             DateSection(
                 date: $trip.startDate,
                 displayComponents: [.date],
-                id: "startDate",
-                isSelected: selection == "startDate",
+                isSelected: selection == .startDate,
                 label: TripVault.startDate.name,
-                selectRow: selectDeselect,
+                selectRow: { selectDeselect(row: .startDate) },
                 timeFormat: .omitted
             )
             Divider().frame(height: 1)
             DateSection(
                 date: $trip.endDate,
                 displayComponents: [.date],
-                id: "endDate",
-                isSelected: selection == "endDate",
+                isSelected: selection == .endDate,
                 label: TripVault.endDate.name,
-                selectRow: selectDeselect,
+                selectRow: { selectDeselect(row: .endDate) },
                 timeFormat: .omitted
             )
         }

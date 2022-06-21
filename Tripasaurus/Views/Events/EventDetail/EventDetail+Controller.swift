@@ -20,9 +20,9 @@ extension EventDetailView {
         dismiss()
     }
 
-    func selectDeselect(row: String) {
+    func selectDeselect(row: ExpandableRow) {
         withAnimation(.linear) {
-            selection = (selection == row) ? "" : row
+            selection = (selection == row) ? .none : row
         }
     }
 }

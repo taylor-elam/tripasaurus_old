@@ -36,10 +36,4 @@ extension FlightDetailView {
         reservation = reservationCopy
         dismiss()
     }
-
-    func selectDeselect(row: String) {
-        withAnimation(.linear) {
-            selection = (selection == row) ? "" : row
-        }
-    }
 }

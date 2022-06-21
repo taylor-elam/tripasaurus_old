@@ -5,13 +5,13 @@ struct TitleSection: View {
     @Binding var icon: EventIcon
     @Binding var title: String
     var isSelected: Bool
-    var selectRow: (String) -> Void
+    var selectRow: () -> Void
 
     var body: some View {
         VStack {
             HStack {
                 Button(
-                    action: { selectRow("icon") },
+                    action: selectRow,
                     label: {
                         Image(systemName: icon.name)
                             .resizeImage(width: 30, height: 30)
@@ -43,7 +43,7 @@ struct TitleSection_Previews: PreviewProvider {
             icon: .constant(Event.example.icon),
             title: .constant(Event.example.title),
             isSelected: true,
-            selectRow: { row in }
+            selectRow: { }
         )
         .background(Color(UIColor.secondarySystemBackground))
         .previewLayout(.sizeThatFits)

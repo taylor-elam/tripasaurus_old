@@ -8,7 +8,6 @@ struct FlightDetailView: View {
     @State var isMainDetailsSelected: Bool = false
     @State var isNew = false
     @State var reservationCopy = FlightReservation()
-    @State var selection: String = ""
 
     var body: some View {
         VStack {

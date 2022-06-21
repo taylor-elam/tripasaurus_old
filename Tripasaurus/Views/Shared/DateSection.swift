@@ -4,10 +4,9 @@ struct DateSection: View {
     @Binding var date: Date
     var dateFormat: Date.FormatStyle.DateStyle = .abbreviated
     var displayComponents: DatePickerComponents = [.date, .hourAndMinute]
-    var id: String = "date"
     var isSelected: Bool
     var label: String
-    var selectRow: (String) -> Void
+    var selectRow: () -> Void
     var timeFormat: Date.FormatStyle.TimeStyle = .shortened
 
     var body: some View {
@@ -18,7 +17,7 @@ struct DateSection: View {
                 if !isSelected { Text(date.formatted(date: dateFormat, time: timeFormat)) }
             }
             .contentShape(Rectangle())
-            .onTapGesture { selectRow(id) }
+            .onTapGesture { selectRow() }
 
             if isSelected {
                 DatePicker(LocalizedStringKey(label), selection: $date, displayedComponents: displayComponents)
@@ -34,10 +33,9 @@ struct DateSection_Previews: PreviewProvider {
         DateSection(
             date: .constant(Event.example.date),
             displayComponents: [.date, .hourAndMinute],
-            id: "date",
             isSelected: false,
             label: TripVault.startDate.name,
-            selectRow: {row in }
+            selectRow: { }
         )
         .previewLayout(.sizeThatFits)
     }

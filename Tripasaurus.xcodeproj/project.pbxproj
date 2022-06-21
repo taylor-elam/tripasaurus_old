@@ -55,6 +55,7 @@
 		7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E972860FD3E0068B182 /* AppVault.swift */; };
 		7FE52E9A286104A90068B182 /* EventVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E99286104A90068B182 /* EventVault.swift */; };
 		7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E9B286116EB0068B182 /* TripVault.swift */; };
+		7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E9F2861546F0068B182 /* ExpandableRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +108,7 @@
 		7FE52E972860FD3E0068B182 /* AppVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVault.swift; sourceTree = "<group>"; };
 		7FE52E99286104A90068B182 /* EventVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVault.swift; sourceTree = "<group>"; };
 		7FE52E9B286116EB0068B182 /* TripVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripVault.swift; sourceTree = "<group>"; };
+		7FE52E9F2861546F0068B182 /* ExpandableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				7F79445B285CF64800B850FB /* EventColor.swift */,
 				7F79445D285CF65800B850FB /* EventIcon.swift */,
 				7F79445F285CF67D00B850FB /* EventSection.swift */,
+				7FE52E9F2861546F0068B182 /* ExpandableRow.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
+				7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */,
 				7FA9830C285F943500C2CEC0 /* FlightDetail+Controller.swift in Sources */,
 				7F79447E285D071600B850FB /* DateSection.swift in Sources */,
 			);
