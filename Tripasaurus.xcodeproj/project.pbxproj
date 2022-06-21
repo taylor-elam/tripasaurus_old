@@ -60,6 +60,7 @@
 		7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA328615C090068B182 /* NumberFormatter.swift */; };
 		7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA528616BC90068B182 /* FlightsSection.swift */; };
 		7FE52EA82861EE3F0068B182 /* BudgetingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */; };
+		7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA92861F2C40068B182 /* ExpenseItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +118,7 @@
 		7FE52EA328615C090068B182 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		7FE52EA528616BC90068B182 /* FlightsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsSection.swift; sourceTree = "<group>"; };
 		7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetingSection.swift; sourceTree = "<group>"; };
+		7FE52EA92861F2C40068B182 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7F79448B285D720800B850FB /* Trip.swift */,
+				7FE52EA92861F2C40068B182 /* ExpenseItem.swift */,
 				7F0D9103285EB09300B674D9 /* FlightReservation.swift */,
 			);
 			path = Trips;
@@ -467,6 +470,7 @@
 				7F0D9106285EB97600B674D9 /* FlightMainDetails.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,
+				7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */,
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
 				7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */,
 				7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */,

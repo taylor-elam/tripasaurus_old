@@ -6,10 +6,16 @@ struct BudgetingSection: View {
 
     var body: some View {
         Section(content: {
-            ForEach(trip.budgetItems, id: \.self) { budgetItem in
-                if let formattedCost = currencyFormatter.string(from: budgetItem as NSNumber) {
-                    Text(formattedCost)
+            ForEach(trip.expenseItems) { expenseItem in
+                HStack {
+                    Image(systemName: AppSymbol.airplane.name)
+                    Text(expenseItem.title)
+                    Spacer()
+                    if let formattedCost = currencyFormatter.string(from: expenseItem.cost as NSNumber) {
+                        Text(formattedCost)
+                    }
                 }
+                // TODO: tap to navigate to flight
             }
         }, header: {
             Label(
