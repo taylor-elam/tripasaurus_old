@@ -1,12 +1,6 @@
 import SwiftUI
 
 extension TripDetailView {
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "E, MMM d"
-        return formatter
-    }
-
     var isSaveDisabled: Bool {
         return trip.title.isEmpty
     }

@@ -8,13 +8,14 @@ struct FlightDetailView: View {
     @State var isMainDetailsSelected: Bool = false
     @State var isNew = false
     @State var reservationCopy = FlightReservation()
+    let currencyFormatter: NumberFormatter = NumberFormatter().currency()
 
     var body: some View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 10) {
                     if !isNew {
-                        FlightMainDetails(reservation: $reservation, dateFormatter: dateFormatter)
+                        FlightMainDetails(reservation: $reservation)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .onTapGesture { isMainDetailsSelected.toggle() }
                     }
@@ -77,7 +78,7 @@ struct FlightDetailView: View {
                                 .font(.caption).foregroundColor(.secondary)
                             TextField(
                                 LocalizedStringKey(TripVault.flightCost.name),
-                                value: $reservationCopy.cost, formatter: numberFormatter
+                                value: $reservationCopy.cost, formatter: currencyFormatter
                             )
                             .textInputStyle()
                             .keyboardType(.decimalPad)
