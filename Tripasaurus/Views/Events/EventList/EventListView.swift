@@ -34,7 +34,6 @@ struct EventListView: View {
         .sheet(isPresented: $isAddingNewEvent) {
             NavigationView {
                 EventDetailView(event: $newEvent, isNew: true)
-                    .navigationBarTitle(Text(LocalizedStringKey(EventVault.new.name)), displayMode: .inline)
             }
         }
     }

@@ -3,7 +3,7 @@ import Foundation
 enum AppSymbol: String, CaseIterable, Identifiable {
     case addNew = "plus"
     case airplane = "airplane"
-    case arrowRight = "arror.right"
+    case arrowRight = "arrow.right"
     case delete = "trash"
     case calendar = "calendar"
     case checkmark = "checkmark"
