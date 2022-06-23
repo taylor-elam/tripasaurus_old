@@ -8,7 +8,7 @@ struct FlightDetailView: View {
     @State var isMainDetailsSelected: Bool = false
     @State var isNew = false
     @State var reservationCopy = FlightReservation()
-    let currencyFormatter: NumberFormatter = NumberFormatter().currency()
+    let decimalFormatter: NumberFormatter = NumberFormatter().decimal()
 
     var body: some View {
         VStack {
@@ -78,7 +78,7 @@ struct FlightDetailView: View {
                                 .font(.caption).foregroundColor(.secondary)
                             TextField(
                                 LocalizedStringKey(TripVault.flightCost.name),
-                                value: $reservationCopy.cost, formatter: currencyFormatter
+                                value: $reservationCopy.cost, formatter: decimalFormatter
                             )
                             .textInputStyle()
                             .keyboardType(.decimalPad)
@@ -113,7 +113,7 @@ struct FlightDetailView: View {
             displayMode: .inline
         )
         .toolbar {
-            SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addFlight, cancelAction: cancel, saveAction: saveFlight)
+            SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, showCancelButton: isNew, addAction: addFlight, cancelAction: cancel, saveAction: saveFlight)
         }
     }
 }
