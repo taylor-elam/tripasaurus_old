@@ -51,6 +51,7 @@
 		7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */; };
 		7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983112860089300C2CEC0 /* CopyButton.swift */; };
 		7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983132860155A00C2CEC0 /* SaveToolbar.swift */; };
+		7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */; };
 		7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */; };
 		7FE52E952860FC890068B182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FE52E942860FC890068B182 /* Localizable.strings */; };
 		7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E972860FD3E0068B182 /* AppVault.swift */; };
@@ -112,6 +113,7 @@
 		7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		7FA983112860089300C2CEC0 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		7FA983132860155A00C2CEC0 /* SaveToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToolbar.swift; sourceTree = "<group>"; };
+		7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetEdit+Controller.swift"; sourceTree = "<group>"; };
 		7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSymbol.swift; sourceTree = "<group>"; };
 		7FE52E942860FC890068B182 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7FE52E972860FD3E0068B182 /* AppVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVault.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */,
 				7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */,
 				7F3D733A2864095400C4DBBC /* BudgetEdit.swift */,
+				7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */,
 			);
 			path = Budgeting;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				7F79445C285CF64800B850FB /* EventColor.swift in Sources */,
 				7F794462285CF6B200B850FB /* EventTask.swift in Sources */,
 				7F79445E285CF65800B850FB /* EventIcon.swift in Sources */,
+				7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */,
 				7F79444A285CED6600B850FB /* EventListView.swift in Sources */,
 				7F3D733B2864095400C4DBBC /* BudgetEdit.swift in Sources */,
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,

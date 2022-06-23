@@ -8,7 +8,9 @@ enum TripVault: String {
     case startDate = "trip.startDate"
     case titlePlaceholder = "trip.titlePlaceholder"
 
+    case budgetEdit = "trip.budget.edit"
     case budgetSectionHeader = "trip.budget.sectionHeader"
+    case budgetTotal = "trip.budget.total"
 
     case flightAdd = "trip.flight.add"
     case flightArrivalCityPlaceholder = "trip.flight.arrivalCityPlaceholder"
