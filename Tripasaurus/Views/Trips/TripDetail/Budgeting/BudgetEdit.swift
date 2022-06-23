@@ -9,11 +9,8 @@ struct BudgetEdit: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text(LocalizedStringKey(TripVault.budgetTotal.name))
-                .font(.caption)
-                .foregroundColor(.secondary)
             TextField(LocalizedStringKey(TripVault.budgetTotal.name), value: $budget, formatter: decimalFormatter)
-                .textInputStyle()
+                .textInputStyle(label: TripVault.budgetTotal.name)
                 .keyboardType(.decimalPad)
             Spacer()
         }

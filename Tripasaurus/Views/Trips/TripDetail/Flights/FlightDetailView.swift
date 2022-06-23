@@ -39,62 +39,41 @@ struct FlightDetailView: View {
                             label: TripVault.flightArrive.name
                         )
                         
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(LocalizedStringKey(TripVault.flightCarrier.name))
-                                .font(.caption).foregroundColor(.secondary)
-                            TextField(
-                                LocalizedStringKey(TripVault.flightCarrier.name),
-                                text: $reservationCopy.carrier
-                            )
-                            .textInputStyle()
-                        }
+                        TextField(
+                            LocalizedStringKey(TripVault.flightCarrier.name),
+                            text: $reservationCopy.carrier
+                        )
+                        .textInputStyle(label: TripVault.flightCarrier.name)
                         
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(LocalizedStringKey(TripVault.flightNumber.name))
-                                .font(.caption).foregroundColor(.secondary)
-                            TextField(
-                                LocalizedStringKey(TripVault.flightNumber.name),
-                                text: $reservationCopy.flightNumber
-                            )
-                            .textInputStyle()
-                        }
+                        TextField(
+                            LocalizedStringKey(TripVault.flightNumber.name),
+                            text: $reservationCopy.flightNumber
+                        )
+                        .textInputStyle(label: TripVault.flightNumber.name)
 
                         Divider()
                     }
 
                     HStack {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(LocalizedStringKey(TripVault.flightConfirmationNumber.name))
-                                .font(.caption).foregroundColor(.secondary)
-                            TextField(
-                                LocalizedStringKey(TripVault.flightConfirmationNumber.name),
-                                text: $reservationCopy.confirmationNumber
-                            )
-                            .textInputStyle()
-                        }
+                        TextField(
+                            LocalizedStringKey(TripVault.flightConfirmationNumber.name),
+                            text: $reservationCopy.confirmationNumber
+                        )
+                        .textInputStyle(label: TripVault.flightConfirmationNumber.name)
 
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(LocalizedStringKey(TripVault.flightCost.name))
-                                .font(.caption).foregroundColor(.secondary)
-                            TextField(
-                                LocalizedStringKey(TripVault.flightCost.name),
-                                value: $reservationCopy.cost, formatter: decimalFormatter
-                            )
-                            .textInputStyle()
-                            .keyboardType(.decimalPad)
-                            // TODO: add custom currency input
-                        }
+                        TextField(
+                            LocalizedStringKey(TripVault.flightCost.name),
+                            value: $reservationCopy.cost, formatter: decimalFormatter
+                        )
+                        .textInputStyle(label: TripVault.flightCost.name)
+                        .keyboardType(.decimalPad)
+                        // TODO: add custom currency input
                     }
 
-                    VStack(alignment: .leading, spacing: 5) {
-                        // TODO: add custom label style
-                        Text(LocalizedStringKey(TripVault.flightNotes.name))
-                            .font(.caption).foregroundColor(.secondary)
-                        TextEditor(text: $reservationCopy.notes)
-                            .frame(height: 120)
-                            .padding(.vertical, -5)
-                            .textInputStyle()
-                    }
+                    TextEditor(text: $reservationCopy.notes)
+                        .frame(height: 120)
+                        .padding(.vertical, -5)
+                        .textInputStyle(label: TripVault.flightNotes.name)
                 }
                 .padding()
                 .listCardStyle()
