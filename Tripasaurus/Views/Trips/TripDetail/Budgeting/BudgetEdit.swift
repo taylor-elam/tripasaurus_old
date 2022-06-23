@@ -7,29 +7,16 @@ struct BudgetEdit: View {
     @State var budgetCopy: Double = 0.0
     let decimalFormatter: NumberFormatter = NumberFormatter().decimal()
 
-    func cancel() {
-        dismiss()
-    }
-
-    func saveBudget() {
-        budget = budgetCopy
-        dismiss()
-    }
-
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text(LocalizedStringKey("Budget"))
-                .font(.caption).foregroundColor(.secondary)
-            TextField(
-                LocalizedStringKey("Budget"),
-                value: $budget, formatter: decimalFormatter
-            )
-            .textInputStyle()
-            .keyboardType(.decimalPad)
+            TextField(LocalizedStringKey(TripVault.budgetTotal.name), value: $budget, formatter: decimalFormatter)
+                .textInputStyle(label: TripVault.budgetTotal.name)
+                .keyboardType(.decimalPad)
             Spacer()
         }
         .padding()
         .onAppear { budgetCopy = budget }
+        .navigationBarTitle(Text(LocalizedStringKey(TripVault.budgetEdit.name)), displayMode: .inline)
         .toolbar {
             SaveToolbar(isNew: false, isSaveDisabled: budget == 0.0, showCancelButton: true, cancelAction: cancel, saveAction: saveBudget)
         }

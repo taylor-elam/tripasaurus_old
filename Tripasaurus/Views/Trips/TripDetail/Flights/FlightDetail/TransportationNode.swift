@@ -9,10 +9,9 @@ struct TransportationNode: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            Text(LocalizedStringKey(label)).font(.caption).foregroundColor(.secondary)
             VStack(alignment: .leading) {
                 TextField(LocalizedStringKey(cityPlaceholder), text: $city)
-                    .textInputStyle()
+                    .textInputStyle(label: label)
                 // TODO: date format - MMM d
                 DatePicker(LocalizedStringKey(dateTitle), selection: $date)
                     .datePickerStyle(.compact)

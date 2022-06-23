@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F0D9104285EB09300B674D9 /* FlightReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9103285EB09300B674D9 /* FlightReservation.swift */; };
-		7F0D9106285EB97600B674D9 /* FlightMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */; };
+		7F0D9106285EB97600B674D9 /* FlightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9105285EB97600B674D9 /* FlightRow.swift */; };
 		7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9108285EC69300B674D9 /* TripMainDetails.swift */; };
 		7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */; };
 		7F3D733B2864095400C4DBBC /* BudgetEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D733A2864095400C4DBBC /* BudgetEdit.swift */; };
@@ -51,6 +51,7 @@
 		7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */; };
 		7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983112860089300C2CEC0 /* CopyButton.swift */; };
 		7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983132860155A00C2CEC0 /* SaveToolbar.swift */; };
+		7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */; };
 		7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */; };
 		7FE52E952860FC890068B182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FE52E942860FC890068B182 /* Localizable.strings */; };
 		7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E972860FD3E0068B182 /* AppVault.swift */; };
@@ -68,7 +69,7 @@
 
 /* Begin PBXFileReference section */
 		7F0D9103285EB09300B674D9 /* FlightReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightReservation.swift; sourceTree = "<group>"; };
-		7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightMainDetails.swift; sourceTree = "<group>"; };
+		7F0D9105285EB97600B674D9 /* FlightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRow.swift; sourceTree = "<group>"; };
 		7F0D9108285EC69300B674D9 /* TripMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMainDetails.swift; sourceTree = "<group>"; };
 		7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
 		7F3D733A2864095400C4DBBC /* BudgetEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEdit.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		7FA983112860089300C2CEC0 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		7FA983132860155A00C2CEC0 /* SaveToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToolbar.swift; sourceTree = "<group>"; };
+		7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetEdit+Controller.swift"; sourceTree = "<group>"; };
 		7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSymbol.swift; sourceTree = "<group>"; };
 		7FE52E942860FC890068B182 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7FE52E972860FD3E0068B182 /* AppVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVault.swift; sourceTree = "<group>"; };
@@ -161,10 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				7FE52EA528616BC90068B182 /* FlightsSection.swift */,
-				7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */,
-				7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */,
-				7F0D9105285EB97600B674D9 /* FlightMainDetails.swift */,
-				7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */,
+				7F0D9105285EB97600B674D9 /* FlightRow.swift */,
+				7FBADBF12864E7640018A4D8 /* FlightDetail */,
 			);
 			path = Flights;
 			sourceTree = "<group>";
@@ -366,6 +366,16 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		7FBADBF12864E7640018A4D8 /* FlightDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */,
+				7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */,
+				7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */,
+			);
+			path = FlightDetail;
+			sourceTree = "<group>";
+		};
 		7FE52E962860FCDB0068B182 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +392,7 @@
 				7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */,
 				7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */,
 				7F3D733A2864095400C4DBBC /* BudgetEdit.swift */,
+				7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */,
 			);
 			path = Budgeting;
 			sourceTree = "<group>";
@@ -478,6 +489,7 @@
 				7F79445C285CF64800B850FB /* EventColor.swift in Sources */,
 				7F794462285CF6B200B850FB /* EventTask.swift in Sources */,
 				7F79445E285CF65800B850FB /* EventIcon.swift in Sources */,
+				7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */,
 				7F79444A285CED6600B850FB /* EventListView.swift in Sources */,
 				7F3D733B2864095400C4DBBC /* BudgetEdit.swift in Sources */,
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,
@@ -486,7 +498,7 @@
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
 				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
 				7FE52EAC286239CF0068B182 /* ProgressViewStyle.swift in Sources */,
-				7F0D9106285EB97600B674D9 /* FlightMainDetails.swift in Sources */,
+				7F0D9106285EB97600B674D9 /* FlightRow.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,
 				7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */,
