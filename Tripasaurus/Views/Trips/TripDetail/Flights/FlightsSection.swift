@@ -9,7 +9,7 @@ struct FlightsSection: View {
             ForEach($trip.flights.filter { !$0.isDeleted.wrappedValue }) { $flight in
                 NavigationLink(
                     destination: { FlightDetailView(reservation: $flight, trip: $trip) },
-                    label: { FlightMainDetails(reservation: $flight) }
+                    label: { FlightRow(reservation: $flight) }
                 )
                 .swipeActions { DeleteButton(action: { flight.isDeleted = true }) }
             }

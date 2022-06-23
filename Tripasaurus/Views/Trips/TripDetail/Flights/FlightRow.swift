@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct FlightMainDetails: View {
+struct FlightRow: View {
     @Binding var reservation: FlightReservation
     let dateFormatter: DateFormatter = DateFormatter().with(format: "E, MMM d")
 
@@ -39,9 +39,9 @@ struct FlightMainDetails: View {
     }
 }
 
-struct FlightMainDetails_Previews: PreviewProvider {
+struct FlightRow_Previews: PreviewProvider {
     static var previews: some View {
-        FlightMainDetails(reservation: .constant(FlightReservation.example))
+        FlightRow(reservation: .constant(FlightReservation.example))
             .previewLayout(.sizeThatFits)
     }
 }

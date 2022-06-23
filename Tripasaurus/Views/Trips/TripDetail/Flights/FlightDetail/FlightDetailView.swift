@@ -14,31 +14,25 @@ struct FlightDetailView: View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 10) {
-                    if !isNew {
-                        FlightMainDetails(reservation: $reservation)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .onTapGesture { isMainDetailsSelected.toggle() }
-                    }
+                    TransportationNode(
+                        city: $reservationCopy.departureCity,
+                        date: $reservationCopy.departureDate,
+                        cityPlaceholder: TripVault.flightDepartureCityPlaceholder.name,
+                        dateTitle: TripVault.flightDepartureDate.name,
+                        label: TripVault.flightDepart.name
+                    )
 
-                    if isMainDetailsSelected {
-                        if !isNew { Divider() }
-
-                        TransportationNode(
-                            city: $reservationCopy.departureCity,
-                            date: $reservationCopy.departureDate,
-                            cityPlaceholder: TripVault.flightDepartureCityPlaceholder.name,
-                            dateTitle: TripVault.flightDepartureDate.name,
-                            label: TripVault.flightDepart.name
-                        )
-
-                        TransportationNode(
-                            city: $reservationCopy.arrivalCity,
-                            date: $reservationCopy.arrivalDate,
-                            cityPlaceholder: TripVault.flightArrivalCityPlaceholder.name,
-                            dateTitle: TripVault.flightArrivalDate.name,
-                            label: TripVault.flightArrive.name
-                        )
-                        
+                    TransportationNode(
+                        city: $reservationCopy.arrivalCity,
+                        date: $reservationCopy.arrivalDate,
+                        cityPlaceholder: TripVault.flightArrivalCityPlaceholder.name,
+                        dateTitle: TripVault.flightArrivalDate.name,
+                        label: TripVault.flightArrive.name
+                    )
+                    
+                    Divider()
+                    
+                    HStack {
                         TextField(
                             LocalizedStringKey(TripVault.flightCarrier.name),
                             text: $reservationCopy.carrier
@@ -50,9 +44,9 @@ struct FlightDetailView: View {
                             text: $reservationCopy.flightNumber
                         )
                         .textInputStyle(label: TripVault.flightNumber.name)
-
-                        Divider()
                     }
+
+                    Divider()
 
                     HStack {
                         TextField(
