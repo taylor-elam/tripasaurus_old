@@ -16,7 +16,7 @@ struct TripDetailView: View {
 
             List {
                 FlightsSection(trip: $trip, addNewFlight: addNewFlight)
-                // TODO: add Transportation
+                TransportationSection(trip: $trip)
                 // TODO: add Hotels & Lodging
                 // TODO: add Points of Interest
                 BudgetingSection(trip: $trip)

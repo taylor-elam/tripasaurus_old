@@ -10,6 +10,7 @@ struct Trip: Identifiable, Hashable {
     var budget: Double = 0.0
 
     var flights: [FlightReservation] = []
+    var transportation: [TransportationReservation] = []
 
     var expenseItems: [ExpenseItem] {
         var expenseItems: [ExpenseItem] = []
@@ -31,19 +32,7 @@ extension Trip {
         startDate: Date.now.add(days: 45),
         title: "Trip to Paris",
         budget: 1500.0,
-        flights: [
-            FlightReservation.example,
-            FlightReservation(
-                arrivalCity: "Paris",
-                arrivalDate: Date.now.add(days: 46).add(hours: 8),
-                carrier: "United Airlines",
-                confirmationNumber: "",
-                cost: 148.99,
-                departureCity: "New York, NY",
-                departureDate: Date.now.add(days: 45).add(hours: 16),
-                flightNumber: "101",
-                notes: ""
-            )
-        ]
+        flights: FlightReservation.examples,
+        transportation: [TransportationReservation.example]
     )
 }

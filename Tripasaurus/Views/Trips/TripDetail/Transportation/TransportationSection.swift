@@ -1,9 +1,13 @@
 import SwiftUI
 
 struct TransportationSection: View {
+    @Binding var trip: Trip
+
     var body: some View {
         Section(content: {
-            
+            ForEach($trip.transportation.filter { !$0.isDeleted.wrappedValue }) { $transportation in
+                Text("\(transportation.departureCity) -> \(transportation.arrivalCity)")
+            }
         }, header: {
             Label(
                 LocalizedStringKey(TripVault.transportationSectionHeader.name),
@@ -16,7 +20,7 @@ struct TransportationSection: View {
 struct TransportationSection_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            TransportationSection()
+            TransportationSection(trip: .constant(Trip.example))
         }.listStyle(.sidebar)
     }
 }
