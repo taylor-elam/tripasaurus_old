@@ -31,7 +31,7 @@ struct TripDetailView: View {
         // TODO: add styling to navbar
         .navigationBarTitle(Text(isNew ? LocalizedStringKey(TripVault.new.name) : ""), displayMode: .inline)
         .toolbar {
-            SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, addAction: addTrip, cancelAction: cancelAddTrip, saveAction: saveTrip)
+            SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, showCancelButton: isNew, addAction: addTrip, cancelAction: cancelAddTrip, saveAction: saveTrip)
         }
         .sheet(isPresented: $isAddingNewFlight) {
             NavigationView {

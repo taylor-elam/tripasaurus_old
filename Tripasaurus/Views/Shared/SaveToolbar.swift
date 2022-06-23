@@ -3,9 +3,11 @@ import SwiftUI
 struct SaveToolbar: ToolbarContent {
     var isNew: Bool
     var isSaveDisabled: Bool
-    var addAction: () -> Void
-    var cancelAction: () -> Void
-    var saveAction: () -> Void
+    var showCancelButton: Bool
+
+    var addAction: () -> Void = {}
+    var cancelAction: () -> Void = {}
+    var saveAction: () -> Void = {}
 
     var body: some ToolbarContent {
         Group {

@@ -6,8 +6,7 @@ struct BudgetingSection: View {
 
     var body: some View {
         Section(content: {
-            BudgetProgress(budget: trip.budget, expenseTotal: trip.expenseTotal)
-            // TODO: tap to edit budget
+            BudgetProgress(budget: $trip.budget, expenseTotal: trip.expenseTotal)
             // TODO: add budget sections to progress bar
             ForEach(trip.expenseItems) { expenseItem in
                 HStack {

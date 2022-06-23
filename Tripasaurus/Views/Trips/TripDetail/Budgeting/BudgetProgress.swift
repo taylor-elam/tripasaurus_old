@@ -1,13 +1,17 @@
 import SwiftUI
 
 struct BudgetProgress: View {
-    var budget: Double
+    @Binding var budget: Double
     var expenseTotal: Double
+
+    @State var isEditingBudget: Bool = false
     let currencyFormatter: NumberFormatter = NumberFormatter().currency()
+    let decimalFormatter: NumberFormatter = NumberFormatter().decimal()
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
-            ProgressView(currencyFormatter.string(from: budget as NSNumber)!, value: expenseTotal, total: budget)
+            Text(currencyFormatter.string(from: budget as NSNumber)!).font(.title)
+            ProgressView(value: expenseTotal, total: budget)
                 .progressViewStyle(RoundedRectProgressViewStyle())
             HStack {
                 Text(currencyFormatter.string(from: expenseTotal as NSNumber)!).font(.callout)
@@ -16,11 +20,19 @@ struct BudgetProgress: View {
             }
         }
         .padding(.vertical, 10)
+        .onTapGesture { isEditingBudget.toggle() }
+        .sheet(isPresented: $isEditingBudget) {
+            NavigationView {
+                BudgetEdit(budget: $budget)
+            }
+        }
     }
 }
 
 struct BudgetProgress_Previews: PreviewProvider {
     static var previews: some View {
-        BudgetProgress(budget: 150.0, expenseTotal: 100.0)
+        List {
+            BudgetProgress(budget: .constant(150.0), expenseTotal: 100.0)
+        }
     }
 }
