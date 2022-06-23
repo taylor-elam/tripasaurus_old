@@ -28,6 +28,8 @@ enum TripVault: String {
     case flightNumber = "trip.flight.number"
     case flightReservation = "trip.flight.reservation"
     case flightSectionHeader = "trip.flight.sectionHeader"
+    
+    case transportationSectionHeader = "trip.transportation.sectionHeader"
 
     var name: String { self.rawValue }
 }

@@ -23,7 +23,7 @@ struct FlightsSection: View {
         }, header: {
             Label(
                 LocalizedStringKey(TripVault.flightSectionHeader.name),
-                systemImage: AppSymbol.airplane.name
+                systemImage: AppSymbol.flight.name
             ).font(.title2).fontWeight(.bold)
         })
     }

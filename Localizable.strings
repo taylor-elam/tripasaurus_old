@@ -40,3 +40,5 @@
 "trip.flight.number" = "Flight #";
 "trip.flight.reservation" = "Flight Reservation";
 "trip.flight.sectionHeader" = "Flights";
+
+"trip.transportation.sectionHeader" = "Transportation";
