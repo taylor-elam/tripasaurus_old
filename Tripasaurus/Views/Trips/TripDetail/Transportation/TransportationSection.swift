@@ -5,8 +5,8 @@ struct TransportationSection: View {
 
     var body: some View {
         Section(content: {
-            ForEach($trip.transportation.filter { !$0.isDeleted.wrappedValue }) { $transportation in
-                Text("\(transportation.departureCity) -> \(transportation.arrivalCity)")
+            ForEach($trip.transportation.filter { !$0.isDeleted.wrappedValue }) { $reservation in
+                TransportationRow(reservation: $reservation)
             }
         }, header: {
             Label(

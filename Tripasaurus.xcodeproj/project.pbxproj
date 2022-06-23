@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F0712F92865165A00A35535 /* TransportationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712F82865165A00A35535 /* TransportationSection.swift */; };
 		7F0712FB28651FE900A35535 /* TransportationReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712FA28651FE900A35535 /* TransportationReservation.swift */; };
+		7F0712FF28652D9E00A35535 /* TransportationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712FE28652D9E00A35535 /* TransportationRow.swift */; };
 		7F0D9104285EB09300B674D9 /* FlightReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9103285EB09300B674D9 /* FlightReservation.swift */; };
 		7F0D9106285EB97600B674D9 /* FlightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9105285EB97600B674D9 /* FlightRow.swift */; };
 		7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9108285EC69300B674D9 /* TripMainDetails.swift */; };
@@ -72,6 +73,7 @@
 /* Begin PBXFileReference section */
 		7F0712F82865165A00A35535 /* TransportationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationSection.swift; sourceTree = "<group>"; };
 		7F0712FA28651FE900A35535 /* TransportationReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationReservation.swift; sourceTree = "<group>"; };
+		7F0712FE28652D9E00A35535 /* TransportationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationRow.swift; sourceTree = "<group>"; };
 		7F0D9103285EB09300B674D9 /* FlightReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightReservation.swift; sourceTree = "<group>"; };
 		7F0D9105285EB97600B674D9 /* FlightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRow.swift; sourceTree = "<group>"; };
 		7F0D9108285EC69300B674D9 /* TripMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMainDetails.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				7F0712F82865165A00A35535 /* TransportationSection.swift */,
+				7F0712FE28652D9E00A35535 /* TransportationRow.swift */,
 			);
 			path = Transportation;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				7F79448C285D720800B850FB /* Trip.swift in Sources */,
 				7F79447C285D059800B850FB /* EventDetail+Controller.swift in Sources */,
 				7F794464285CF6C300B850FB /* Event.swift in Sources */,
+				7F0712FF28652D9E00A35535 /* TransportationRow.swift in Sources */,
 				7F79445C285CF64800B850FB /* EventColor.swift in Sources */,
 				7F794462285CF6B200B850FB /* EventTask.swift in Sources */,
 				7F79445E285CF65800B850FB /* EventIcon.swift in Sources */,
