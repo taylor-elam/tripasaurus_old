@@ -29,6 +29,21 @@ enum TripVault: String {
     case flightReservation = "trip.flight.reservation"
     case flightSectionHeader = "trip.flight.sectionHeader"
     
+    case transportationAdd = "trip.transportation.add"
+    case transportationArrivalCityPlaceholder = "trip.transportation.arrivalCityPlaceholder"
+    case transportationArrivalDate = "trip.transportation.arrivalDate"
+    case transportationArrive = "trip.transportation.arrive"
+    case transportationCarrier = "trip.transportation.carrier"
+    case transportationConfirmationNumber = "trip.transportation.confirmationNumber"
+    case transportationCost = "trip.transportation.cost"
+    case transportationDelete = "trip.transportation.delete"
+    case transportationDepartureCityPlaceholder = "trip.transportation.departureCityPlaceholder"
+    case transportationDepartureDate = "trip.transportation.departureDate"
+    case transportationDepart = "trip.transportation.depart"
+    case transportationNew = "trip.transportation.new"
+    case transportationNotes = "trip.transportation.notes"
+    case transportationRouteNumber = "trip.transportation.routeNumber"
+    case transportationReservation = "trip.transportation.reservation"
     case transportationSectionHeader = "trip.transportation.sectionHeader"
 
     var name: String { self.rawValue }

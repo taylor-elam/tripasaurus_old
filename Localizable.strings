@@ -41,4 +41,19 @@
 "trip.flight.reservation" = "Flight Reservation";
 "trip.flight.sectionHeader" = "Flights";
 
+"trip.transportation.add" = "Add Flight Reservation";
+"trip.transportation.arrivalCityPlaceholder" = "Destination";
+"trip.transportation.arrivalDate" = "Arrival Date";
+"trip.transportation.arrive" = "Arrive";
+"trip.transportation.carrier" = "Carrier";
+"trip.transportation.confirmationNumber" = "Confirmation #";
+"trip.transportation.cost" = "Cost";
+"trip.transportation.delete" = "Delete Reservation";
+"trip.transportation.departureCityPlaceholder" = "Origin";
+"trip.transportation.departureDate" = "Departure Date";
+"trip.transportation.depart" = "Depart";
+"trip.transportation.new" = "New Transportation Reservation";
+"trip.transportation.notes" = "Notes";
+"trip.transportation.reservation" = "Flight Reservation";
+"trip.transportation.routeNumber" = "Route #";
 "trip.transportation.sectionHeader" = "Transportation";

@@ -6,7 +6,11 @@ struct TransportationSection: View {
     var body: some View {
         Section(content: {
             ForEach($trip.transportation.filter { !$0.isDeleted.wrappedValue }) { $reservation in
-                TransportationRow(reservation: $reservation)
+                NavigationLink(
+                    destination: TransportationDetailView(reservation: $reservation, trip: $trip),
+                    label: { TransportationRow(reservation: $reservation) }
+                )
+                .swipeActions { DeleteButton(action: { reservation.isDeleted = true }) }
             }
         }, header: {
             Label(
