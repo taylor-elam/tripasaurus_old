@@ -11,26 +11,31 @@ struct Trip: Identifiable, Hashable {
 
     var transportation: [TransportReservation] = []
 
-    var expenseItems: [ExpenseItem] {
-        var expenseItems: [ExpenseItem] = []
-
-        let transportationExpenseItems: [ExpenseItem] = transportation
-            .filter { !$0.isDeleted }
-            .sorted { $0.departureDate < $1.departureDate }
-            .map {
-            ExpenseItem(
-                title: "\($0.carrier) \($0.routeNumber)",
-                cost: $0.cost,
-                symbol: $0.mode == .flight ? AppSymbol.flight.name : AppSymbol.transportation.name
-            )
-        }
-
-        expenseItems += transportationExpenseItems
-        return expenseItems
+    var expenseTotal: Double {
+        expenseReports.map({ $0.total }).reduce(0, +)
     }
 
-    var expenseTotal: Double {
-        expenseItems.map({ $0.cost }).reduce(0, +)
+    var expenseReports: [ExpenseReport] {
+        var flightExpenseReport = ExpenseReport(category: .flights, total: 0.0, items: [])
+        var transportExpenseReport = ExpenseReport(category: .transportation, total: 0.0, items: [])
+
+        transportation.forEach({ reservation in
+            let isFlight = reservation.mode == .flight
+            let expenseItem = ExpenseItem(
+                title: "\(reservation.carrier) \(reservation.routeNumber)",
+                cost: reservation.cost,
+                symbol: isFlight ? AppSymbol.flight.name : AppSymbol.transportation.name
+            )
+            if isFlight {
+                flightExpenseReport.total += expenseItem.cost
+                flightExpenseReport.items.append(expenseItem)
+            } else {
+                transportExpenseReport.total += expenseItem.cost
+                transportExpenseReport.items.append(expenseItem)
+            }
+        })
+
+        return [flightExpenseReport, transportExpenseReport]
     }
 }
 

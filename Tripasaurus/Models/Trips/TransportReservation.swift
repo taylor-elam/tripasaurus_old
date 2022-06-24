@@ -35,7 +35,7 @@ extension TransportReservation {
         arrivalDate: Date.now.add(days: 45).hour(9).minute(34),
         carrier: "Amtrak",
         confirmationNumber: "ABC123",
-        cost: 25.00,
+        cost: 75.00,
         departureCity: "Milwaukee, WI",
         departureDate: Date.now.add(days: 45).hour(8).minute(5),
         mode: .train,
