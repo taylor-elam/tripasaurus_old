@@ -1,12 +1,12 @@
-import SwiftUI
+import Foundation
 
-extension FlightDetailView {
+extension TransportDetailView {
     var isSaveDisabled: Bool {
         return reservationCopy.departureCity.isEmpty || reservationCopy.arrivalCity.isEmpty
     }
 
-    func addFlight() {
-        trip.flights.append(reservationCopy)
+    func addTransport() {
+        trip.transportation.append(reservationCopy)
         dismiss()
     }
 
@@ -14,12 +14,12 @@ extension FlightDetailView {
         dismiss()
     }
 
-    func deleteFlight() {
+    func deleteTransport() {
         reservation.isDeleted = true
         dismiss()
     }
 
-    func saveFlight() {
+    func saveTransport() {
         reservation = reservationCopy
         dismiss()
     }

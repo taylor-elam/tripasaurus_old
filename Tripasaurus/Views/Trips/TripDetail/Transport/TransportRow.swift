@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct FlightRow: View {
-    @Binding var reservation: FlightReservation
+struct TransportRow: View {
+    @Binding var reservation: TransportReservation
     let dateFormatter: DateFormatter = DateFormatter().with(format: "E, MMM d")
 
     var overnightDays: Int {
@@ -32,16 +32,16 @@ struct FlightRow: View {
 
             HStack {
                 Text(reservation.carrier)
-                Text(reservation.flightNumber)
+                Text(reservation.routeNumber)
             }
             .font(.caption2)
         }
     }
 }
 
-struct FlightRow_Previews: PreviewProvider {
+struct Transport_Previews: PreviewProvider {
     static var previews: some View {
-        FlightRow(reservation: .constant(FlightReservation.example))
+        TransportRow(reservation: .constant(TransportReservation.transportExample))
             .previewLayout(.sizeThatFits)
     }
 }

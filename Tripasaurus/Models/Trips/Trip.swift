@@ -9,14 +9,23 @@ struct Trip: Identifiable, Hashable {
     var title: String = ""
     var budget: Double = 0.0
 
-    var flights: [FlightReservation] = []
+    var transportation: [TransportReservation] = []
 
     var expenseItems: [ExpenseItem] {
         var expenseItems: [ExpenseItem] = []
 
-        let flightExpenseItems: [ExpenseItem] = flights.map { ExpenseItem(title: "\($0.carrier) \($0.flightNumber)", cost: $0.cost) }
-        expenseItems += flightExpenseItems
+        let transportationExpenseItems: [ExpenseItem] = transportation
+            .filter { !$0.isDeleted }
+            .sorted { $0.departureDate < $1.departureDate }
+            .map {
+            ExpenseItem(
+                title: "\($0.carrier) \($0.routeNumber)",
+                cost: $0.cost,
+                symbol: $0.mode == .flight ? AppSymbol.flight.name : AppSymbol.transportation.name
+            )
+        }
 
+        expenseItems += transportationExpenseItems
         return expenseItems
     }
 
@@ -31,19 +40,6 @@ extension Trip {
         startDate: Date.now.add(days: 45),
         title: "Trip to Paris",
         budget: 1500.0,
-        flights: [
-            FlightReservation.example,
-            FlightReservation(
-                arrivalCity: "Paris",
-                arrivalDate: Date.now.add(days: 46).add(hours: 8),
-                carrier: "United Airlines",
-                confirmationNumber: "",
-                cost: 148.99,
-                departureCity: "New York, NY",
-                departureDate: Date.now.add(days: 45).add(hours: 16),
-                flightNumber: "101",
-                notes: ""
-            )
-        ]
+        transportation: TransportReservation.examples
     )
 }

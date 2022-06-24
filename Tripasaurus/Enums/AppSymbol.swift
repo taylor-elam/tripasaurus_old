@@ -2,7 +2,7 @@ import Foundation
 
 enum AppSymbol: String, CaseIterable, Identifiable {
     case addNew = "plus"
-    case airplane = "airplane"
+    case flight = "airplane"
     case arrowRight = "arrow.right"
     case budget = "dollarsign.circle.fill"
     case delete = "trash"
@@ -11,6 +11,7 @@ enum AppSymbol: String, CaseIterable, Identifiable {
     case checkmarkCircle = "checkmark.circle.fill"
     case circle = "circle"
     case copy = "doc.on.doc"
+    case transportation = "tram.fill"
 
     var id: String { self.rawValue }
     var name: String { self.rawValue }

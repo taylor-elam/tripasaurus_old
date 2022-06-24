@@ -8,6 +8,14 @@ extension Date {
     func add(hours: Int) -> Date {
         Calendar.autoupdatingCurrent.date(byAdding: .hour, value: hours, to: self) ?? self
     }
+    
+    func hour(_ hour: Int) -> Date {
+        Calendar.autoupdatingCurrent.date(bySetting: .hour, value: hour, of: self) ?? self
+    }
+    
+    func minute(_ minute: Int) -> Date {
+        Calendar.autoupdatingCurrent.date(bySetting: .minute, value: minute, of: self) ?? self
+    }
 
     var startOfDay: Date {
         Calendar.current.startOfDay(for: self)

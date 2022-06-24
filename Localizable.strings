@@ -24,19 +24,25 @@
 "trip.budget.sectionHeader" = "Budgeting";
 "trip.budget.total" = "Total Budget";
 
-"trip.flight.add" = "Add Flight Reservation";
-"trip.flight.arrivalCityPlaceholder" = "Destination";
-"trip.flight.arrivalDate" = "Arrival Date";
-"trip.flight.arrive" = "Arrive";
-"trip.flight.carrier" = "Carrier";
-"trip.flight.confirmationNumber" = "Confirmation #";
-"trip.flight.cost" = "Cost";
-"trip.flight.delete" = "Delete Reservation";
-"trip.flight.departureCityPlaceholder" = "Origin";
-"trip.flight.departureDate" = "Departure Date";
-"trip.flight.depart" = "Depart";
-"trip.flight.new" = "New Flight Reservation";
-"trip.flight.notes" = "Notes";
+"trip.flight.header" = "Flight";
 "trip.flight.number" = "Flight #";
-"trip.flight.reservation" = "Flight Reservation";
 "trip.flight.sectionHeader" = "Flights";
+
+"trip.transport.add" = "Add Reservation";
+"trip.transport.arrivalCityPlaceholder" = "Destination";
+"trip.transport.arrivalDate" = "Arrival Date";
+"trip.transport.arrive" = "Arrive";
+"trip.transport.carrier" = "Carrier";
+"trip.transport.confirmationNumber" = "Confirmation #";
+"trip.transport.cost" = "Cost";
+"trip.transport.delete" = "Delete Reservation";
+"trip.transport.departureCityPlaceholder" = "Origin";
+"trip.transport.departureDate" = "Departure Date";
+"trip.transport.depart" = "Depart";
+"trip.transport.new" = "New Reservation";
+"trip.transport.notes" = "Notes";
+
+"trip.transportation.header" = "Transportation";
+"trip.transportation.mode" = "Mode";
+"trip.transportation.routeNumber" = "Route #";
+"trip.transportation.sectionHeader" = "Transportation";
