@@ -15,8 +15,14 @@ struct Trip: Identifiable, Hashable {
     var expenseItems: [ExpenseItem] {
         var expenseItems: [ExpenseItem] = []
 
-        let flightExpenseItems: [ExpenseItem] = flights.map { ExpenseItem(title: "\($0.carrier) \($0.flightNumber)", cost: $0.cost) }
+        let flightExpenseItems: [ExpenseItem] = flights.filter { !$0.isDeleted }.map {
+            ExpenseItem(title: "\($0.carrier) \($0.flightNumber)", cost: $0.cost, symbol: AppSymbol.flight.name)
+        }
+        let transportationExpenseItems: [ExpenseItem] = transportation.filter { !$0.isDeleted }.map {
+            ExpenseItem(title: "\($0.carrier) \($0.routeNumber)", cost: $0.cost, symbol: AppSymbol.transportation.name)
+        }
         expenseItems += flightExpenseItems
+        expenseItems += transportationExpenseItems
 
         return expenseItems
     }

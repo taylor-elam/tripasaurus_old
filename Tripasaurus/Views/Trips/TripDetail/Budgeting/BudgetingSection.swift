@@ -10,7 +10,7 @@ struct BudgetingSection: View {
             // TODO: add budget sections to progress bar
             ForEach(trip.expenseItems) { expenseItem in
                 HStack {
-                    Image(systemName: AppSymbol.flight.name)
+                    Image(systemName: expenseItem.symbol)
                     Text(expenseItem.title)
                     Spacer()
                     if let formattedCost = currencyFormatter.string(from: expenseItem.cost as NSNumber) {
