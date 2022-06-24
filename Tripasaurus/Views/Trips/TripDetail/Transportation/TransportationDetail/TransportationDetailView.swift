@@ -14,6 +14,13 @@ struct TransportationDetailView: View {
         VStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(LocalizedStringKey(TripVault.transportationMode.name))
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        TransportationModePicker(reservation: $reservationCopy)
+                    }
+
                     TransportationNode(
                         city: $reservationCopy.departureCity,
                         date: $reservationCopy.departureDate,

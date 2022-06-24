@@ -52,8 +52,9 @@
 "trip.transportation.departureCityPlaceholder" = "Origin";
 "trip.transportation.departureDate" = "Departure Date";
 "trip.transportation.depart" = "Depart";
-"trip.transportation.new" = "New Transportation Reservation";
+"trip.transportation.mode" = "Mode";
+"trip.transportation.new" = "New Reservation";
 "trip.transportation.notes" = "Notes";
-"trip.transportation.reservation" = "Flight Reservation";
+"trip.transportation.reservation" = "Transportation";
 "trip.transportation.routeNumber" = "Route #";
 "trip.transportation.sectionHeader" = "Transportation";

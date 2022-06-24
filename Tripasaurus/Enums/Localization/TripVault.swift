@@ -40,6 +40,7 @@ enum TripVault: String {
     case transportationDepartureCityPlaceholder = "trip.transportation.departureCityPlaceholder"
     case transportationDepartureDate = "trip.transportation.departureDate"
     case transportationDepart = "trip.transportation.depart"
+    case transportationMode = "trip.transportation.mode"
     case transportationNew = "trip.transportation.new"
     case transportationNotes = "trip.transportation.notes"
     case transportationRouteNumber = "trip.transportation.routeNumber"

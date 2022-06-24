@@ -11,6 +11,7 @@ struct TransportationReservation: Identifiable, Hashable {
     var cost: Double = 0.0
     var departureCity: String = ""
     var departureDate: Date = Date.now
+    var mode: TransportationMode = .default
     var routeNumber: String = ""
     var notes: String = ""
 }
@@ -24,6 +25,7 @@ extension TransportationReservation {
         cost: 25.00,
         departureCity: "Milwaukee, WI",
         departureDate: Date.now.add(days: 45).hour(8).minute(5),
+        mode: .train,
         routeNumber: "332 Hiawatha",
         notes: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     )
