@@ -6,13 +6,15 @@ extension TripDetailView {
     }
     
     func addNewFlight() {
-        newFlight = FlightReservation()
+        newFlight = TransportReservation()
+        newTransportation.mode = .flight
         isAddingNewReservation = true
         newReservationType = "flight"
     }
     
-    func addNewTransportation() {
-        newTransportation = TransportationReservation()
+    func addNewTransport() {
+        newTransportation = TransportReservation()
+        newTransportation.mode = .default
         isAddingNewReservation = true
         newReservationType = "transportation"
     }

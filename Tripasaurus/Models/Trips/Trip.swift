@@ -9,21 +9,23 @@ struct Trip: Identifiable, Hashable {
     var title: String = ""
     var budget: Double = 0.0
 
-    var flights: [FlightReservation] = []
-    var transportation: [TransportationReservation] = []
+    var transportation: [TransportReservation] = []
 
     var expenseItems: [ExpenseItem] {
         var expenseItems: [ExpenseItem] = []
 
-        let flightExpenseItems: [ExpenseItem] = flights.filter { !$0.isDeleted }.map {
-            ExpenseItem(title: "\($0.carrier) \($0.flightNumber)", cost: $0.cost, symbol: AppSymbol.flight.name)
+        let transportationExpenseItems: [ExpenseItem] = transportation
+            .filter { !$0.isDeleted }
+            .sorted { $0.departureDate < $1.departureDate }
+            .map {
+            ExpenseItem(
+                title: "\($0.carrier) \($0.routeNumber)",
+                cost: $0.cost,
+                symbol: $0.mode == .flight ? AppSymbol.flight.name : AppSymbol.transportation.name
+            )
         }
-        let transportationExpenseItems: [ExpenseItem] = transportation.filter { !$0.isDeleted }.map {
-            ExpenseItem(title: "\($0.carrier) \($0.routeNumber)", cost: $0.cost, symbol: AppSymbol.transportation.name)
-        }
-        expenseItems += flightExpenseItems
-        expenseItems += transportationExpenseItems
 
+        expenseItems += transportationExpenseItems
         return expenseItems
     }
 
@@ -38,7 +40,6 @@ extension Trip {
         startDate: Date.now.add(days: 45),
         title: "Trip to Paris",
         budget: 1500.0,
-        flights: FlightReservation.examples,
-        transportation: [TransportationReservation.example]
+        transportation: TransportReservation.examples
     )
 }

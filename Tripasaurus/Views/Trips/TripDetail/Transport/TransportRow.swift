@@ -1,14 +1,7 @@
-//
-//  TransportationRow.swift
-//  Tripasaurus
-//
-//  Created by Taylor Elam on 6/23/22.
-//
-
 import SwiftUI
 
-struct TransportationRow: View {
-    @Binding var reservation: TransportationReservation
+struct TransportRow: View {
+    @Binding var reservation: TransportReservation
     let dateFormatter: DateFormatter = DateFormatter().with(format: "E, MMM d")
 
     var overnightDays: Int {
@@ -46,9 +39,9 @@ struct TransportationRow: View {
     }
 }
 
-struct TransportationRow_Previews: PreviewProvider {
+struct Transport_Previews: PreviewProvider {
     static var previews: some View {
-        TransportationRow(reservation: .constant(TransportationReservation.example))
+        TransportRow(reservation: .constant(TransportReservation.transportExample))
             .previewLayout(.sizeThatFits)
     }
 }

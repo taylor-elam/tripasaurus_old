@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TransportationModePicker: View {
-    @Binding var reservation: TransportationReservation
+    @Binding var reservation: TransportReservation
     @State var isShowingModeButtons: Bool = false
 
     func setTransportationMode(mode: String) -> Void {
@@ -47,7 +47,7 @@ struct TransportationModePicker: View {
 
 struct TransportationModePicker_Previews: PreviewProvider {
     static var previews: some View {
-        TransportationModePicker(reservation: .constant(TransportationReservation.example))
+        TransportationModePicker(reservation: .constant(TransportReservation.transportExample))
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

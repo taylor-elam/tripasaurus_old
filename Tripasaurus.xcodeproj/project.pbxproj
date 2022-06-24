@@ -7,18 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F0712F92865165A00A35535 /* TransportationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712F82865165A00A35535 /* TransportationSection.swift */; };
-		7F0712FB28651FE900A35535 /* TransportationReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712FA28651FE900A35535 /* TransportationReservation.swift */; };
-		7F0712FF28652D9E00A35535 /* TransportationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712FE28652D9E00A35535 /* TransportationRow.swift */; };
-		7F071302286536A800A35535 /* TransportationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F071301286536A800A35535 /* TransportationDetailView.swift */; };
+		7F0712F92865165A00A35535 /* TransportSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712F82865165A00A35535 /* TransportSection.swift */; };
+		7F0712FB28651FE900A35535 /* TransportReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712FA28651FE900A35535 /* TransportReservation.swift */; };
+		7F0712FF28652D9E00A35535 /* TransportRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0712FE28652D9E00A35535 /* TransportRow.swift */; };
+		7F071302286536A800A35535 /* TransportDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F071301286536A800A35535 /* TransportDetailView.swift */; };
 		7F0713042865370C00A35535 /* TransportationDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0713032865370C00A35535 /* TransportationDetail+Controller.swift */; };
 		7F071306286559FE00A35535 /* TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F071305286559FE00A35535 /* TransportationMode.swift */; };
 		7F07130828655B4700A35535 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07130728655B4700A35535 /* IconButton.swift */; };
 		7F07130A2865659F00A35535 /* TransportationModePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0713092865659F00A35535 /* TransportationModePicker.swift */; };
-		7F0D9104285EB09300B674D9 /* FlightReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9103285EB09300B674D9 /* FlightReservation.swift */; };
-		7F0D9106285EB97600B674D9 /* FlightRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9105285EB97600B674D9 /* FlightRow.swift */; };
 		7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9108285EC69300B674D9 /* TripMainDetails.swift */; };
-		7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */; };
 		7F3D733B2864095400C4DBBC /* BudgetEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D733A2864095400C4DBBC /* BudgetEdit.swift */; };
 		7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E5FA285E07C300529B61 /* TripList+Controller.swift */; };
 		7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F52E602285E298900529B61 /* DetailDeleteButton.swift */; };
@@ -54,8 +51,7 @@
 		7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794492285D78CD00B850FB /* TripDetailView.swift */; };
 		7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794494285D86EB00B850FB /* TripDetail+Controller.swift */; };
 		7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA98309285F7D0700C2CEC0 /* TextInput.swift */; };
-		7FA9830C285F943500C2CEC0 /* FlightDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */; };
-		7FA9830E285F9AC600C2CEC0 /* TransportationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */; };
+		7FA9830E285F9AC600C2CEC0 /* TransportNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */; };
 		7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */; };
 		7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983112860089300C2CEC0 /* CopyButton.swift */; };
 		7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983132860155A00C2CEC0 /* SaveToolbar.swift */; };
@@ -68,7 +64,6 @@
 		7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52E9F2861546F0068B182 /* ExpandableRow.swift */; };
 		7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA1286159780068B182 /* DateFormatter.swift */; };
 		7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA328615C090068B182 /* NumberFormatter.swift */; };
-		7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA528616BC90068B182 /* FlightsSection.swift */; };
 		7FE52EA82861EE3F0068B182 /* BudgetingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */; };
 		7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA92861F2C40068B182 /* ExpenseItem.swift */; };
 		7FE52EAC286239CF0068B182 /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */; };
@@ -76,18 +71,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F0712F82865165A00A35535 /* TransportationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationSection.swift; sourceTree = "<group>"; };
-		7F0712FA28651FE900A35535 /* TransportationReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationReservation.swift; sourceTree = "<group>"; };
-		7F0712FE28652D9E00A35535 /* TransportationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationRow.swift; sourceTree = "<group>"; };
-		7F071301286536A800A35535 /* TransportationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationDetailView.swift; sourceTree = "<group>"; };
+		7F0712F82865165A00A35535 /* TransportSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportSection.swift; sourceTree = "<group>"; };
+		7F0712FA28651FE900A35535 /* TransportReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportReservation.swift; sourceTree = "<group>"; };
+		7F0712FE28652D9E00A35535 /* TransportRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportRow.swift; sourceTree = "<group>"; };
+		7F071301286536A800A35535 /* TransportDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailView.swift; sourceTree = "<group>"; };
 		7F0713032865370C00A35535 /* TransportationDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TransportationDetail+Controller.swift"; sourceTree = "<group>"; };
 		7F071305286559FE00A35535 /* TransportationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationMode.swift; sourceTree = "<group>"; };
 		7F07130728655B4700A35535 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		7F0713092865659F00A35535 /* TransportationModePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationModePicker.swift; sourceTree = "<group>"; };
-		7F0D9103285EB09300B674D9 /* FlightReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightReservation.swift; sourceTree = "<group>"; };
-		7F0D9105285EB97600B674D9 /* FlightRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRow.swift; sourceTree = "<group>"; };
 		7F0D9108285EC69300B674D9 /* TripMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMainDetails.swift; sourceTree = "<group>"; };
-		7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
 		7F3D733A2864095400C4DBBC /* BudgetEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEdit.swift; sourceTree = "<group>"; };
 		7F52E5FA285E07C300529B61 /* TripList+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripList+Controller.swift"; sourceTree = "<group>"; };
 		7F52E602285E298900529B61 /* DetailDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDeleteButton.swift; sourceTree = "<group>"; };
@@ -124,8 +116,7 @@
 		7F794492285D78CD00B850FB /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		7F794494285D86EB00B850FB /* TripDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripDetail+Controller.swift"; sourceTree = "<group>"; };
 		7FA98309285F7D0700C2CEC0 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
-		7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightDetail+Controller.swift"; sourceTree = "<group>"; };
-		7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationNode.swift; sourceTree = "<group>"; };
+		7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportNode.swift; sourceTree = "<group>"; };
 		7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		7FA983112860089300C2CEC0 /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		7FA983132860155A00C2CEC0 /* SaveToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToolbar.swift; sourceTree = "<group>"; };
@@ -138,7 +129,6 @@
 		7FE52E9F2861546F0068B182 /* ExpandableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableRow.swift; sourceTree = "<group>"; };
 		7FE52EA1286159780068B182 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		7FE52EA328615C090068B182 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
-		7FE52EA528616BC90068B182 /* FlightsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsSection.swift; sourceTree = "<group>"; };
 		7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetingSection.swift; sourceTree = "<group>"; };
 		7FE52EA92861F2C40068B182 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
@@ -156,24 +146,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7F0712F72865164500A35535 /* Transportation */ = {
+		7F0712F72865164500A35535 /* Transport */ = {
 			isa = PBXGroup;
 			children = (
-				7F0712F82865165A00A35535 /* TransportationSection.swift */,
-				7F0712FE28652D9E00A35535 /* TransportationRow.swift */,
-				7F0713002865366E00A35535 /* TransportationDetail */,
+				7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */,
+				7F0712FE28652D9E00A35535 /* TransportRow.swift */,
+				7F0712F82865165A00A35535 /* TransportSection.swift */,
+				7F44A2592866152E000DB4B6 /* TransportDetail */,
 			);
-			path = Transportation;
-			sourceTree = "<group>";
-		};
-		7F0713002865366E00A35535 /* TransportationDetail */ = {
-			isa = PBXGroup;
-			children = (
-				7F071301286536A800A35535 /* TransportationDetailView.swift */,
-				7F0713032865370C00A35535 /* TransportationDetail+Controller.swift */,
-				7F0713092865659F00A35535 /* TransportationModePicker.swift */,
-			);
-			path = TransportationDetail;
+			path = Transport;
 			sourceTree = "<group>";
 		};
 		7F0D9101285EB07900B674D9 /* Events */ = {
@@ -190,20 +171,19 @@
 			children = (
 				7F79448B285D720800B850FB /* Trip.swift */,
 				7FE52EA92861F2C40068B182 /* ExpenseItem.swift */,
-				7F0D9103285EB09300B674D9 /* FlightReservation.swift */,
-				7F0712FA28651FE900A35535 /* TransportationReservation.swift */,
+				7F0712FA28651FE900A35535 /* TransportReservation.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
 		};
-		7F0D9107285EBC0F00B674D9 /* Flights */ = {
+		7F44A2592866152E000DB4B6 /* TransportDetail */ = {
 			isa = PBXGroup;
 			children = (
-				7FE52EA528616BC90068B182 /* FlightsSection.swift */,
-				7F0D9105285EB97600B674D9 /* FlightRow.swift */,
-				7FBADBF12864E7640018A4D8 /* FlightDetail */,
+				7F071301286536A800A35535 /* TransportDetailView.swift */,
+				7F0713032865370C00A35535 /* TransportationDetail+Controller.swift */,
+				7F0713092865659F00A35535 /* TransportationModePicker.swift */,
 			);
-			path = Flights;
+			path = TransportDetail;
 			sourceTree = "<group>";
 		};
 		7F79443B285CED6600B850FB = {
@@ -387,8 +367,7 @@
 				7F794492285D78CD00B850FB /* TripDetailView.swift */,
 				7F794494285D86EB00B850FB /* TripDetail+Controller.swift */,
 				7F0D9108285EC69300B674D9 /* TripMainDetails.swift */,
-				7F0D9107285EBC0F00B674D9 /* Flights */,
-				7F0712F72865164500A35535 /* Transportation */,
+				7F0712F72865164500A35535 /* Transport */,
 				7FE52EAD28623F9C0068B182 /* Budgeting */,
 			);
 			path = TripDetail;
@@ -402,18 +381,8 @@
 				7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */,
 				7F07130728655B4700A35535 /* IconButton.swift */,
 				7FA983132860155A00C2CEC0 /* SaveToolbar.swift */,
-				7FA9830D285F9AC600C2CEC0 /* TransportationNode.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		7FBADBF12864E7640018A4D8 /* FlightDetail */ = {
-			isa = PBXGroup;
-			children = (
-				7F0D910A285EC7EC00B674D9 /* FlightDetailView.swift */,
-				7FA9830B285F943500C2CEC0 /* FlightDetail+Controller.swift */,
-			);
-			path = FlightDetail;
 			sourceTree = "<group>";
 		};
 		7FE52E962860FCDB0068B182 /* Localization */ = {
@@ -513,14 +482,13 @@
 				7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */,
 				7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */,
 				7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */,
-				7F0D9104285EB09300B674D9 /* FlightReservation.swift in Sources */,
 				7FE52E9A286104A90068B182 /* EventVault.swift in Sources */,
 				7F79446A285CF71600B850FB /* EventStore.swift in Sources */,
 				7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */,
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
 				7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,
-				7FA9830E285F9AC600C2CEC0 /* TransportationNode.swift in Sources */,
+				7FA9830E285F9AC600C2CEC0 /* TransportNode.swift in Sources */,
 				7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */,
 				7F0713042865370C00A35535 /* TransportationDetail+Controller.swift in Sources */,
 				7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */,
@@ -528,21 +496,20 @@
 				7F79447C285D059800B850FB /* EventDetail+Controller.swift in Sources */,
 				7F794464285CF6C300B850FB /* Event.swift in Sources */,
 				7F071306286559FE00A35535 /* TransportationMode.swift in Sources */,
-				7F0712FF28652D9E00A35535 /* TransportationRow.swift in Sources */,
+				7F0712FF28652D9E00A35535 /* TransportRow.swift in Sources */,
 				7F79445C285CF64800B850FB /* EventColor.swift in Sources */,
 				7F794462285CF6B200B850FB /* EventTask.swift in Sources */,
 				7F79445E285CF65800B850FB /* EventIcon.swift in Sources */,
 				7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */,
 				7F79444A285CED6600B850FB /* EventListView.swift in Sources */,
 				7F3D733B2864095400C4DBBC /* BudgetEdit.swift in Sources */,
-				7F071302286536A800A35535 /* TransportationDetailView.swift in Sources */,
+				7F071302286536A800A35535 /* TransportDetailView.swift in Sources */,
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,
 				7F794460285CF67D00B850FB /* EventSection.swift in Sources */,
 				7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */,
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
 				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
 				7FE52EAC286239CF0068B182 /* ProgressViewStyle.swift in Sources */,
-				7F0D9106285EB97600B674D9 /* FlightRow.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F07130828655B4700A35535 /* IconButton.swift in Sources */,
 				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,
@@ -551,7 +518,7 @@
 				7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */,
 				7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */,
 				7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */,
-				7F0712F92865165A00A35535 /* TransportationSection.swift in Sources */,
+				7F0712F92865165A00A35535 /* TransportSection.swift in Sources */,
 				7F07130A2865659F00A35535 /* TransportationModePicker.swift in Sources */,
 				7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */,
 				7F794470285CF91B00B850FB /* CustomLabelStyle.swift in Sources */,
@@ -562,15 +529,12 @@
 				7F79447A285D041800B850FB /* ListCard.swift in Sources */,
 				7F79448E285D72D700B850FB /* TripStore.swift in Sources */,
 				7FE52E9C286116EB0068B182 /* TripVault.swift in Sources */,
-				7F0D910B285EC7EC00B674D9 /* FlightDetailView.swift in Sources */,
-				7FE52EA628616BC90068B182 /* FlightsSection.swift in Sources */,
 				7FE52EAF28623FBB0068B182 /* BudgetProgress.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
 				7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */,
-				7FA9830C285F943500C2CEC0 /* FlightDetail+Controller.swift in Sources */,
 				7F79447E285D071600B850FB /* DateSection.swift in Sources */,
-				7F0712FB28651FE900A35535 /* TransportationReservation.swift in Sources */,
+				7F0712FB28651FE900A35535 /* TransportReservation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

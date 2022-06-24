@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TransportationNode: View {
+struct TransportNode: View {
     @Binding var city: String
     @Binding var date: Date
     var cityPlaceholder: String
@@ -21,14 +21,14 @@ struct TransportationNode: View {
     }
 }
 
-struct TransportationNode_Previews: PreviewProvider {
+struct TransportNode_Previews: PreviewProvider {
     static var previews: some View {
-        TransportationNode(
-            city: .constant(FlightReservation.example.departureCity),
+        TransportNode(
+            city: .constant(TransportReservation.flightExample.departureCity),
             date: .constant(Date.now),
-            cityPlaceholder: TripVault.flightDepartureCityPlaceholder.name,
-            dateTitle: TripVault.flightDepartureDate.name,
-            label: TripVault.flightDepart.name
+            cityPlaceholder: TripVault.transportDepartureCityPlaceholder.name,
+            dateTitle: TripVault.transportDepartureDate.name,
+            label: TripVault.transportDepart.name
         )
     }
 }

@@ -8,8 +8,8 @@ struct TripDetailView: View {
     @State var isAddingNewReservation: Bool = false
     @State var isNew: Bool = false
     @State var newReservationType: String = ""
-    @State var newFlight: FlightReservation = FlightReservation()
-    @State var newTransportation: TransportationReservation = TransportationReservation()
+    @State var newFlight: TransportReservation = TransportReservation()
+    @State var newTransportation: TransportReservation = TransportReservation()
     @State var tripCopy: Trip = Trip()
 
     var body: some View {
@@ -17,8 +17,8 @@ struct TripDetailView: View {
             TripMainDetails(trip: $tripCopy)
 
             List {
-                FlightsSection(trip: $trip, addNewFlight: addNewFlight)
-                TransportationSection(trip: $trip, addNewTransportation: addNewTransportation)
+                TransportSection(trip: $trip, isFlight: true, addNewTransport: addNewFlight)
+                TransportSection(trip: $trip, isFlight: false, addNewTransport: addNewTransport)
                 // TODO: add Hotels & Lodging
                 // TODO: add Points of Interest
                 BudgetingSection(trip: $trip)
@@ -38,12 +38,12 @@ struct TripDetailView: View {
         }
         .sheet(isPresented: $isAddingNewReservation) {
             NavigationView {
-                if newReservationType == "flight" {
-                    FlightDetailView(reservation: $newFlight, trip: $trip, isNew: true)
-                }
-                if newReservationType == "transportation" {
-                    TransportationDetailView(reservation: $newTransportation, trip: $trip, isNew: true)
-                }
+                TransportDetailView(
+                    reservation: $newFlight,
+                    trip: $trip,
+                    isFlight: newReservationType == "flight",
+                    isNew: true
+                )
             }
         }
     }

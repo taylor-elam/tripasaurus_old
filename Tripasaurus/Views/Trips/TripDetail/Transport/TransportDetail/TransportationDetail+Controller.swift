@@ -1,11 +1,11 @@
 import Foundation
 
-extension TransportationDetailView {
+extension TransportDetailView {
     var isSaveDisabled: Bool {
         return reservationCopy.departureCity.isEmpty || reservationCopy.arrivalCity.isEmpty
     }
 
-    func addTransportation() {
+    func addTransport() {
         trip.transportation.append(reservationCopy)
         dismiss()
     }
@@ -14,12 +14,12 @@ extension TransportationDetailView {
         dismiss()
     }
 
-    func deleteTransportation() {
+    func deleteTransport() {
         reservation.isDeleted = true
         dismiss()
     }
 
-    func saveTransportation() {
+    func saveTransport() {
         reservation = reservationCopy
         dismiss()
     }
