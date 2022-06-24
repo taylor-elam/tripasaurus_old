@@ -31,7 +31,6 @@ struct TripDetailView: View {
         }
         .onAppear { tripCopy = trip }
         .background(Color(UIColor.secondarySystemBackground))
-        // TODO: add styling to navbar
         .navigationBarTitle(Text(isNew ? LocalizedStringKey(TripVault.new.name) : ""), displayMode: .inline)
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, showCancelButton: isNew, addAction: addTrip, cancelAction: cancelAddTrip, saveAction: saveTrip)

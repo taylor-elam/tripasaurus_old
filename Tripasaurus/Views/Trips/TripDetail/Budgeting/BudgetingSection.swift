@@ -2,22 +2,32 @@ import SwiftUI
 
 struct BudgetingSection: View {
     @Binding var trip: Trip
+    @State var isShowingExpenseItems: Bool = false
     let currencyFormatter: NumberFormatter = NumberFormatter().currency()
 
     var body: some View {
         Section(content: {
-            BudgetProgress(budget: $trip.budget, expenseTotal: trip.expenseTotal)
+            BudgetProgress(
+                budget: $trip.budget,
+                expenseTotal: trip.expenseTotal,
+                expenseReports: trip.expenseReports
+            )
+            .onTapGesture { withAnimation(.linear) { isShowingExpenseItems.toggle() } }
             // TODO: add budget sections to progress bar
-            ForEach(trip.expenseItems) { expenseItem in
-                HStack {
-                    Image(systemName: expenseItem.symbol)
-                    Text(expenseItem.title)
-                    Spacer()
-                    if let formattedCost = currencyFormatter.string(from: expenseItem.cost as NSNumber) {
-                        Text(formattedCost)
+            if isShowingExpenseItems {
+                ForEach(trip.expenseReports) { expenseReport in
+                    ForEach(expenseReport.items) { expenseItem in
+                        HStack {
+                            Image(systemName: expenseItem.symbol)
+                            Text(expenseItem.title)
+                            Spacer()
+                            if let formattedCost = currencyFormatter.string(from: expenseItem.cost as NSNumber) {
+                                Text(formattedCost)
+                            }
+                        }
+                        // TODO: tap to navigate to flight
                     }
                 }
-                // TODO: tap to navigate to flight
             }
         }, header: {
             Label(
