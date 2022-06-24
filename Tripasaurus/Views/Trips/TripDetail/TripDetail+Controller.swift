@@ -4,10 +4,17 @@ extension TripDetailView {
     var isSaveDisabled: Bool {
         return trip.title.isEmpty
     }
-
+    
     func addNewFlight() {
         newFlight = FlightReservation()
-        isAddingNewFlight = true
+        isAddingNewReservation = true
+        newReservationType = "flight"
+    }
+    
+    func addNewTransportation() {
+        newTransportation = TransportationReservation()
+        isAddingNewReservation = true
+        newReservationType = "transportation"
     }
 
     func addTrip() {

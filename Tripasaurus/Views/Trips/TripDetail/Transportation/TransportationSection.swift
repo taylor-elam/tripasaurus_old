@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TransportationSection: View {
     @Binding var trip: Trip
+    var addNewTransportation: () -> Void
 
     var body: some View {
         Section(content: {
@@ -12,6 +13,13 @@ struct TransportationSection: View {
                 )
                 .swipeActions { DeleteButton(action: { reservation.isDeleted = true }) }
             }
+            Button(
+                action: addNewTransportation,
+                label: {
+                    Label(LocalizedStringKey(TripVault.transportationAdd.name), systemImage: AppSymbol.addNew.name)
+                }
+            )
+            .padding(.horizontal, -4)
         }, header: {
             Label(
                 LocalizedStringKey(TripVault.transportationSectionHeader.name),
@@ -24,7 +32,7 @@ struct TransportationSection: View {
 struct TransportationSection_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            TransportationSection(trip: .constant(Trip.example))
+            TransportationSection(trip: .constant(Trip.example), addNewTransportation: {})
         }.listStyle(.sidebar)
     }
 }
