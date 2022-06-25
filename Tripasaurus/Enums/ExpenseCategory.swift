@@ -6,8 +6,8 @@ enum ExpenseCategory: String {
 
     var color: Color {
         switch self {
-        case .flights: return EventColor.blue.mainColor
-        case .transportation: return EventColor.yellow.mainColor
+        case .flights: return AppColor.blue.mainColor
+        case .transportation: return AppColor.yellow.mainColor
         }
     }
     var name: String { self.rawValue }

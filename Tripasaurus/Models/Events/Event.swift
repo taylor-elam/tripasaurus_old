@@ -3,7 +3,7 @@ import Foundation
 struct Event: Identifiable, Hashable {
     var id: UUID = UUID()
 
-    var color: EventColor = EventColor.random()
+    var color: AppColor = AppColor.random()
     var date: Date = Date.now
     var icon: EventIcon = EventIcon.random()
     var isDeleted: Bool = false

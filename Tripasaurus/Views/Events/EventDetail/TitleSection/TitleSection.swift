@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct TitleSection: View {
-    @Binding var color: EventColor
+    @Binding var color: AppColor
     @Binding var icon: EventIcon
     @Binding var title: String
     var isSelected: Bool

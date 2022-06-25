@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct EventIconPicker: View {
-    @Binding var eventColor: EventColor
+    @Binding var eventColor: AppColor
     @Binding var eventIcon: EventIcon
 
     private let size: CGFloat = 50
@@ -10,7 +10,7 @@ struct EventIconPicker: View {
     var body: some View {
         VStack {
             HStack {
-                ForEach(EventColor.allCases) { color in
+                ForEach(AppColor.allCases) { color in
                     Button {
                         eventColor = color
                     } label: {

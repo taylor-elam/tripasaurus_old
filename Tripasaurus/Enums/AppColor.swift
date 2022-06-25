@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum EventColor: String, CaseIterable, Identifiable, Codable {
+enum AppColor: String, CaseIterable, Identifiable, Codable {
     case red
     case orange
     case yellow
@@ -9,13 +9,13 @@ enum EventColor: String, CaseIterable, Identifiable, Codable {
     case magenta
     case darkGray
 
-    static var `default` = EventColor.darkGray
+    static var `default` = AppColor.darkGray
 
     var id: String { name }
     var mainColor: Color { Color(rawValue) }
     var name: String { rawValue.capitalized }
 
-    static func random() -> EventColor {
-        EventColor.allCases.randomElement() ?? .default
+    static func random() -> AppColor {
+        AppColor.allCases.randomElement() ?? .default
     }
 }
