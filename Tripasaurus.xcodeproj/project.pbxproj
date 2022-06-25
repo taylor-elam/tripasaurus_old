@@ -151,9 +151,8 @@
 		7F0712F72865164500A35535 /* Transport */ = {
 			isa = PBXGroup;
 			children = (
-				7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */,
-				7F0712FE28652D9E00A35535 /* TransportRow.swift */,
 				7F0712F82865165A00A35535 /* TransportSection.swift */,
+				7F0712FE28652D9E00A35535 /* TransportRow.swift */,
 				7F44A2592866152E000DB4B6 /* TransportDetail */,
 			);
 			path = Transport;
@@ -183,6 +182,7 @@
 			children = (
 				7F071301286536A800A35535 /* TransportDetailView.swift */,
 				7F0713032865370C00A35535 /* TransportationDetail+Controller.swift */,
+				7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */,
 				7F0713092865659F00A35535 /* TransportationModePicker.swift */,
 			);
 			path = TransportDetail;
