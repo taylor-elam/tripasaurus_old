@@ -4,6 +4,8 @@ import SwiftUI
 struct TripasaurusApp: App {
     @StateObject private var eventStore = EventStore()
     @StateObject private var tripStore = TripStore()
+    var amadeusGateway = AmadeusGateway()
+
     @State private var id = UUID()
     @State private var tabSelection = 0
 
@@ -31,6 +33,8 @@ struct TripasaurusApp: App {
             }
             .environmentObject(eventStore)
             .environmentObject(tripStore)
+            .environmentObject(amadeusGateway)
+            .onAppear { amadeusGateway.authorize() }
         }
     }
 }
