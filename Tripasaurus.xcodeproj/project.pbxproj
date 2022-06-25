@@ -27,7 +27,7 @@
 		7F79444C285CED6B00B850FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444B285CED6B00B850FB /* Assets.xcassets */; };
 		7F79444F285CED6B00B850FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F79444E285CED6B00B850FB /* Preview Assets.xcassets */; };
 		7F794459285CF2A100B850FB /* AppTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794458285CF2A100B850FB /* AppTab.swift */; };
-		7F79445C285CF64800B850FB /* EventColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79445B285CF64800B850FB /* EventColor.swift */; };
+		7F79445C285CF64800B850FB /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79445B285CF64800B850FB /* AppColor.swift */; };
 		7F79445E285CF65800B850FB /* EventIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79445D285CF65800B850FB /* EventIcon.swift */; };
 		7F794460285CF67D00B850FB /* EventSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F79445F285CF67D00B850FB /* EventSection.swift */; };
 		7F794462285CF6B200B850FB /* EventTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794461285CF6B200B850FB /* EventTask.swift */; };
@@ -68,7 +68,6 @@
 		7FE52EA428615C090068B182 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA328615C090068B182 /* NumberFormatter.swift */; };
 		7FE52EA82861EE3F0068B182 /* BudgetingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */; };
 		7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA92861F2C40068B182 /* ExpenseItem.swift */; };
-		7FE52EAC286239CF0068B182 /* ProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */; };
 		7FE52EAF28623FBB0068B182 /* BudgetProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,7 +93,7 @@
 		7F79444B285CED6B00B850FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F79444E285CED6B00B850FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7F794458285CF2A100B850FB /* AppTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTab.swift; sourceTree = "<group>"; };
-		7F79445B285CF64800B850FB /* EventColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventColor.swift; sourceTree = "<group>"; };
+		7F79445B285CF64800B850FB /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		7F79445D285CF65800B850FB /* EventIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventIcon.swift; sourceTree = "<group>"; };
 		7F79445F285CF67D00B850FB /* EventSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSection.swift; sourceTree = "<group>"; };
 		7F794461285CF6B200B850FB /* EventTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTask.swift; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 		7FE52EA328615C090068B182 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetingSection.swift; sourceTree = "<group>"; };
 		7FE52EA92861F2C40068B182 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
-		7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewStyle.swift; sourceTree = "<group>"; };
 		7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,9 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				7FE52E962860FCDB0068B182 /* Localization */,
+				7F79445B285CF64800B850FB /* AppColor.swift */,
 				7F794458285CF2A100B850FB /* AppTab.swift */,
 				7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */,
-				7F79445B285CF64800B850FB /* EventColor.swift */,
 				7F79445D285CF65800B850FB /* EventIcon.swift */,
 				7F79445F285CF67D00B850FB /* EventSection.swift */,
 				7FE52E9F2861546F0068B182 /* ExpandableRow.swift */,
@@ -311,7 +309,6 @@
 				7F79446F285CF91B00B850FB /* CustomLabelStyle.swift */,
 				7F52E602285E298900529B61 /* DetailDeleteButton.swift */,
 				7F794479285D041800B850FB /* ListCard.swift */,
-				7FE52EAB286239CF0068B182 /* ProgressViewStyle.swift */,
 				7F52E606285E4D5500529B61 /* ResizeImage.swift */,
 				7F52E604285E2C2500529B61 /* SectionHeader.swift */,
 				7FA98309285F7D0700C2CEC0 /* TextInput.swift */,
@@ -505,7 +502,7 @@
 				7F794464285CF6C300B850FB /* Event.swift in Sources */,
 				7F071306286559FE00A35535 /* TransportationMode.swift in Sources */,
 				7F0712FF28652D9E00A35535 /* TransportRow.swift in Sources */,
-				7F79445C285CF64800B850FB /* EventColor.swift in Sources */,
+				7F79445C285CF64800B850FB /* AppColor.swift in Sources */,
 				7F794462285CF6B200B850FB /* EventTask.swift in Sources */,
 				7F79445E285CF65800B850FB /* EventIcon.swift in Sources */,
 				7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */,
@@ -517,7 +514,6 @@
 				7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */,
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
 				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
-				7FE52EAC286239CF0068B182 /* ProgressViewStyle.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F07130828655B4700A35535 /* IconButton.swift in Sources */,
 				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,

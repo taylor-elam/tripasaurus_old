@@ -13,7 +13,6 @@ struct BudgetingSection: View {
                 expenseReports: trip.expenseReports
             )
             .onTapGesture { withAnimation(.linear) { isShowingExpenseItems.toggle() } }
-            // TODO: add budget sections to progress bar
             if isShowingExpenseItems {
                 ForEach(trip.expenseReports) { expenseReport in
                     ForEach(expenseReport.items) { expenseItem in
@@ -30,10 +29,11 @@ struct BudgetingSection: View {
                 }
             }
         }, header: {
-            Label(
-                LocalizedStringKey(TripVault.budgetSectionHeader.name),
-                systemImage: AppSymbol.budget.name
-            ).font(.title2).fontWeight(.bold)
+            HStack {
+                Image(systemName: AppSymbol.budget.name).resizeImage(width: 20, height: 20)
+                Text(LocalizedStringKey(TripVault.budgetSectionHeader.name))
+                    .font(.title2).fontWeight(.bold)
+            }
         })
     }
 }

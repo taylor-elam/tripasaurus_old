@@ -33,11 +33,16 @@ struct TransportSection: View {
             )
             .padding(.horizontal, -4)
         }, header: {
-            Label(
-                LocalizedStringKey(isFlight ? TripVault.flightSectionHeader.name : TripVault.transportationSectionHeader.name),
-                systemImage: isFlight ? AppSymbol.flight.name : AppSymbol.transportation.name
-                // TODO: constant symbol height
-            ).font(.title2).fontWeight(.bold)
+            HStack {
+                Image(systemName: isFlight ? AppSymbol.flight.name : AppSymbol.transportation.name)
+                    .resizeImage(width: 20, height: 20)
+                Text(LocalizedStringKey(
+                    isFlight
+                    ? TripVault.flightSectionHeader.name
+                    : TripVault.transportationSectionHeader.name)
+                )
+                .font(.title2).fontWeight(.bold)
+            }
         })
     }
 }
