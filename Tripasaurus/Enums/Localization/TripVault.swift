@@ -14,6 +14,7 @@ enum TripVault: String {
     
     case flightHeader = "trip.flight.header"
     case flightNumber = "trip.flight.number"
+    case flightSearchAirports = "Search for Airports"
     case flightSectionHeader = "trip.flight.sectionHeader"
     
     case transportAdd = "Add Reservation"

@@ -14,6 +14,11 @@ struct Link: Codable {
     var `self`: String
 }
 
+struct LocationLink: Codable {
+    var methods: [String]
+    var href: String
+}
+
 struct Airport: Identifiable, Codable {
     var type: String
     var subType: String
@@ -24,7 +29,8 @@ struct Airport: Identifiable, Codable {
     var iataCode: String
     var geoCode: GeoCode
     var address: Address
-    var analytics: Analytics
+    var analytics: Analytics?
+    var `self`: LocationLink
 }
 
 struct Location: Codable {
@@ -47,6 +53,7 @@ struct Address: Codable {
     var countryName: String
     var countryCode: String
     var regionCode: String
+    var stateCode: String?
 }
 
 struct Analytics: Codable {

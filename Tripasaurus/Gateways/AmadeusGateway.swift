@@ -2,7 +2,7 @@ import SwiftUI
 
 class AmadeusGateway: ObservableObject {
     @Published var airports: [Airport] = []
-    @Published var authorization: Authorization = Authorization()
+    var authorization: Authorization = Authorization()
     var tokenExpiration: Date = Date.now
 
     func authorize() {
