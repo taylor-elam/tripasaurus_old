@@ -4,10 +4,11 @@ class SearchBarViewModel: ObservableObject {
     @Published var text: String = ""
 }
 
-struct AirportCitySearchView: View {
+struct LocationSearchView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var gateway: AmadeusGateway
     @StateObject private var vm = SearchBarViewModel()
+    var selectLocation: (String) -> Void
 
     var body: some View {
         VStack {
@@ -18,6 +19,7 @@ struct AirportCitySearchView: View {
                     gateway.getLocations(ofType: AmadeusLocationType.airport.name, matching: $0)
                 }
             // TODO: add spinner
+            // TODO: add no locations found
 
             ScrollView {
                 ForEach($gateway.airports) { $airport in
@@ -28,7 +30,10 @@ struct AirportCitySearchView: View {
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .listCardStyle()
-                    // TODO: tap to set origin/destination
+                    .onTapGesture {
+                        selectLocation("\(airport.iataCode) \(airport.name)")
+                        dismiss()
+                    }
                 }
             }
         }
@@ -43,10 +48,10 @@ struct AirportCitySearchView: View {
     }
 }
 
-struct AirportCitySearchView_Previews: PreviewProvider {
+struct LocationSearchView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            AirportCitySearchView().environmentObject(AmadeusGateway())
+            LocationSearchView(selectLocation: { name in }).environmentObject(AmadeusGateway())
         }
     }
 }

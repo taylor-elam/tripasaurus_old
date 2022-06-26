@@ -6,7 +6,6 @@ struct TransportDetailView: View {
 
     @Environment(\.dismiss) var dismiss
     @State var isMainDetailsSelected: Bool = false
-    @State var isSearchingLocations: Bool = false
     @State var reservationCopy: TransportReservation = TransportReservation()
     var isFlight: Bool
     var isNew: Bool
@@ -30,8 +29,7 @@ struct TransportDetailView: View {
                         date: $reservationCopy.departureDate,
                         cityPlaceholder: TripVault.transportDepartureCityPlaceholder.name,
                         dateTitle: TripVault.transportDepartureDate.name,
-                        label: TripVault.transportDepart.name,
-                        openLocationSearch: { isSearchingLocations.toggle() }
+                        label: TripVault.transportDepart.name
                     )
 
                     TransportNode(
@@ -39,8 +37,7 @@ struct TransportDetailView: View {
                         date: $reservationCopy.arrivalDate,
                         cityPlaceholder: TripVault.transportArrivalCityPlaceholder.name,
                         dateTitle: TripVault.transportArrivalDate.name,
-                        label: TripVault.transportArrive.name,
-                        openLocationSearch: { isSearchingLocations.toggle() }
+                        label: TripVault.transportArrive.name
                     )
 
                     Divider()
@@ -104,9 +101,6 @@ struct TransportDetailView: View {
         )
         .toolbar {
             SaveToolbar(isNew: isNew, isSaveDisabled: isSaveDisabled, showCancelButton: isNew, addAction: addTransport, cancelAction: cancel, saveAction: saveTransport)
-        }
-        .sheet(isPresented: $isSearchingLocations) {
-            NavigationView { AirportCitySearchView() }
         }
     }
 }
