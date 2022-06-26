@@ -52,8 +52,6 @@
 		7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794492285D78CD00B850FB /* TripDetailView.swift */; };
 		7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794494285D86EB00B850FB /* TripDetail+Controller.swift */; };
 		7F87972C28665C3C0071DDC3 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F87972B28665C3C0071DDC3 /* CornerRadius.swift */; };
-		7F96338F2867844600E2A153 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96338E2867844600E2A153 /* TestView.swift */; };
-		7F9633912867864D00E2A153 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9633902867864D00E2A153 /* Network.swift */; };
 		7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA98309285F7D0700C2CEC0 /* TextInput.swift */; };
 		7FA9830E285F9AC600C2CEC0 /* TransportNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */; };
 		7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */; };
@@ -61,6 +59,7 @@
 		7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983132860155A00C2CEC0 /* SaveToolbar.swift */; };
 		7FB609E72867B80A005A658E /* AmadeusGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB609E62867B809005A658E /* AmadeusGateway.swift */; };
 		7FB609EA2867E303005A658E /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB609E92867E303005A658E /* Authorization.swift */; };
+		7FB609EC2867EC8E005A658E /* CityAndAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB609EB2867EC8E005A658E /* CityAndAirport.swift */; };
 		7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */; };
 		7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */; };
 		7FE52E952860FC890068B182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FE52E942860FC890068B182 /* Localizable.strings */; };
@@ -122,8 +121,6 @@
 		7F794492285D78CD00B850FB /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		7F794494285D86EB00B850FB /* TripDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripDetail+Controller.swift"; sourceTree = "<group>"; };
 		7F87972B28665C3C0071DDC3 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
-		7F96338E2867844600E2A153 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		7F9633902867864D00E2A153 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		7FA98309285F7D0700C2CEC0 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportNode.swift; sourceTree = "<group>"; };
 		7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
@@ -131,6 +128,7 @@
 		7FA983132860155A00C2CEC0 /* SaveToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToolbar.swift; sourceTree = "<group>"; };
 		7FB609E62867B809005A658E /* AmadeusGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmadeusGateway.swift; sourceTree = "<group>"; };
 		7FB609E92867E303005A658E /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		7FB609EB2867EC8E005A658E /* CityAndAirport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAndAirport.swift; sourceTree = "<group>"; };
 		7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetEdit+Controller.swift"; sourceTree = "<group>"; };
 		7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSymbol.swift; sourceTree = "<group>"; };
 		7FE52E942860FC890068B182 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -305,7 +303,6 @@
 		7F79446B285CF84300B850FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7F96338D2867843B00E2A153 /* Test */,
 				7F794496285DA09300B850FB /* Shared */,
 				7F794455285CEF7F00B850FB /* Events */,
 				7F794487285D6ECE00B850FB /* Trips */,
@@ -399,15 +396,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		7F96338D2867843B00E2A153 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				7F96338E2867844600E2A153 /* TestView.swift */,
-				7F9633902867864D00E2A153 /* Network.swift */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		7FB609E52867B7F9005A658E /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB609E92867E303005A658E /* Authorization.swift */,
+				7FB609EB2867EC8E005A658E /* CityAndAirport.swift */,
 			);
 			path = Amadeus;
 			sourceTree = "<group>";
@@ -522,7 +511,6 @@
 				7FE52E982860FD3E0068B182 /* AppVault.swift in Sources */,
 				7F52E607285E4D5500529B61 /* ResizeImage.swift in Sources */,
 				7FB609E72867B80A005A658E /* AmadeusGateway.swift in Sources */,
-				7F9633912867864D00E2A153 /* Network.swift in Sources */,
 				7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */,
 				7FE52E9A286104A90068B182 /* EventVault.swift in Sources */,
 				7F79446A285CF71600B850FB /* EventStore.swift in Sources */,
@@ -554,7 +542,6 @@
 				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F07130828655B4700A35535 /* IconButton.swift in Sources */,
-				7F96338F2867844600E2A153 /* TestView.swift in Sources */,
 				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,
 				7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */,
 				7F794467285CF6E400B850FB /* Date.swift in Sources */,
@@ -576,6 +563,7 @@
 				7FE52EAF28623FBB0068B182 /* BudgetProgress.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
+				7FB609EC2867EC8E005A658E /* CityAndAirport.swift in Sources */,
 				7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */,
 				7F79447E285D071600B850FB /* DateSection.swift in Sources */,
 				7F0712FB28651FE900A35535 /* TransportReservation.swift in Sources */,
