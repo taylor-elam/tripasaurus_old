@@ -29,6 +29,7 @@ enum TripVault: String {
     case transportDepartureDate = "trip.transport.departureDate"
     case transportDepart = "trip.transport.depart"
     case transportNew = "trip.transport.new"
+    case transportNoLocationsFound = "trip.transport.noLocationsFound"
     case transportNotes = "trip.transport.notes"
     
     case transportationHeader = "trip.transportation.header"

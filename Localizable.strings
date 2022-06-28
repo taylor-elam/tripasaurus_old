@@ -42,6 +42,7 @@
 "trip.transport.departureDate" = "Departure Date";
 "trip.transport.depart" = "Depart";
 "trip.transport.new" = "New Reservation";
+"trip.transport.noLocationsFound" = "No Locations Found";
 "trip.transport.notes" = "Notes";
 
 "trip.transportation.header" = "Transportation";

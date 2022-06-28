@@ -18,20 +18,26 @@ struct LocationSearchView: View {
                     guard $0.count >= 3 else { return }
                     gateway.getLocations(ofType: AmadeusLocationType.airport.name, matching: $0)
                 }
-            // TODO: add spinner
-            // TODO: add no locations found
+
+            if gateway.locationRequestStatus == .inProgress {
+                ProgressView().progressViewStyle(.circular)
+            }
+
+            if gateway.locationRequestStatus == .succeded && $gateway.locations.isEmpty {
+                Text(LocalizedStringKey(TripVault.transportNoLocationsFound.name)).foregroundColor(.gray)
+            }
 
             ScrollView {
-                ForEach($gateway.airports) { $airport in
+                ForEach($gateway.locations) { $location in
                     HStack {
-                        Text(airport.iataCode)
-                        Text(airport.name)
+                        Text(location.iataCode)
+                        Text(location.address.cityName)
                     }
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .listCardStyle()
                     .onTapGesture {
-                        selectLocation("\(airport.iataCode) \(airport.name)")
+                        selectLocation("\(location.iataCode) \(location.address.cityName)")
                         dismiss()
                     }
                 }

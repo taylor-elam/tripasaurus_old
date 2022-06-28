@@ -1,7 +1,9 @@
 import SwiftUI
 
 class AmadeusGateway: ObservableObject {
-    @Published var airports: [Airport] = []
+    @Published var locations: [LocationDTO] = []
+    @Published var locationRequestStatus: RequestStatus = RequestStatus.notStarted
+
     var authorization: Authorization = Authorization()
     var tokenExpiration: Date = Date.now
 
@@ -44,19 +46,29 @@ class AmadeusGateway: ObservableObject {
     }
 
     func getLocations(ofType subType: String, matching searchText: String) {
+        self.locationRequestStatus = .inProgress
         if Date.now > tokenExpiration {
             print("token expired")
+            self.locationRequestStatus = .failed
             return
+            // TODO: request new access token
         }
 
         guard let url = URL(string: "https://test.api.amadeus.com/v1/reference-data/locations?subType=\(subType)&keyword=\(searchText)")
-        else { fatalError("Missing URL") }
+        else {
+            // TODO: error handling
+            self.locationRequestStatus = .failed
+            print("Missing URL")
+            return
+        }
 
         var request = URLRequest(url: url)
         request.setValue("Bearer \(self.authorization.access_token)", forHTTPHeaderField: "Authorization")
 
-        let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
+                // TODO: error handling
+                self.locationRequestStatus = .failed
                 print("Request error: ", error)
                 return
             }
@@ -68,8 +80,11 @@ class AmadeusGateway: ObservableObject {
                 DispatchQueue.main.async {
                     do {
                         let decodedUsers = try JSONDecoder().decode(AirportLocationsResponse.self, from: data)
-                        self.airports = decodedUsers.data
+                        self.locations = decodedUsers.data
+                        self.locationRequestStatus = .succeded
                     } catch let error {
+                        // TODO: error handling
+                        self.locationRequestStatus = .failed
                         print("Error decoding: ", error)
                     }
                 }

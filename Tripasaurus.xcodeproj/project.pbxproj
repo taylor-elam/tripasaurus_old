@@ -74,6 +74,8 @@
 		7FE52EA82861EE3F0068B182 /* BudgetingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */; };
 		7FE52EAA2861F2C40068B182 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EA92861F2C40068B182 /* ExpenseItem.swift */; };
 		7FE52EAF28623FBB0068B182 /* BudgetProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */; };
+		7FF9CF29286A9EBA000E8C6B /* RequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9CF28286A9EBA000E8C6B /* RequestStatus.swift */; };
+		7FF9CF2D286AA406000E8C6B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF9CF2C286AA406000E8C6B /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +147,8 @@
 		7FE52EA72861EE3F0068B182 /* BudgetingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetingSection.swift; sourceTree = "<group>"; };
 		7FE52EA92861F2C40068B182 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
 		7FE52EAE28623FBB0068B182 /* BudgetProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetProgress.swift; sourceTree = "<group>"; };
+		7FF9CF28286A9EBA000E8C6B /* RequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatus.swift; sourceTree = "<group>"; };
+		7FF9CF2C286AA406000E8C6B /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,7 @@
 				7F79448B285D720800B850FB /* Trip.swift */,
 				7FE52EA92861F2C40068B182 /* ExpenseItem.swift */,
 				7F0712FA28651FE900A35535 /* TransportReservation.swift */,
+				7FF9CF2C286AA406000E8C6B /* Location.swift */,
 			);
 			path = Trips;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				7FE52E962860FCDB0068B182 /* Localization */,
+				7FA4365D2868A0EA0086CCB0 /* AmadeusLocationType.swift */,
 				7F79445B285CF64800B850FB /* AppColor.swift */,
 				7F794458285CF2A100B850FB /* AppTab.swift */,
 				7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */,
@@ -271,6 +277,7 @@
 				7F79445F285CF67D00B850FB /* EventSection.swift */,
 				7FE52E9F2861546F0068B182 /* ExpandableRow.swift */,
 				7F44A25A28662FC1000DB4B6 /* ExpenseCategory.swift */,
+				7FF9CF28286A9EBA000E8C6B /* RequestStatus.swift */,
 				7F071305286559FE00A35535 /* TransportationMode.swift */,
 			);
 			path = Enums;
@@ -424,7 +431,6 @@
 				7FE52E972860FD3E0068B182 /* AppVault.swift */,
 				7FE52E99286104A90068B182 /* EventVault.swift */,
 				7FE52E9B286116EB0068B182 /* TripVault.swift */,
-				7FA4365D2868A0EA0086CCB0 /* AmadeusLocationType.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */,
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
 				7F1ECF2D2867F86900CD5520 /* LocationSearchView.swift in Sources */,
+				7FF9CF29286A9EBA000E8C6B /* RequestStatus.swift in Sources */,
 				7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,
 				7FA9830E285F9AC600C2CEC0 /* TransportNode.swift in Sources */,
@@ -544,6 +551,7 @@
 				7F3D733B2864095400C4DBBC /* BudgetEdit.swift in Sources */,
 				7F071302286536A800A35535 /* TransportDetailView.swift in Sources */,
 				7F794448285CED6600B850FB /* TripasaurusApp.swift in Sources */,
+				7FF9CF2D286AA406000E8C6B /* Location.swift in Sources */,
 				7F794460285CF67D00B850FB /* EventSection.swift in Sources */,
 				7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */,
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
