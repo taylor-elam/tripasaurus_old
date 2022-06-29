@@ -1,20 +1,11 @@
 import Foundation
 
-struct AirportLocationsResponse: Codable {
+class AirportResponse: Codable {
     var meta: Meta
-    var data: [LocationDTO]
-    
-    struct Meta: Codable {
-        var count: Int
-        var links: Link
-        
-        struct Link: Codable {
-            var `self`: String
-        }
-    }
+    var data: [AirportDTO]
 }
 
-struct LocationDTO: Identifiable, Codable {
+struct AirportDTO: Identifiable, Codable {
     var type: String
     var subType: String
     var name: String
@@ -23,16 +14,11 @@ struct LocationDTO: Identifiable, Codable {
     var timeZoneOffset: String
     var iataCode: String
     var geoCode: GeoCode
-    var address: Address
+    var address: AirportAddress
     var analytics: Analytics?
     var `self`: LocationLink
-    
-    struct GeoCode: Codable {
-        var latitude: Double
-        var longitude: Double
-    }
 
-    struct Address: Codable {
+    struct AirportAddress: Codable {
         var cityName: String
         var cityCode: String
         var countryName: String

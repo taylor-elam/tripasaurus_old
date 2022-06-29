@@ -1,11 +1,31 @@
 import SwiftUI
 
 class AmadeusGateway: ObservableObject {
-    @Published var locations: [LocationDTO] = []
     @Published var locationRequestStatus: RequestStatus = RequestStatus.notStarted
 
     var authorization: Authorization = Authorization()
     var tokenExpiration: Date = Date.now
+
+    private func checkAccessToken() {
+        if Date.now > tokenExpiration {
+            print("token expired")
+            self.locationRequestStatus = .failed
+            return
+            // TODO: request new access token
+        }
+    }
+
+    private func missingUrlError(setRequestState: () -> Void) {
+        // TODO: error handling
+        setRequestState()
+        print("Missing URL")
+    }
+
+    private func requestError(message: String, error: Any, setRequestState: () -> Void) {
+        // TODO: error handling
+        setRequestState()
+        print(message, error)
+    }
 
     func authorize() {
         guard let url = URL(string: "https://test.api.amadeus.com/v1/security/oauth2/token")
@@ -20,9 +40,9 @@ class AmadeusGateway: ObservableObject {
         request.httpMethod = "POST"
         request.httpBody = postString.data(using: .utf8)
 
-        let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                print("Request error: ", error)
+                self.requestError(message: "Request error: ", error: error, setRequestState: {})
                 return
             }
 
@@ -36,40 +56,30 @@ class AmadeusGateway: ObservableObject {
                         self.authorization = decodedAuthorization
                         self.tokenExpiration = Date.now.add(seconds: decodedAuthorization.expires_in)
                     } catch let error {
-                        print("Error decoding: ", error)
+                        self.requestError(message: "Error decoding: ", error: error, setRequestState: {})
                     }
                 }
             }
-       }
-
-       dataTask.resume()
+       }.resume()
     }
-
-    func getLocations(ofType subType: String, matching searchText: String) {
+    
+    func getAirports(matching searchText: String, completion: @escaping ([AirportDTO]) -> ()) {
+        print("getAirports")
         self.locationRequestStatus = .inProgress
-        if Date.now > tokenExpiration {
-            print("token expired")
-            self.locationRequestStatus = .failed
-            return
-            // TODO: request new access token
-        }
+        self.checkAccessToken()
 
-        guard let url = URL(string: "https://test.api.amadeus.com/v1/reference-data/locations?subType=\(subType)&keyword=\(searchText)")
+        guard let url = URL(string: "https://test.api.amadeus.com/v1/reference-data/locations?subType=AIRPORT&keyword=\(searchText)")
         else {
-            // TODO: error handling
-            self.locationRequestStatus = .failed
-            print("Missing URL")
+            self.missingUrlError { self.locationRequestStatus = .failed }
             return
         }
 
         var request = URLRequest(url: url)
         request.setValue("Bearer \(self.authorization.access_token)", forHTTPHeaderField: "Authorization")
 
-        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                // TODO: error handling
-                self.locationRequestStatus = .failed
-                print("Request error: ", error)
+                self.requestError(message: "Request error: ", error: error, setRequestState: { self.locationRequestStatus = .failed })
                 return
             }
 
@@ -79,18 +89,50 @@ class AmadeusGateway: ObservableObject {
                 guard let data = data else { return }
                 DispatchQueue.main.async {
                     do {
-                        let decodedUsers = try JSONDecoder().decode(AirportLocationsResponse.self, from: data)
-                        self.locations = decodedUsers.data
+                        let decodedUsers = try JSONDecoder().decode(AirportResponse.self, from: data)
                         self.locationRequestStatus = .succeded
+                        completion(decodedUsers.data)
                     } catch let error {
-                        // TODO: error handling
-                        self.locationRequestStatus = .failed
-                        print("Error decoding: ", error)
+                        self.requestError(message: "Error decoding: ", error: error, setRequestState: { self.locationRequestStatus = .failed })
                     }
                 }
             }
-       }
+       }.resume()
+    }
+    
+    func getCities(matching searchText: String, completion: @escaping ([CityDTO]) -> ()) {
+        self.locationRequestStatus = .inProgress
+        self.checkAccessToken()
 
-       dataTask.resume()
+        guard let url = URL(string: "https://test.api.amadeus.com/v1/reference-data/locations/cities?keyword=\(searchText)")
+        else {
+            self.missingUrlError { self.locationRequestStatus = .failed }
+            return
+        }
+
+        var request = URLRequest(url: url)
+        request.setValue("Bearer \(self.authorization.access_token)", forHTTPHeaderField: "Authorization")
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                self.requestError(message: "Request error: ", error: error, setRequestState: { self.locationRequestStatus = .failed })
+                return
+            }
+
+            guard let response = response as? HTTPURLResponse else { return }
+
+            if response.statusCode == 200 {
+                guard let data = data else { return }
+                DispatchQueue.main.async {
+                    do {
+                        let decodedUsers = try JSONDecoder().decode(CityResponse.self, from: data)
+                        self.locationRequestStatus = .succeded
+                        completion(decodedUsers.data)
+                    } catch let error {
+                        self.requestError(message: "Error decoding: ", error: error, setRequestState: { self.locationRequestStatus = .failed })
+                    }
+                }
+            }
+       }.resume()
     }
 }

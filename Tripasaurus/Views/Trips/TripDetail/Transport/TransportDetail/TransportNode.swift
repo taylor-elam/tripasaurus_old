@@ -6,6 +6,7 @@ struct TransportNode: View {
     var cityPlaceholder: String
     var dateTitle: String
     var label: String
+    var isFlight: Bool
     @State var isSearchingLocations: Bool = false
 
     func selectLocation(name: String) -> Void {
@@ -41,7 +42,7 @@ struct TransportNode: View {
             }
         }
         .sheet(isPresented: $isSearchingLocations) {
-            NavigationView { LocationSearchView(selectLocation: selectLocation) }
+            NavigationView { LocationSearchView(isFlight: isFlight, selectLocation: selectLocation) }
         }
     }
 }
@@ -53,7 +54,8 @@ struct TransportNode_Previews: PreviewProvider {
             date: .constant(Date.now),
             cityPlaceholder: TripVault.transportDepartureCityPlaceholder.name,
             dateTitle: TripVault.transportDepartureDate.name,
-            label: TripVault.transportDepart.name
+            label: TripVault.transportDepart.name,
+            isFlight: true
         )
     }
 }

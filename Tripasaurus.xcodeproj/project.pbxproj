@@ -15,6 +15,9 @@
 		7F071306286559FE00A35535 /* TransportationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F071305286559FE00A35535 /* TransportationMode.swift */; };
 		7F07130828655B4700A35535 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F07130728655B4700A35535 /* IconButton.swift */; };
 		7F07130A2865659F00A35535 /* TransportationModePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0713092865659F00A35535 /* TransportationModePicker.swift */; };
+		7F078752286BEC5800C02DC6 /* GeoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F078751286BEC5800C02DC6 /* GeoCode.swift */; };
+		7F078754286BEC8100C02DC6 /* CityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F078753286BEC8100C02DC6 /* CityResponse.swift */; };
+		7F078756286BEDDB00C02DC6 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F078755286BEDDB00C02DC6 /* Meta.swift */; };
 		7F0D9109285EC69300B674D9 /* TripMainDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0D9108285EC69300B674D9 /* TripMainDetails.swift */; };
 		7F1ECF2D2867F86900CD5520 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1ECF2C2867F86900CD5520 /* LocationSearchView.swift */; };
 		7F3D733B2864095400C4DBBC /* BudgetEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D733A2864095400C4DBBC /* BudgetEdit.swift */; };
@@ -53,7 +56,6 @@
 		7F794493285D78CD00B850FB /* TripDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794492285D78CD00B850FB /* TripDetailView.swift */; };
 		7F794495285D86EB00B850FB /* TripDetail+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F794494285D86EB00B850FB /* TripDetail+Controller.swift */; };
 		7F87972C28665C3C0071DDC3 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F87972B28665C3C0071DDC3 /* CornerRadius.swift */; };
-		7FA4365E2868A0EA0086CCB0 /* AmadeusLocationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA4365D2868A0EA0086CCB0 /* AmadeusLocationType.swift */; };
 		7FA9830A285F7D0700C2CEC0 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA98309285F7D0700C2CEC0 /* TextInput.swift */; };
 		7FA9830E285F9AC600C2CEC0 /* TransportNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */; };
 		7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */; };
@@ -61,7 +63,7 @@
 		7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA983132860155A00C2CEC0 /* SaveToolbar.swift */; };
 		7FB609E72867B80A005A658E /* AmadeusGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB609E62867B809005A658E /* AmadeusGateway.swift */; };
 		7FB609EA2867E303005A658E /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB609E92867E303005A658E /* Authorization.swift */; };
-		7FB609EC2867EC8E005A658E /* CityAndAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB609EB2867EC8E005A658E /* CityAndAirport.swift */; };
+		7FB609EC2867EC8E005A658E /* AirportResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB609EB2867EC8E005A658E /* AirportResponse.swift */; };
 		7FBADBF02864DAEF0018A4D8 /* BudgetEdit+Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */; };
 		7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */; };
 		7FE52E952860FC890068B182 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7FE52E942860FC890068B182 /* Localizable.strings */; };
@@ -87,6 +89,9 @@
 		7F071305286559FE00A35535 /* TransportationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationMode.swift; sourceTree = "<group>"; };
 		7F07130728655B4700A35535 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		7F0713092865659F00A35535 /* TransportationModePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationModePicker.swift; sourceTree = "<group>"; };
+		7F078751286BEC5800C02DC6 /* GeoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCode.swift; sourceTree = "<group>"; };
+		7F078753286BEC8100C02DC6 /* CityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityResponse.swift; sourceTree = "<group>"; };
+		7F078755286BEDDB00C02DC6 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
 		7F0D9108285EC69300B674D9 /* TripMainDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMainDetails.swift; sourceTree = "<group>"; };
 		7F1ECF2C2867F86900CD5520 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		7F3D733A2864095400C4DBBC /* BudgetEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetEdit.swift; sourceTree = "<group>"; };
@@ -126,7 +131,6 @@
 		7F794492285D78CD00B850FB /* TripDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailView.swift; sourceTree = "<group>"; };
 		7F794494285D86EB00B850FB /* TripDetail+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TripDetail+Controller.swift"; sourceTree = "<group>"; };
 		7F87972B28665C3C0071DDC3 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
-		7FA4365D2868A0EA0086CCB0 /* AmadeusLocationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmadeusLocationType.swift; sourceTree = "<group>"; };
 		7FA98309285F7D0700C2CEC0 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		7FA9830D285F9AC600C2CEC0 /* TransportNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportNode.swift; sourceTree = "<group>"; };
 		7FA9830F2860054D00C2CEC0 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
@@ -134,7 +138,7 @@
 		7FA983132860155A00C2CEC0 /* SaveToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveToolbar.swift; sourceTree = "<group>"; };
 		7FB609E62867B809005A658E /* AmadeusGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmadeusGateway.swift; sourceTree = "<group>"; };
 		7FB609E92867E303005A658E /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
-		7FB609EB2867EC8E005A658E /* CityAndAirport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAndAirport.swift; sourceTree = "<group>"; };
+		7FB609EB2867EC8E005A658E /* AirportResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportResponse.swift; sourceTree = "<group>"; };
 		7FBADBEF2864DAEF0018A4D8 /* BudgetEdit+Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetEdit+Controller.swift"; sourceTree = "<group>"; };
 		7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSymbol.swift; sourceTree = "<group>"; };
 		7FE52E942860FC890068B182 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -269,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				7FE52E962860FCDB0068B182 /* Localization */,
-				7FA4365D2868A0EA0086CCB0 /* AmadeusLocationType.swift */,
 				7F79445B285CF64800B850FB /* AppColor.swift */,
 				7F794458285CF2A100B850FB /* AppTab.swift */,
 				7FE0D06E2860DFB60000DF17 /* AppSymbol.swift */,
@@ -420,7 +423,10 @@
 			isa = PBXGroup;
 			children = (
 				7FB609E92867E303005A658E /* Authorization.swift */,
-				7FB609EB2867EC8E005A658E /* CityAndAirport.swift */,
+				7FB609EB2867EC8E005A658E /* AirportResponse.swift */,
+				7F078753286BEC8100C02DC6 /* CityResponse.swift */,
+				7F078751286BEC5800C02DC6 /* GeoCode.swift */,
+				7F078755286BEDDB00C02DC6 /* Meta.swift */,
 			);
 			path = Amadeus;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				7FA983122860089300C2CEC0 /* CopyButton.swift in Sources */,
 				7FE52E9A286104A90068B182 /* EventVault.swift in Sources */,
 				7F79446A285CF71600B850FB /* EventStore.swift in Sources */,
+				7F078754286BEC8100C02DC6 /* CityResponse.swift in Sources */,
 				7F52E605285E2C2500529B61 /* SectionHeader.swift in Sources */,
 				7F794473285CFFE100B850FB /* EventDetailView.swift in Sources */,
 				7F1ECF2D2867F86900CD5520 /* LocationSearchView.swift in Sources */,
@@ -533,7 +540,7 @@
 				7FE0D06F2860DFB60000DF17 /* AppSymbol.swift in Sources */,
 				7F794481285D0A0D00B850FB /* TaskRow.swift in Sources */,
 				7FA9830E285F9AC600C2CEC0 /* TransportNode.swift in Sources */,
-				7FA4365E2868A0EA0086CCB0 /* AmadeusLocationType.swift in Sources */,
+				7F078752286BEC5800C02DC6 /* GeoCode.swift in Sources */,
 				7FA983142860155A00C2CEC0 /* SaveToolbar.swift in Sources */,
 				7F44A25B28662FC1000DB4B6 /* ExpenseCategory.swift in Sources */,
 				7F0713042865370C00A35535 /* TransportationDetail+Controller.swift in Sources */,
@@ -556,6 +563,7 @@
 				7F52E603285E298900529B61 /* DetailDeleteButton.swift in Sources */,
 				7F794484285D0B0500B850FB /* TaskSection.swift in Sources */,
 				7F52E5FB285E07C300529B61 /* TripList+Controller.swift in Sources */,
+				7F078756286BEDDB00C02DC6 /* Meta.swift in Sources */,
 				7F79448A285D6EE500B850FB /* TripListView.swift in Sources */,
 				7F07130828655B4700A35535 /* IconButton.swift in Sources */,
 				7FE52EA2286159780068B182 /* DateFormatter.swift in Sources */,
@@ -579,7 +587,7 @@
 				7FE52EAF28623FBB0068B182 /* BudgetProgress.swift in Sources */,
 				7FA983102860054D00C2CEC0 /* DeleteButton.swift in Sources */,
 				7F794490285D740100B850FB /* TripRow.swift in Sources */,
-				7FB609EC2867EC8E005A658E /* CityAndAirport.swift in Sources */,
+				7FB609EC2867EC8E005A658E /* AirportResponse.swift in Sources */,
 				7FE52EA02861546F0068B182 /* ExpandableRow.swift in Sources */,
 				7F79447E285D071600B850FB /* DateSection.swift in Sources */,
 				7F0712FB28651FE900A35535 /* TransportReservation.swift in Sources */,

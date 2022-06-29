@@ -29,7 +29,8 @@ struct TransportDetailView: View {
                         date: $reservationCopy.departureDate,
                         cityPlaceholder: TripVault.transportDepartureCityPlaceholder.name,
                         dateTitle: TripVault.transportDepartureDate.name,
-                        label: TripVault.transportDepart.name
+                        label: TripVault.transportDepart.name,
+                        isFlight: isFlight
                     )
 
                     TransportNode(
@@ -37,7 +38,8 @@ struct TransportDetailView: View {
                         date: $reservationCopy.arrivalDate,
                         cityPlaceholder: TripVault.transportArrivalCityPlaceholder.name,
                         dateTitle: TripVault.transportArrivalDate.name,
-                        label: TripVault.transportArrive.name
+                        label: TripVault.transportArrive.name,
+                        isFlight: isFlight
                     )
 
                     Divider()

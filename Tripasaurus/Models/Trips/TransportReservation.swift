@@ -4,6 +4,7 @@ struct TransportReservation: Identifiable, Hashable {
     var id: UUID = UUID()
     var isDeleted: Bool = false
 
+    // TODO: add location data
     var arrivalCity: String = ""
     var arrivalDate: Date = Date.now
     var carrier: String = ""
