@@ -3,6 +3,7 @@
 "app.copy" = "Copy";
 "app.delete" = "Delete";
 "app.save" = "Save";
+"app.search" = "Search";
 
 "event.add" = "Add Event";
 "event.date" = "Date";
@@ -26,6 +27,7 @@
 
 "trip.flight.header" = "Flight";
 "trip.flight.number" = "Flight #";
+"trip.flight.searchAirports" = "Search for Airports";
 "trip.flight.sectionHeader" = "Flights";
 
 "trip.transport.add" = "Add Reservation";
@@ -40,6 +42,7 @@
 "trip.transport.departureDate" = "Departure Date";
 "trip.transport.depart" = "Depart";
 "trip.transport.new" = "New Reservation";
+"trip.transport.noLocationsFound" = "No Locations Found";
 "trip.transport.notes" = "Notes";
 
 "trip.transportation.header" = "Transportation";
